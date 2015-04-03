@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'configureMainWindow.ui'
 **
-** Created: Thu Apr 2 15:53:27 2015
+** Created: Fri Apr 3 16:37:33 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -87,7 +87,7 @@ public:
         buttonPlan->setIconSize(QSize(24, 24));
         buttonRemote = new QPushButton(centralwidget);
         buttonRemote->setObjectName(QString::fromUtf8("buttonRemote"));
-        buttonRemote->setGeometry(QRect(490, 120, 100, 60));
+        buttonRemote->setGeometry(QRect(490, 170, 100, 60));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -98,13 +98,13 @@ public:
         buttonBA1 = new QPushButton(centralwidget);
         buttonBA1->setObjectName(QString::fromUtf8("buttonBA1"));
         buttonBA1->setEnabled(true);
-        buttonBA1->setGeometry(QRect(620, 120, 100, 60));
+        buttonBA1->setGeometry(QRect(620, 170, 100, 60));
         buttonBA1->setFont(font1);
         buttonBA1->setIconSize(QSize(24, 24));
         buttonBA2 = new QPushButton(centralwidget);
         buttonBA2->setObjectName(QString::fromUtf8("buttonBA2"));
         buttonBA2->setEnabled(true);
-        buttonBA2->setGeometry(QRect(620, 220, 100, 60));
+        buttonBA2->setGeometry(QRect(620, 270, 100, 60));
         buttonBA2->setFont(font1);
         buttonBA2->setIconSize(QSize(24, 24));
         buttonFileManage = new QPushButton(centralwidget);
@@ -120,7 +120,7 @@ public:
         buttonQuit = new QPushButton(centralwidget);
         buttonQuit->setObjectName(QString::fromUtf8("buttonQuit"));
         buttonQuit->setEnabled(true);
-        buttonQuit->setGeometry(QRect(550, 300, 100, 100));
+        buttonQuit->setGeometry(QRect(670, 390, 81, 32));
         QFont font2;
         font2.setPointSize(22);
         font2.setBold(true);
@@ -140,7 +140,7 @@ public:
         buttonBA3 = new QPushButton(centralwidget);
         buttonBA3->setObjectName(QString::fromUtf8("buttonBA3"));
         buttonBA3->setEnabled(true);
-        buttonBA3->setGeometry(QRect(490, 220, 100, 60));
+        buttonBA3->setGeometry(QRect(490, 270, 100, 60));
         buttonBA3->setFont(font1);
         buttonBA3->setIconSize(QSize(24, 24));
         ConfigureMainWindow->setCentralWidget(centralwidget);

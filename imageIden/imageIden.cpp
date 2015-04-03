@@ -32,6 +32,13 @@ ImageIden::ImageIden(QWidget *parent):
 	palette.setBrush(backgroundRole(), QBrush(pix));
 	setPalette(palette);
 
+//按钮背景
+	ui->buttonQuit->setText("");
+	ui->buttonQuit->setFixedSize(81,32);
+	ui->buttonQuit->setIconSize(QSize(81,32));
+	pix.load("/opt/gb_ms/picture/return.png", 0, Qt::AutoColor);
+	pix = pix.scaled(81, 32, Qt::IgnoreAspectRatio);
+	ui->buttonQuit->setIcon(QIcon(pix));
 
 /*
 //set button font color
@@ -123,10 +130,9 @@ void ImageIden::setModelFace()
 	ui->lineEditShowIdentId->setVisible(true);
 	
 	m_currentModel = FACEMODEL;
-	
+
 	m_inputId = ui->comboBoxID->currentText();
-	ui->lineEditShowIdentId->setText(m_inputId);
-		
+	ui->lineEditShowIdentId->setText(m_inputId);		
 }
 
 //设置为数字识别模式
@@ -156,13 +162,13 @@ void ImageIden::setModelDigit()
 	
 	++m_digit;
 	ui->lcdNumber->display(m_digit);
-
 }
 
 //开始识别
 void ImageIden::startIden()
 {
 	cout << "StartIdent" << endl;
+
 	m_inputId = ui->comboBoxID->currentText();
 	ui->lineEditShowIdentId->setText(m_inputId);
 

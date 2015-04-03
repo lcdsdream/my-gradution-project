@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'imageIden.ui'
 **
-** Created: Fri Apr 3 11:32:10 2015
+** Created: Fri Apr 3 16:41:31 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -110,7 +110,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         buttonQuit = new QPushButton(centralwidget);
         buttonQuit->setObjectName(QString::fromUtf8("buttonQuit"));
-        buttonQuit->setGeometry(QRect(640, 300, 111, 41));
+        buttonQuit->setGeometry(QRect(660, 330, 81, 32));
         labelPicture = new QLabel(centralwidget);
         labelPicture->setObjectName(QString::fromUtf8("labelPicture"));
         labelPicture->setGeometry(QRect(20, 40, 300, 300));
@@ -186,7 +186,7 @@ public:
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuPattern = new QMenu(menubar);
         menuPattern->setObjectName(QString::fromUtf8("menuPattern"));
-        menuPattern->setGeometry(QRect(287, 116, 148, 116));
+        menuPattern->setGeometry(QRect(287, 116, 203, 116));
         menuCommand = new QMenu(menubar);
         menuCommand->setObjectName(QString::fromUtf8("menuCommand"));
         ImageIden->setMenuBar(menubar);

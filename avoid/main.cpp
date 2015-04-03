@@ -1,10 +1,10 @@
 /*******************************************************************************
-
+20150403 lcd 
 ********************************************************************************/
 
 #include <QApplication>
 #include <QTextCodec>
-#include "configureMainWindow.h"
+#include "avoid.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForCStrings(codec);
 	QTextCodec::setCodecForTr(codec);	
 
-	app.setFont(QFont("WenQuanYi"));
-	ImageIden ii;
-	ii.show();
+	//app.setFont(QFont("WenQuanYi"));
+	Avoid ad;
+	ad.show();
 	return app.exec();
 }
