@@ -1,0 +1,8 @@
+# git 过滤文件
+# 过滤编译中间文件，qmake的产物等
+# lcd
+*.o
+*.O
+*.pro
+Makefile
+
