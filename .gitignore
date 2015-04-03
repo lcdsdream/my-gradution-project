@@ -4,5 +4,6 @@
 *.o
 *.O
 *.pro
+moc*
 Makefile
-
+ui_*.h
