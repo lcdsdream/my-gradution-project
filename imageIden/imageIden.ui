@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageIden</class>
+ <widget class="QMainWindow" name="ImageIden">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <italic>false</italic>
+    <bold>true</bold>
+    <underline>false</underline>
+    <strikeout>false</strikeout>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>图像识别</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonQuit">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>300</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPicture">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>60</y>
+      <width>131</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="buttonCatch">
+       <property name="text">
+        <string>捕获</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonIden">
+       <property name="text">
+        <string>识别</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonTrain">
+       <property name="text">
+        <string>训练</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelInputID">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>110</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>输入ID</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIndentID">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>220</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>识别ID</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>100</y>
+      <width>191</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QComboBox" name="comboBoxID">
+       <item>
+        <property name="text">
+         <string>id-2011051600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>id-2011051601</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>id-2011051602</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditShowIdentId">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>40</y>
+      <width>151</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="numDigits">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelOriginalImage">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>340</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string> 原始图像</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>788</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionFromFile"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuPattern">
+    <property name="geometry">
+     <rect>
+      <x>287</x>
+      <y>116</y>
+      <width>148</width>
+      <height>116</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>模式</string>
+    </property>
+    <addaction name="actionFace"/>
+    <addaction name="separator"/>
+    <addaction name="actionDigit"/>
+   </widget>
+   <widget class="QMenu" name="menuCommand">
+    <property name="title">
+     <string>命令</string>
+    </property>
+    <addaction name="actionIden"/>
+    <addaction name="separator"/>
+    <addaction name="actionCatch"/>
+    <addaction name="actionTrain"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuPattern"/>
+   <addaction name="menuCommand"/>
+  </widget>
+  <action name="actionIden">
+   <property name="text">
+    <string>Recognition</string>
+   </property>
+  </action>
+  <action name="actionZuoqu">
+   <property name="text">
+    <string>zhuqu</string>
+   </property>
+  </action>
+  <action name="actionXunliang">
+   <property name="text">
+    <string>xunliang</string>
+   </property>
+  </action>
+  <action name="actionFromFile">
+   <property name="text">
+    <string>Load from file</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="actionCatch">
+   <property name="text">
+    <string>Catch</string>
+   </property>
+  </action>
+  <action name="actionTrain">
+   <property name="text">
+    <string>Train</string>
+   </property>
+  </action>
+  <action name="actionFace">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Face Recognition</string>
+   </property>
+   <property name="iconText">
+    <string>人脸识别</string>
+   </property>
+  </action>
+  <action name="actionDigit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Digit Recognition</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="actionAa">
+   <property name="text">
+    <string>aa</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
