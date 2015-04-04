@@ -1,4 +1,4 @@
-/****************************************************************************
+/***************************************************************************
  ** object : Avoid 
  ** 毕业设计三级菜单　图像识别
  ** by luchaodong
@@ -9,6 +9,9 @@
 #define AVOID_20150403_DEF
 
 #include "ui_avoid.h"
+#include "TQInputMethod.h"
+#include <QWSInputMethod>
+
 
 class Avoid : public QTabWidget
 {
@@ -42,6 +45,8 @@ public slots :
 	void programEreasure();
 private:
 	Ui::Avoid *ui;
+	QWSInputMethod *im; //输入控件
+	bool m_bKeyShow;    //键盘显示 
 	QString m_loadFileName;
 };
 

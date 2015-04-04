@@ -21,6 +21,11 @@ Avoid::Avoid(QWidget *parent):
 {
 	ui->setupUi(this);
 	
+	m_bKeyShow = false;
+	im = new TQInputMethod; //ÊäÈë·¢
+	QWSServer::setCurrentInputMethod(im);
+	((TQInputMethod*) im)->setVisible(m_bKeyShow);
+
 	//ÉèÖÃ±³¾°Í¼
 	QRect screen_size = QApplication::desktop()->screenGeometry(); //get window size
 	QPixmap pix("/opt/gb_ms/picture/background_1.jpg", 0, Qt::AutoColor);
@@ -156,6 +161,7 @@ Avoid::Avoid(QWidget *parent):
 Avoid::~Avoid()
 {
 	delete ui;
+	delete im;
 }
 
 void Avoid::quitAvoid()

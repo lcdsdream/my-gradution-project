@@ -1,10 +1,10 @@
 /*******************************************************************************
-
+20150403 lcd
 ********************************************************************************/
 
 #include <QApplication>
 #include <QTextCodec>
-#include "configureMainWindow.h"
+#include "localSet.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForTr(codec);	
 
 	app.setFont(QFont("WenQuanYi"));
-	ImageIden ii;
-	ii.show();
+	LocalSet ls;
+	ls.show();
 	return app.exec();
 }

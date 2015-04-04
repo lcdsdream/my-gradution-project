@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForCStrings(codec);
 	QTextCodec::setCodecForTr(codec);	
 
-	//app.setFont(QFont("WenQuanYi"));
+	app.setFont(QFont("WenQuanYi"));
 	Avoid ad;
 	ad.show();
 	return app.exec();
