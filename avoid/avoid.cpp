@@ -166,6 +166,7 @@ Avoid::~Avoid()
 
 void Avoid::quitAvoid()
 {
+	emit returned();
 	close();
 }
 	

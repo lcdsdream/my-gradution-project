@@ -17,10 +17,16 @@ public :
 	explicit PlanRoad(QWidget *parent = 0);
 	~PlanRoad();
 	
-	
 
 public slots :
-	
+	void buttonQuitPushed();
+	void buttonBuildMapPushed();
+	void buttonDestinationPushed();
+	void buttonPathPushed();
+	void buttonSetLocationPushed();
+
+signals :
+	void returned();
 
 
 private:

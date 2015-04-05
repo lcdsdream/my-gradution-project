@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'imageIden.ui'
 **
-** Created: Sun Apr 5 13:51:28 2015
+** Created: Sun Apr 5 14:04:00 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

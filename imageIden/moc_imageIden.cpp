@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'imageIden.h'
 **
-** Created: Sun Apr 5 13:51:43 2015
+** Created: Sun Apr 5 14:04:14 2015
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,26 +23,29 @@ static const uint qt_meta_data_ImageIden[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   12, // methods
+       8,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
 
+ // signals: signature, parameters, type, tag, flags
+      11,   10,   10,   10, 0x05,
+
  // slots: signature, parameters, type, tag, flags
-      11,   10,   10,   10, 0x0a,
-      25,   10,   10,   10, 0x0a,
-      38,   10,   10,   10, 0x0a,
-      53,   10,   10,   10, 0x0a,
-      69,   10,   10,   10, 0x0a,
-      81,   10,   10,   10, 0x0a,
-      94,   10,   10,   10, 0x0a,
+      22,   10,   10,   10, 0x0a,
+      36,   10,   10,   10, 0x0a,
+      49,   10,   10,   10, 0x0a,
+      64,   10,   10,   10, 0x0a,
+      80,   10,   10,   10, 0x0a,
+      92,   10,   10,   10, 0x0a,
+     105,   10,   10,   10, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ImageIden[] = {
-    "ImageIden\0\0loadPicture()\0buttonQuit()\0"
-    "setModelFace()\0setModelDigit()\0"
+    "ImageIden\0\0returned()\0loadPicture()\0"
+    "buttonQuit()\0setModelFace()\0setModelDigit()\0"
     "startIden()\0startCatch()\0startTrain()\0"
 };
 
@@ -71,17 +74,24 @@ int ImageIden::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: loadPicture(); break;
-        case 1: buttonQuit(); break;
-        case 2: setModelFace(); break;
-        case 3: setModelDigit(); break;
-        case 4: startIden(); break;
-        case 5: startCatch(); break;
-        case 6: startTrain(); break;
+        case 0: returned(); break;
+        case 1: loadPicture(); break;
+        case 2: buttonQuit(); break;
+        case 3: setModelFace(); break;
+        case 4: setModelDigit(); break;
+        case 5: startIden(); break;
+        case 6: startCatch(); break;
+        case 7: startTrain(); break;
         default: ;
         }
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
+}
+
+// SIGNAL 0
+void ImageIden::returned()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE

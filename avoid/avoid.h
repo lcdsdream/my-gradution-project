@@ -43,6 +43,10 @@ public slots :
 	void loadProgram();
 	void downloadProgram();
 	void programEreasure();
+
+signals :
+ 	void returned();
+
 private:
 	Ui::Avoid *ui;
 	QWSInputMethod *im; //ÊäÈë¿Ø¼þ

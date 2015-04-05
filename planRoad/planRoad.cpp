@@ -38,9 +38,18 @@ PlanRoad::PlanRoad(QWidget *parent):
 	pix.load("/opt/gb_ms/picture/return.png", 0, Qt::AutoColor);
 	pix = pix.scaled(81, 32, Qt::IgnoreAspectRatio);
 	ui->buttonQuit->setIcon(QIcon(pix));
+
 //signal and slots
-
-
+	connect(ui->buttonQuit, SIGNAL(clicked()),
+		this, SLOT(buttonQuitPushed()));
+	connect(ui->buttonSetLocation, SIGNAL(clicked()),
+		this, SLOT(buttonSetLocationPushed()));	
+	connect(ui->buttonDestination, SIGNAL(clicked()),
+		this, SLOT(buttonDestinationPushed()));
+	connect(ui->buttonPath, SIGNAL(clicked()),
+		this, SLOT(buttonPathPushed()));
+	connect(ui->buttonBuildMap, SIGNAL(clicked()),
+		this, SLOT(buttonBuildMapPushed()));
 }
 
 PlanRoad::~PlanRoad()
@@ -48,5 +57,29 @@ PlanRoad::~PlanRoad()
 	delete ui;
 }
 
+void PlanRoad::buttonQuitPushed()
+{
+	emit returned();
+	close();
+}
 
+void PlanRoad::buttonBuildMapPushed()
+{
+	cout << "Build Map" << endl;
+}
+
+void PlanRoad::buttonDestinationPushed()
+{
+	cout << "Destination" << endl;
+}
+
+void PlanRoad::buttonPathPushed()
+{
+	cout << "Path" << endl;
+}
+
+void PlanRoad::buttonSetLocationPushed()
+{
+	cout << "Set location" << endl;
+}
 

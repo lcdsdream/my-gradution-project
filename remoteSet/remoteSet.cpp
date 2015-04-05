@@ -1,9 +1,9 @@
 /****************************************************************************
- ** object : LocalSet 
- ** 毕业设计三级菜单　图像识别
+ ** object : RemoteSet 
+ ** 毕业设计三级菜单　远程设置
  ** by luchaodong
- ** class Ui::LocalSet : public Ui_LocalSet {}
- ** LocalSet 
+ ** class Ui::RemoteSet : public Ui_RemoteSet {}
+ ** RemoteSet 
  ****************************************************************************/
 
 #include <QtGui>
@@ -13,13 +13,13 @@
 #include <QDesktopWidget> 
 #include <QPalette>
 #include <iostream>
-#include "localSet.h"
+#include "remoteSet.h"
 
 
 using namespace std;
-LocalSet::LocalSet(QWidget *parent):
+RemoteSet::RemoteSet(QWidget *parent):
 	QWidget(parent),
-	ui(new Ui::LocalSet) //Ui namespace ,not this 
+	ui(new Ui::RemoteSet) //Ui namespace ,not this 
 {
 	ui->setupUi(this);
 	
@@ -44,12 +44,12 @@ LocalSet::LocalSet(QWidget *parent):
 		this, SLOT(buttonQuitPushed()));
 }
 
-LocalSet::~LocalSet()
+RemoteSet::~RemoteSet()
 {
 	delete ui;
 }
 
-void LocalSet::buttonQuitPushed()
+void RemoteSet::buttonQuitPushed()
 {
 	emit returned();
 	close();

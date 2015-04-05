@@ -34,6 +34,8 @@ public slots :
 
 	void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
 
+signals :
+	void quited();
 private:
 	Ui::ConfigureMainWindow *ui;
 	QProcess process;

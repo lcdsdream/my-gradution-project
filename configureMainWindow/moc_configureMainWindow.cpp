@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'configureMainWindow.h'
 **
-** Created: Fri Apr 3 16:37:37 2015
+** Created: Sun Apr 5 14:02:52 2015
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,34 +23,37 @@ static const uint qt_meta_data_ConfigureMainWindow[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   12, // methods
+      13,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
 
+ // signals: signature, parameters, type, tag, flags
+      21,   20,   20,   20, 0x05,
+
  // slots: signature, parameters, type, tag, flags
-      21,   20,   20,   20, 0x0a,
-      42,   20,   20,   20, 0x0a,
-      63,   20,   20,   20, 0x0a,
-      84,   20,   20,   20, 0x0a,
-     104,   20,   20,   20, 0x0a,
-     126,   20,   20,   20, 0x0a,
-     145,   20,   20,   20, 0x0a,
-     164,   20,   20,   20, 0x0a,
-     190,   20,   20,   20, 0x0a,
-     211,   20,   20,   20, 0x0a,
-     231,   20,   20,   20, 0x0a,
-     270,  250,   20,   20, 0x0a,
+      30,   20,   20,   20, 0x0a,
+      51,   20,   20,   20, 0x0a,
+      72,   20,   20,   20, 0x0a,
+      93,   20,   20,   20, 0x0a,
+     113,   20,   20,   20, 0x0a,
+     135,   20,   20,   20, 0x0a,
+     154,   20,   20,   20, 0x0a,
+     173,   20,   20,   20, 0x0a,
+     199,   20,   20,   20, 0x0a,
+     220,   20,   20,   20, 0x0a,
+     240,   20,   20,   20, 0x0a,
+     279,  259,   20,   20, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ConfigureMainWindow[] = {
-    "ConfigureMainWindow\0\0buttonVoicePressed()\0"
-    "buttonImagePressed()\0buttonAvoidPressed()\0"
-    "buttonPlanPressed()\0buttonRemotePressed()\0"
-    "buttonBA1Pressed()\0buttonBA2Pressed()\0"
-    "buttonFileManagePressed()\0"
+    "ConfigureMainWindow\0\0quited()\0"
+    "buttonVoicePressed()\0buttonImagePressed()\0"
+    "buttonAvoidPressed()\0buttonPlanPressed()\0"
+    "buttonRemotePressed()\0buttonBA1Pressed()\0"
+    "buttonBA2Pressed()\0buttonFileManagePressed()\0"
     "buttonLocalPressed()\0buttonQuitPressed()\0"
     "buttonBA3Pressed()\0exitCode,exitStatus\0"
     "processFinished(int,QProcess::ExitStatus)\0"
@@ -81,22 +84,29 @@ int ConfigureMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: buttonVoicePressed(); break;
-        case 1: buttonImagePressed(); break;
-        case 2: buttonAvoidPressed(); break;
-        case 3: buttonPlanPressed(); break;
-        case 4: buttonRemotePressed(); break;
-        case 5: buttonBA1Pressed(); break;
-        case 6: buttonBA2Pressed(); break;
-        case 7: buttonFileManagePressed(); break;
-        case 8: buttonLocalPressed(); break;
-        case 9: buttonQuitPressed(); break;
-        case 10: buttonBA3Pressed(); break;
-        case 11: processFinished((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QProcess::ExitStatus(*)>(_a[2]))); break;
+        case 0: quited(); break;
+        case 1: buttonVoicePressed(); break;
+        case 2: buttonImagePressed(); break;
+        case 3: buttonAvoidPressed(); break;
+        case 4: buttonPlanPressed(); break;
+        case 5: buttonRemotePressed(); break;
+        case 6: buttonBA1Pressed(); break;
+        case 7: buttonBA2Pressed(); break;
+        case 8: buttonFileManagePressed(); break;
+        case 9: buttonLocalPressed(); break;
+        case 10: buttonQuitPressed(); break;
+        case 11: buttonBA3Pressed(); break;
+        case 12: processFinished((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QProcess::ExitStatus(*)>(_a[2]))); break;
         default: ;
         }
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
+}
+
+// SIGNAL 0
+void ConfigureMainWindow::quited()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE

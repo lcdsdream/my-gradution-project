@@ -110,8 +110,6 @@ ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 		this, SLOT(buttonFileManagePressed()));
 	connect(ui->buttonLocal, SIGNAL(clicked()),
 		this, SLOT(buttonLocalPressed()));
-	connect(ui->buttonLocal, SIGNAL(clicked()),
-		this, SLOT(buttonLocalPressed()));
 	connect(ui->buttonQuit, SIGNAL(clicked()),
 		this, SLOT(buttonQuitPressed()));
 	connect(ui->buttonBA3, SIGNAL(clicked()),
@@ -207,6 +205,7 @@ void ConfigureMainWindow::buttonLocalPressed()
 
 void ConfigureMainWindow::buttonQuitPressed()
 {
+	emit quited();
 	close();
 }
 

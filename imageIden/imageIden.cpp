@@ -104,6 +104,7 @@ void ImageIden::loadPicture()
 
 void ImageIden::buttonQuit()
 {
+	emit returned();
 	close();
 }
 

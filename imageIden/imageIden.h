@@ -27,6 +27,8 @@ public slots :
 	void startCatch();
 	void startTrain();
 
+signals :
+	void returned();
 private:
 	Ui::ImageIden *ui;
 	QImage *m_getImg;  //load picture from file

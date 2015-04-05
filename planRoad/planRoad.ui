@@ -64,7 +64,7 @@
     <string>目的地</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttomBuildMap">
+  <widget class="QPushButton" name="buttonBuildMap">
    <property name="geometry">
     <rect>
      <x>210</x>

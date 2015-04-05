@@ -1,21 +1,21 @@
 /****************************************************************************
- ** object : LocalSet 
+ ** object : RemoteSet 
  ** 毕业设计三级菜单　图像识别
  ** by luchaodong
- ** class Ui::LocalSet : public Ui_LocalSet {}
- ** LocalSet 
+ ** class Ui::RemoteSet : public Ui_RemoteSet {}
+ ** RemoteSet 
  ****************************************************************************/
 #ifndef LOCALSET_20150403_DEF
 #define LOCALSET_20150403_DEF
 
-#include "ui_localSet.h"
+#include "ui_remoteSet.h"
 
-class LocalSet : public QWidget
+class RemoteSet : public QWidget
 {
 	Q_OBJECT
 public :
-	explicit LocalSet(QWidget *parent = 0);
-	~LocalSet();
+	explicit RemoteSet(QWidget *parent = 0);
+	~RemoteSet();
 	
 	
 
@@ -27,7 +27,7 @@ signals :
 	
 	
 private:
-	Ui::LocalSet *ui;
+	Ui::RemoteSet *ui;
 
 
 };
