@@ -39,6 +39,13 @@
       <height>32</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="text">
      <string>退出</string>
     </property>
@@ -51,6 +58,13 @@
       <width>300</width>
       <height>300</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
      <string/>
@@ -65,9 +79,23 @@
       <height>241</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QPushButton" name="buttonCatch">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
         <string>捕获</string>
        </property>
@@ -75,6 +103,13 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonIden">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
         <string>识别</string>
        </property>
@@ -82,6 +117,13 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonTrain">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
         <string>训练</string>
        </property>
@@ -100,7 +142,10 @@
     </property>
     <property name="font">
      <font>
+      <family>WenQuanYi Micro Hei</family>
       <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -118,7 +163,10 @@
     </property>
     <property name="font">
      <font>
+      <family>WenQuanYi Micro Hei</family>
       <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -134,9 +182,23 @@
       <height>141</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QComboBox" name="comboBoxID">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <item>
         <property name="text">
          <string>id-2011051600</string>
@@ -156,6 +218,13 @@
      </item>
      <item>
       <spacer name="verticalSpacer">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -169,6 +238,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEditShowIdentId">
+       <property name="font">
+        <font>
+         <family>WenQuanYi Micro Hei</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -185,6 +261,13 @@
       <height>231</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="numDigits">
      <number>1</number>
     </property>
@@ -200,7 +283,10 @@
     </property>
     <property name="font">
      <font>
+      <family>WenQuanYi Micro Hei</family>
       <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -229,9 +315,9 @@
    <widget class="QMenu" name="menuPattern">
     <property name="geometry">
      <rect>
-      <x>287</x>
-      <y>116</y>
-      <width>203</width>
+      <x>324</x>
+      <y>231</y>
+      <width>133</width>
       <height>116</height>
      </rect>
     </property>
@@ -257,7 +343,12 @@
   </widget>
   <action name="actionIden">
    <property name="text">
-    <string>Recognition</string>
+    <string>识别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionZuoqu">
@@ -272,20 +363,32 @@
   </action>
   <action name="actionFromFile">
    <property name="text">
-    <string>Load from file</string>
+    <string>载入图片</string>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionCatch">
    <property name="text">
-    <string>Catch</string>
+    <string>捕获</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionTrain">
    <property name="text">
-    <string>Train</string>
+    <string>训练</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionFace">
@@ -296,10 +399,15 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Face Recognition</string>
+    <string>人脸识别</string>
    </property>
    <property name="iconText">
     <string>人脸识别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionDigit">
@@ -307,15 +415,22 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Digit Recognition</string>
+    <string>数字识别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionQuit">
    <property name="text">
-    <string>Quit</string>
+    <string>退出</string>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
    </property>
   </action>
   <action name="actionAa">

@@ -1,9 +1,9 @@
 /****************************************************************************
- ** object : LocalSet 
+ ** object : PlanRoad 
  ** 毕业设计三级菜单　图像识别
  ** by luchaodong
- ** class Ui::LocalSet : public Ui_LocalSet {}
- ** LocalSet 
+ ** class Ui::PlanRoad : public Ui_PlanRoad {}
+ ** PlanRoad 
  ****************************************************************************/
 
 #include <QtGui>
@@ -13,13 +13,13 @@
 #include <QDesktopWidget> 
 #include <QPalette>
 #include <iostream>
-#include "localSet.h"
-
+#include "planRoad.h"
 
 using namespace std;
-LocalSet::LocalSet(QWidget *parent):
-	QMainWindow(parent),
-	ui(new Ui::LocalSet) //Ui namespace ,not this 
+
+PlanRoad::PlanRoad(QWidget *parent):
+	QWidget(parent),
+	ui(new Ui::PlanRoad) //Ui namespace ,not this 
 {
 	ui->setupUi(this);
 	
@@ -38,16 +38,15 @@ LocalSet::LocalSet(QWidget *parent):
 	pix.load("/opt/gb_ms/picture/return.png", 0, Qt::AutoColor);
 	pix = pix.scaled(81, 32, Qt::IgnoreAspectRatio);
 	ui->buttonQuit->setIcon(QIcon(pix));
-	
-
-
-
+//signal and slots
 
 
 }
 
-LocalSet::~LocalSet()
+PlanRoad::~PlanRoad()
 {
 	delete ui;
 }
+
+
 
