@@ -1,10 +1,10 @@
 /*******************************************************************************
-
+20150405 lcd
 ********************************************************************************/
 
 #include <QApplication>
 #include <QTextCodec>
-#include "configureMainWindow.h"
+#include "voiceIden.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForCStrings(codec);
 	QTextCodec::setCodecForTr(codec);	
 
-	app.setFont(QFont("WenQuanYi"));
-	ImageIden ii;
-	ii.show();
+	app.setFont(QFont("wqy-microhei"));
+	VoiceIden vi;
+	vi.show();
 	return app.exec();
 }

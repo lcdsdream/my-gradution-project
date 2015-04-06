@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VoiceIden</class>
+ <widget class="QWidget" name="VoiceIden">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>WenQuanYi Micro Hei</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>语音识别</string>
+  </property>
+  <widget class="QPushButton" name="buttonQuit">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>390</y>
+     <width>81</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidgetOne">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>350</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>识别-1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>说明</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidgetTwo">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>50</y>
+     <width>330</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>识别-1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>合成</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>识别-2</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="buttonAdd">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加表一数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonDelete">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除表一数据</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonEdit">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>编辑表二数据</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelOne">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>数据表-1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTwo">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>10</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>数据表-2 在识别-1 数据表-1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonSureWrite">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定写入</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

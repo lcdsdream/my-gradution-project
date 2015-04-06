@@ -84,7 +84,7 @@ void ImageIden::loadPicture()
 {
 	QString fileName;
 
-	fileName = QFileDialog::getOpenFileName(this, tr("Ñ¡ÔñÍ¼Ïñ"), "",
+	fileName = QFileDialog::getOpenFileName(this, trUtf8("Ñ¡ÔñÍ¼Ïñ"), "",
 					tr("Images(*.png *.bmp *.jpg *.tif *.GIF)"));
 	if (fileName.isEmpty())
 		return;
