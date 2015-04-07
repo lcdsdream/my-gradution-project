@@ -152,9 +152,17 @@ void VoiceIden::buttonDeletePushed()
 	if (r == QMessageBox::No)
 		return;
 
-	cout << "delete one item from WidgettableOne and database's table one" << endl;
 	int iRow = ui->tableWidgetOne->currentRow();
-	
+
+	if (iRow < 0 || iRow >= ui->tableWidgetOne->rowCount())
+	{
+		QMessageBox::warning(this, tr("Edit Error"), 
+			tr("No Item has been chose!"), QMessageBox::Yes);
+
+		return;
+	}
+
+	cout << "delete one item from WidgettableOne and database's table one" << endl;
 	QSqlQuery query(g_db);
 	query.prepare("delete FROM table1 where Iden=?");
 	query.bindValue(0,
@@ -167,14 +175,24 @@ void VoiceIden::buttonDeletePushed()
 void VoiceIden::buttonEditPushed()
 {
 	cout << "edit table two" << endl;
-	int iRow = ui->tableWidgetOne->currentRow();
+
 	
+	int iRow = ui->tableWidgetTwo->currentRow();	
+	//qDebug() << iRow;
+
+	if (iRow < 0 || iRow >= ui->tableWidgetTwo->rowCount())
+	{
+		QMessageBox::warning(this, tr("Edit Error"), 
+			tr("No Item has been chose!"), QMessageBox::Yes);
+
+		return;
+	}
+
 	QSqlQuery query(g_db);
 	query.prepare("update table2 set shibie1=?,hecheng=?,shibie2=? where id=?"); 
 	query.bindValue(0, ui->tableWidgetTwo->item(iRow, 0)->text());
 	query.bindValue(1, ui->tableWidgetTwo->item(iRow, 1)->text());
 	query.bindValue(2, ui->tableWidgetTwo->item(iRow, 2)->text());
-	
 	query.bindValue(3, QString::number(iRow+1));	
 	query.exec();
 
@@ -216,7 +234,6 @@ void VoiceIden::readDatabaseTableTwo()
 		int shibie_1 = query.record().indexOf("shibie1");
 		int hecheng = query.record().indexOf("hecheng");
 		int shibie_2 = query.record().indexOf("shibie2");
-
 		while (query.next())
 		{
 			ui->tableWidgetTwo->setRowCount(iRow+1);
