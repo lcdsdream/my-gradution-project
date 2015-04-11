@@ -13,6 +13,8 @@
 #include "ui_voiceIden.h"
 #include "dialogAddTable1.h"
 #include "dialogAddTable2.h"
+//#include "dialogModifyTable1.h"
+#include "dialogModifyTable2.h"
 
 class VoiceIden : public QWidget
 {
@@ -40,7 +42,12 @@ public slots :
 	void dialogAddTable2Comfirn();
 	void dialogAddTable2Cancel();	
 
-
+	//void dialogModifyTable1Comfirn();
+	//void dialogModifyTable1Cancel();
+	
+	void dialogModifyTable2Comfirn();
+	void dialogModifyTable2Cancel();
+	
 	//录音操作
 	void startedRecordVoice();
 	void finishedRecordVoice();
@@ -55,6 +62,8 @@ private:
 //bool m_isVoiseSource;  //录音资源是否可用
 	DialogAddTable1 *m_dat1;
 	DialogAddTable2 *m_dat2;
+	//DialogModifyTable1 *m_dmt1;
+	DialogModifyTable2 *m_dmt2;
 
 	void readDatabaseTable1();
 	void readDatabaseTable2(QString &tableName);

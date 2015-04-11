@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>305</width>
-    <height>251</height>
+    <height>278</height>
    </rect>
   </property>
   <property name="font">
@@ -64,11 +64,11 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="btAddConfirm">
+  <widget class="QPushButton" name="btModifyConfirm">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>220</y>
+     <y>240</y>
      <width>87</width>
      <height>27</height>
     </rect>
@@ -81,7 +81,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>220</y>
+     <y>240</y>
      <width>87</width>
      <height>27</height>
     </rect>
@@ -117,9 +117,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>130</y>
+     <y>129</y>
      <width>261</width>
-     <height>80</height>
+     <height>101</height>
     </rect>
    </property>
    <property name="title">
@@ -129,7 +129,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>40</y>
+      <y>60</y>
       <width>87</width>
       <height>27</height>
      </rect>
@@ -142,7 +142,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>40</y>
+      <y>60</y>
       <width>87</width>
       <height>27</height>
      </rect>
@@ -154,14 +154,14 @@
    <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>131</width>
+      <x>70</x>
+      <y>30</y>
+      <width>181</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>更新录音</string>
+     <string>选择更新录音</string>
     </property>
    </widget>
   </widget>

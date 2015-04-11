@@ -27,7 +27,7 @@ QSqlDatabase g_db;
 VoiceIden::VoiceIden(QWidget *parent):
 	QWidget(parent),
 	ui(new Ui::VoiceIden),//Ui namespace ,not this 
-	im(new TQInputMethod), m_dat1(0), m_dat2(0)
+	im(new TQInputMethod), m_dat1(0), m_dat2(0), m_dmt2(0)
 {
 	ui->setupUi(this);
 
@@ -116,6 +116,9 @@ VoiceIden::~VoiceIden()
 	delete ui;
 	delete im;
 	if (m_dat1) delete m_dat1;
+	if (m_dat2) delete m_dat2;
+	//if (m_dmt1) delete m_dmt1;
+	if (m_dmt2) delete m_dmt2;
 }
 
 
@@ -167,7 +170,7 @@ void VoiceIden::btDeleteTable1Pushed()
 		return;
 	}
 
-	cout << "delete one item from WidgettableTwo and database's table" << endl;
+	cout << "delete one item from WidgettableOne and database's table" << endl;
 	QSqlQuery query(g_db);
 	
 	//读取name
@@ -255,7 +258,29 @@ void VoiceIden::btDeleteTable2Pushed()
 //双击，弹框，更新二级表中一项
 void VoiceIden::modifyTable2(int r, int c)
 {
-	cout << "d2" << r << c  << endl;
+	if ( !m_dmt2 )
+	{
+		m_dmt2 = new DialogModifyTable2;
+		
+		connect(m_dmt2, SIGNAL(operateConfirm()),
+  		this, SLOT(dialogModifyTable2Comfirn()));
+  		connect(m_dmt2, SIGNAL(cancel()),
+  		this, SLOT(dialogModifyTable2Cancel()));
+	
+		connect(m_dmt2, SIGNAL(startRecord()),
+			this, SLOT(startedRecordVoice()));
+		connect(m_dmt2, SIGNAL(finishRecord()),
+			this, SLOT(finishedRecordVoice()));
+		
+		int iRow = ui->tableWidgetTwo->currentRow();
+		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,0)->text(), 0);
+		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,1)->text(), 1);
+		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,2)->text(), 2);
+	}
+
+	m_dmt2->show();
+	m_dmt2->raise();
+	m_dmt2->activateWindow();
 }
 
 //根据一级表中数据当前选项变化更新对应二级表
@@ -355,8 +380,9 @@ void VoiceIden::dialogAddTable2Comfirn()
 {
 
 	QSqlQuery query(g_db);
-	//数据写入
-	QString table2Name = ui->tableWidgetOne->currentItem()->text();
+	//数据表名
+	int iRow = ui->tableWidgetOne->currentRow();
+	QString table2Name = ui->tableWidgetOne->item(iRow,0)->text();
 	
 	//插入数据表格 2
 	QString  queryString = tr("insert into %1 (name1, hecheng, name2) values('%2','%3','%4')").arg(table2Name).arg(table2Name).arg(m_dat2->getItemText(1)).arg(m_dat2->getItemText(2)); 
@@ -367,7 +393,7 @@ void VoiceIden::dialogAddTable2Comfirn()
 	}
 
 	//更新表格2显示
-	int iRow = ui->tableWidgetTwo->rowCount();
+	iRow = ui->tableWidgetTwo->rowCount();
 	ui->tableWidgetTwo->setRowCount(iRow+1);
 	ui->tableWidgetTwo->setItem(iRow, 0,
 		new QTableWidgetItem(m_dat2->getItemText(0)));
@@ -404,6 +430,65 @@ void VoiceIden::dialogAddTable2Cancel()
 		this, SLOT(finishedRecordVoice()));
 	delete m_dat2;
 	m_dat2 = 0;
+}
+
+//void VoiceIden::dialogModifyTable1Comfirn()
+//{}
+//void VoiceIden::dialogModifyTable1Cancel()
+//{}
+
+void VoiceIden::dialogModifyTable2Comfirn()
+{
+
+	QSqlQuery query(g_db);
+	//数据写入
+	int iRow = ui->tableWidgetTwo->currentRow();
+	QString table2Name = ui->tableWidgetTwo->item(iRow,0)->text();
+	QString name2 =  ui->tableWidgetTwo->item(iRow,2)->text();
+	//插入数据表格 2
+	QString  queryString = tr("update %1 set name1='%2', hecheng='%3', name2='%4'where name2=%5").arg(table2Name).arg(table2Name).arg(m_dmt2->getItemText(1)).arg(m_dmt2->getItemText(2)).arg(name2); 
+	
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+	
+	//ui->tableWidgetTwo->setItem(iRow, 0,
+	//         new QTableWidgetItem(m_dmt2->getItemText(0)));
+	
+	ui->tableWidgetTwo->setItem(iRow, 1,
+	         new QTableWidgetItem(m_dmt2->getItemText(1)));
+	
+	ui->tableWidgetTwo->setItem(iRow, 2,
+	         new QTableWidgetItem(m_dmt2->getItemText(2)));
+
+	
+	disconnect(m_dmt2, SIGNAL(operateConfirm()),
+  		this, SLOT(dialogModifyTable2Comfirn()));
+  	disconnect(m_dmt2, SIGNAL(cancel()),
+  		this, SLOT(dialogModifyTable2Cancel()));
+	
+	disconnect(m_dmt2, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dmt2, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dmt2;
+	m_dmt2 = 0;
+}
+
+void VoiceIden::dialogModifyTable2Cancel()
+{
+	disconnect(m_dmt2, SIGNAL(operateConfirm()),
+  		this, SLOT(dialogModifyTable2Comfirn()));
+  	disconnect(m_dmt2, SIGNAL(cancel()),
+  		this, SLOT(dialogModifyTable2Cancel()));
+	
+	disconnect(m_dmt2, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dmt2, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dmt2;
+	m_dmt2 = 0;
 }
 
 
