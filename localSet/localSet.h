@@ -9,6 +9,8 @@
 #define LOCALSET_20150403_DEF
 
 #include "ui_localSet.h"
+#include <QWSInputMethod> 
+#include "TQInputMethod.h" 
 
 class LocalSet : public QWidget
 {
@@ -21,6 +23,7 @@ public :
 
 public slots :
 	void buttonQuitPushed();
+	void RemoteSetCheckBoxStatusChanged(int state); //远程设置开关设置
 
 signals :
 	void returned();
@@ -28,7 +31,8 @@ signals :
 	
 private:
 	Ui::LocalSet *ui;
-
+	QWSInputMethod *im;
+	void initRemoteSetStatus(); //读取设置远程开关初始状态
 
 };
 

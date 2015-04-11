@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'configureMainWindow.h'
 **
-** Created: Sun Apr 5 14:02:52 2015
+** Created: Wed Apr 8 00:23:30 2015
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -37,13 +37,13 @@ static const uint qt_meta_data_ConfigureMainWindow[] = {
       72,   20,   20,   20, 0x0a,
       93,   20,   20,   20, 0x0a,
      113,   20,   20,   20, 0x0a,
-     135,   20,   20,   20, 0x0a,
-     154,   20,   20,   20, 0x0a,
-     173,   20,   20,   20, 0x0a,
+     139,   20,   20,   20, 0x0a,
+     160,   20,   20,   20, 0x0a,
+     180,   20,   20,   20, 0x0a,
      199,   20,   20,   20, 0x0a,
-     220,   20,   20,   20, 0x0a,
-     240,   20,   20,   20, 0x0a,
-     279,  259,   20,   20, 0x0a,
+     218,   20,   20,   20, 0x0a,
+     237,   20,   20,   20, 0x0a,
+     276,  256,   20,   20, 0x0a,
 
        0        // eod
 };
@@ -52,10 +52,11 @@ static const char qt_meta_stringdata_ConfigureMainWindow[] = {
     "ConfigureMainWindow\0\0quited()\0"
     "buttonVoicePressed()\0buttonImagePressed()\0"
     "buttonAvoidPressed()\0buttonPlanPressed()\0"
-    "buttonRemotePressed()\0buttonBA1Pressed()\0"
-    "buttonBA2Pressed()\0buttonFileManagePressed()\0"
+    "buttonFileManagePressed()\0"
     "buttonLocalPressed()\0buttonQuitPressed()\0"
-    "buttonBA3Pressed()\0exitCode,exitStatus\0"
+    "buttonBA3Pressed()\0buttonBA0Pressed()\0"
+    "buttonBA1Pressed()\0buttonBA2Pressed()\0"
+    "exitCode,exitStatus\0"
     "processFinished(int,QProcess::ExitStatus)\0"
 };
 
@@ -89,13 +90,13 @@ int ConfigureMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: buttonImagePressed(); break;
         case 3: buttonAvoidPressed(); break;
         case 4: buttonPlanPressed(); break;
-        case 5: buttonRemotePressed(); break;
-        case 6: buttonBA1Pressed(); break;
-        case 7: buttonBA2Pressed(); break;
-        case 8: buttonFileManagePressed(); break;
-        case 9: buttonLocalPressed(); break;
-        case 10: buttonQuitPressed(); break;
-        case 11: buttonBA3Pressed(); break;
+        case 5: buttonFileManagePressed(); break;
+        case 6: buttonLocalPressed(); break;
+        case 7: buttonQuitPressed(); break;
+        case 8: buttonBA3Pressed(); break;
+        case 9: buttonBA0Pressed(); break;
+        case 10: buttonBA1Pressed(); break;
+        case 11: buttonBA2Pressed(); break;
         case 12: processFinished((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QProcess::ExitStatus(*)>(_a[2]))); break;
         default: ;
         }

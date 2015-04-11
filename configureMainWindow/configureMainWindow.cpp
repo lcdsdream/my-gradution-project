@@ -15,12 +15,17 @@
 #include <iostream>
 #include "configureMainWindow.h"
 using namespace std;
+
 ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 	QMainWindow(parent),
 	ui(new Ui::ConfigureMainWindow) //Ui namespace ,not this 
 {
 	ui->setupUi(this);
-	
+
+  im = new TQInputMethod;
+  QWSServer::setCurrentInputMethod(im);
+  ((TQInputMethod*)im)->setVisible(false);
+
 	//设置背景图
 	QRect screen_size = QApplication::desktop()->screenGeometry(); //get window size
 	QPixmap pix("/opt/gb_ms/picture/background.jpg", 0, Qt::AutoColor);
@@ -38,6 +43,7 @@ ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 	ui->buttonQuit->setIcon(QIcon(pix));
 	
 //备用按钮失能
+	ui->buttonBA0->setEnabled(false);
 	ui->buttonBA1->setEnabled(false);
 	ui->buttonBA2->setEnabled(false);
 	ui->buttonBA3->setEnabled(false);
@@ -100,8 +106,8 @@ ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 		this, SLOT(buttonAvoidPressed()));
 	connect(ui->buttonPlan, SIGNAL(clicked()),
 		this, SLOT(buttonPlanPressed()));
-	connect(ui->buttonRemote, SIGNAL(clicked()),
-		this, SLOT(buttonRemotePressed()));
+	connect(ui->buttonBA0, SIGNAL(clicked()),
+		this, SLOT(buttonBA0Pressed()));
 	connect(ui->buttonBA1, SIGNAL(clicked()),
 		this, SLOT(buttonBA1Pressed()));
 	connect(ui->buttonBA2, SIGNAL(clicked()),
@@ -118,12 +124,15 @@ ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 	connect(&process, SIGNAL(finished(int, QProcess::ExitStatus)),
 		this, SLOT(processFinished(int, QProcess::ExitStatus)));
 
-
+	process.setProcessChannelMode(QProcess::ForwardedChannels);
+	qDebug() << process.workingDirectory();
+	process.setWorkingDirectory("/opt/gb_ms/app/");
 }
 
 ConfigureMainWindow::~ConfigureMainWindow()
 {
 	delete ui;
+	delete im;
 }
 
 void ConfigureMainWindow::buttonVoicePressed()
@@ -131,7 +140,7 @@ void ConfigureMainWindow::buttonVoicePressed()
 	cout << "voiceIden" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./voiceIden", argList);
+	processLauncher("/opt/gb_ms/app/voiceIden", argList);
 }
 
 void ConfigureMainWindow::buttonImagePressed()
@@ -139,7 +148,7 @@ void ConfigureMainWindow::buttonImagePressed()
 	cout << "imageIden" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./imageIden", argList);
+	processLauncher("/opt/gb_ms/app/imageIden", argList);
 
 }
 
@@ -148,7 +157,7 @@ void ConfigureMainWindow::buttonAvoidPressed()
 	cout << "avoid" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./avoid", argList);
+	processLauncher("/opt/gb_ms/app/avoid", argList);
 
 }
 
@@ -157,16 +166,16 @@ void ConfigureMainWindow::buttonPlanPressed()
 	cout << "planRoad" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./planRoad", argList);
+	processLauncher("/opt/gb_ms/app/planRoad", argList);
 
 }
 
-void ConfigureMainWindow::buttonRemotePressed()
+void ConfigureMainWindow::buttonBA0Pressed()
 {
-	cout << "remoteSet" << endl;
+	cout << "BA0" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./remoteSet", argList);
+	processLauncher("/opt/gb_ms/app/ba0", argList);
 
 }
 
@@ -175,7 +184,7 @@ void ConfigureMainWindow::buttonBA1Pressed()
 	cout << "ba1" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./ba1", argList);
+	processLauncher("/opt/gb_ms/app/ba1", argList);
 }
 
 void ConfigureMainWindow::buttonBA2Pressed()
@@ -183,7 +192,7 @@ void ConfigureMainWindow::buttonBA2Pressed()
 	cout << "ba2" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./ba2", argList);
+	processLauncher("/opt/gb_ms/app/ba2", argList);
 
 }
 
@@ -191,7 +200,7 @@ void ConfigureMainWindow::buttonFileManagePressed()
 {
 	cout << "fileManage" << endl;
 	QStringList argList;
-	processLauncher("./fileManage", argList);
+	processLauncher("/opt/gb_ms/app/fileManage", argList);
 }
 
 void ConfigureMainWindow::buttonLocalPressed()
@@ -199,7 +208,7 @@ void ConfigureMainWindow::buttonLocalPressed()
 	cout << "localSet" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./localSet", argList);
+	processLauncher("/opt/gb_ms/app/localSet", argList);
 
 }
 
@@ -214,7 +223,7 @@ void ConfigureMainWindow::buttonBA3Pressed()
 	cout << "ba3" << endl;
 	QStringList argList;
 	//argList << "-al";
-	processLauncher("./ba3", argList);
+	processLauncher("/opt/gb_ms/app/ba3", argList);
 
 }
 
@@ -230,7 +239,6 @@ void ConfigureMainWindow::processLauncher(const QString &program, const QStringL
 {
 	
 	process.start(program, arguments);
-	
 	if ( process.waitForStarted(10000) != true )
 	{
 		QMessageBox::warning(this, tr("Process Error"), tr("Can\'t start the process"), QMessageBox::Yes);
@@ -241,4 +249,5 @@ void ConfigureMainWindow::processLauncher(const QString &program, const QStringL
 	hide();
 //	process.waitForFinished(-1);  //block until the process is finished, never timeout
 }
+
 

@@ -22,7 +22,11 @@ LocalSet::LocalSet(QWidget *parent):
 	ui(new Ui::LocalSet) //Ui namespace ,not this 
 {
 	ui->setupUi(this);
-	
+
+	im = new TQInputMethod;
+	QWSServer::setCurrentInputMethod(im);
+ 	((TQInputMethod*)im)->setVisible(false);
+
 	//设置背景图
 	QRect screen_size = QApplication::desktop()->screenGeometry(); //get window size
 	QPixmap pix("/opt/gb_ms/picture/background_1.jpg", 0, Qt::AutoColor);
@@ -40,13 +44,21 @@ LocalSet::LocalSet(QWidget *parent):
 	ui->buttonQuit->setIcon(QIcon(pix));
 	
 
+	initRemoteSetStatus();  //初始化远程设置允许开关
+
 	connect(ui->buttonQuit, SIGNAL(clicked()),
 		this, SLOT(buttonQuitPushed()));
+
+	connect(ui->checkBoxRemoteSet, SIGNAL(stateChanged(int)),
+		this, SLOT(RemoteSetCheckBoxStatusChanged(int)));
+	
+
 }
 
 LocalSet::~LocalSet()
 {
 	delete ui;
+	delete im;
 }
 
 void LocalSet::buttonQuitPushed()
@@ -54,3 +66,24 @@ void LocalSet::buttonQuitPushed()
 	emit returned();
 	close();
 }
+
+void LocalSet::RemoteSetCheckBoxStatusChanged(int state)
+{
+	if (state == Qt::Checked)
+	{
+		cout << "checked" << endl;
+	}
+	else
+	{
+		cout << "unchecked" << endl;
+	}
+}
+
+void LocalSet::initRemoteSetStatus()
+{
+
+//读取文件设置
+	ui->checkBoxRemoteSet->setCheckState(Qt::Checked);
+
+}
+

@@ -17,8 +17,9 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QSqlRecord>
-
+#include <QSqlError>
 #include "voiceIden.h"
+
 using namespace std;
 
 QSqlDatabase g_db;
@@ -26,7 +27,7 @@ QSqlDatabase g_db;
 VoiceIden::VoiceIden(QWidget *parent):
 	QWidget(parent),
 	ui(new Ui::VoiceIden),//Ui namespace ,not this 
-	im(new TQInputMethod), m_newRow(0)
+	im(new TQInputMethod), m_dat1(0), m_dat2(0)
 {
 	ui->setupUi(this);
 
@@ -39,7 +40,6 @@ VoiceIden::VoiceIden(QWidget *parent):
 
 	
 	//input
-//	im = new TQInputMethod;
 	QWSServer::setCurrentInputMethod(im);
 	((TQInputMethod*)im)->setVisible(false);
 
@@ -61,19 +61,28 @@ VoiceIden::VoiceIden(QWidget *parent):
 	
 	//信号 槽
 	connect(ui->buttonQuit, SIGNAL(clicked()),
-		this, SLOT(buttonQuitPushed()));
+		this, SLOT(btQuitPushed()));
 	
-	connect(ui->buttonAdd, SIGNAL(clicked()),
-		this, SLOT(buttonAddPushed()));
+	connect(ui->buttonAddTable1, SIGNAL(clicked()),
+		this, SLOT(btAddTable1Pushed()));
 
-	connect(ui->buttonDelete, SIGNAL(clicked()),
-		this, SLOT(buttonDeletePushed()));
+	connect(ui->buttonDeleteTable1, SIGNAL(clicked()),
+		this, SLOT(btDeleteTable1Pushed()));
 
-	connect(ui->buttonEdit, SIGNAL(clicked()),
-		this, SLOT(buttonEditPushed()));
+	connect(ui->buttonAddTable2, SIGNAL(clicked()),
+		this, SLOT(btAddTable2Pushed()));
 
-	connect(ui->buttonSureWrite, SIGNAL(clicked()),
-		this, SLOT(buttonSureWritePushed()));
+	connect(ui->buttonDeleteTable2, SIGNAL(clicked()),
+		this, SLOT(btDeleteTable2Pushed()));
+
+	connect(ui->tableWidgetTwo, SIGNAL(cellDoubleClicked(int, int)),
+		this, SLOT(modifyTable2(int, int)));
+
+	connect(ui->tableWidgetOne, SIGNAL(cellDoubleClicked(int, int)),
+		this, SLOT(modifyTable1(int, int)));
+	connect(ui->tableWidgetOne, SIGNAL(currentCellChanged(int,int,int,int)),
+		this, SLOT(updateTable2(int, int,int, int)));
+
 //数据库建立连接
 	g_db = QSqlDatabase::addDatabase("QSQLITE", "voiceIden");
 	g_db.setDatabaseName("voice.db");
@@ -86,9 +95,15 @@ VoiceIden::VoiceIden(QWidget *parent):
 	else
 	{
 		//read from database
-		readDatabaseTableOne();
-		readDatabaseTableTwo();
+		readDatabaseTable1();
+		if (ui->tableWidgetOne->item(0, 0))
+		{
+			QString table2Name = ui->tableWidgetOne->item(0, 0)->text();
+			readDatabaseTable2(table2Name);
+		}
 	}
+
+
 }
 
 VoiceIden::~VoiceIden()
@@ -100,106 +115,313 @@ VoiceIden::~VoiceIden()
 
 	delete ui;
 	delete im;
+	if (m_dat1) delete m_dat1;
 }
 
-void VoiceIden::buttonQuitPushed()
+
+void VoiceIden::btQuitPushed()
 {
 	emit returned();
 	close();
 }
 
-void VoiceIden::buttonAddPushed()
+//弹框，向一级表添加新一项
+void VoiceIden::btAddTable1Pushed()
 {
-	cout << "add one item to WidgetTableOne" << endl; 
-	
-	m_newRow = ui->tableWidgetOne->rowCount();
-	ui->tableWidgetOne->insertRow(m_newRow);
-	ui->tableWidgetOne->setRowCount(m_newRow+1);	
-	ui->tableWidgetOne->setCurrentCell(m_newRow, 0); //定位到新增加的行
-
-}
-	
-void VoiceIden::buttonSureWritePushed()
-{
-	if (m_newRow == 0 || ui->tableWidgetOne->item(m_newRow, 0)->text().length() == 0 		|| ui->tableWidgetOne->item(m_newRow, 1)->text().length() == 0 )
+	if ( !m_dat1 )
 	{
-		return;
+		m_dat1 = new DialogAddTable1;
+		
+		connect(m_dat1, SIGNAL(operateConfirm()),
+			this, SLOT(dialogAddTable1Comfirn()));
+		connect(m_dat1, SIGNAL(cancel()),
+			this, SLOT(dialogAddTable1Cancel()));
+		
+		connect(m_dat1, SIGNAL(startRecord()),
+			this, SLOT(startedRecordVoice()));
+		connect(m_dat1, SIGNAL(finishRecord()),
+			this, SLOT(finishedRecordVoice()));
 	}
 
-	cout << "write the change to database's table1" << endl;
-	//qDebug() << ui->tableWidgetOne->item(m_newRow, 0)->text() ;	
-	//qDebug() << ui->tableWidgetOne->item(m_newRow, 1)->text() ;	
-	
-	QSqlQuery query(g_db);
-	query.prepare("insert into table1 (Iden, shuoming) values(?,?)");
-	query.bindValue(0, ui->tableWidgetOne->item(m_newRow, 0)->text());
-	query.bindValue(1, ui->tableWidgetOne->item(m_newRow, 1)->text());
-	query.exec();
-
-	m_newRow = 0;
-//	readDatabaseTableOne();
+	m_dat1->show();
+	m_dat1->raise();
+	m_dat1->activateWindow();
+	//ui->buttonAddTable1->setEnabled(false);
 }
-
-
-void VoiceIden::buttonDeletePushed()
-{
 	
-	int r = QMessageBox::warning(this, tr("Confirm To Delete"), 
+void VoiceIden::btDeleteTable1Pushed()
+{
+	int r = QMessageBox::warning(this, tr("Confirm To Delete"),
 		tr("This execution will delete an item \n"
 			"which you have choose from the database\n"
 			"Are you sure ?"), QMessageBox::Yes | QMessageBox::No);
-	
+
 	if (r == QMessageBox::No)
 		return;
 
 	int iRow = ui->tableWidgetOne->currentRow();
-
 	if (iRow < 0 || iRow >= ui->tableWidgetOne->rowCount())
 	{
-		QMessageBox::warning(this, tr("Edit Error"), 
+		QMessageBox::warning(this, tr("Edit Error"),
 			tr("No Item has been chose!"), QMessageBox::Yes);
-
 		return;
 	}
 
-	cout << "delete one item from WidgettableOne and database's table one" << endl;
+	cout << "delete one item from WidgettableTwo and database's table" << endl;
 	QSqlQuery query(g_db);
-	query.prepare("delete FROM table1 where Iden=?");
-	query.bindValue(0,
-			ui->tableWidgetOne->item(iRow, 0)->text());
-	query.exec();
+	
+	//读取name
+	QString table2Name = ui->tableWidgetOne->item(iRow, 0)->text();
+	
+	//删除一级数据表中的项目
+	QString queryString = tr("delete FROM table1 where name='%1'").arg(table2Name);
+	if ( !query.exec(queryString) ) qDebug() << query.lastError();
+	queryString.clear();
+	
+	//删除对应二级表
+	queryString = tr("DROP TABLE IF EXISTS %1").arg(table2Name);
+	if ( !query.exec(queryString) ) qDebug() << query.lastError();
+
+	
 	ui->tableWidgetOne->removeRow(iRow);
 }
 
-
-void VoiceIden::buttonEditPushed()
+//双击，弹框，更新一级表中一项
+void VoiceIden::modifyTable1(int r, int c)
 {
-	cout << "edit table two" << endl;
+	cout << "d1" << r << c << endl; 
 
-	
-	int iRow = ui->tableWidgetTwo->currentRow();	
-	//qDebug() << iRow;
-
-	if (iRow < 0 || iRow >= ui->tableWidgetTwo->rowCount())
-	{
-		QMessageBox::warning(this, tr("Edit Error"), 
-			tr("No Item has been chose!"), QMessageBox::Yes);
-
-		return;
-	}
-
-	QSqlQuery query(g_db);
-	query.prepare("update table2 set shibie1=?,hecheng=?,shibie2=? where id=?"); 
-	query.bindValue(0, ui->tableWidgetTwo->item(iRow, 0)->text());
-	query.bindValue(1, ui->tableWidgetTwo->item(iRow, 1)->text());
-	query.bindValue(2, ui->tableWidgetTwo->item(iRow, 2)->text());
-	query.bindValue(3, QString::number(iRow+1));	
-	query.exec();
 
 }
 
 
-void VoiceIden::readDatabaseTableOne()
+//弹框，向二级表添加新一项
+void VoiceIden::btAddTable2Pushed()
+{
+	if ( !m_dat2 )
+	{
+		m_dat2 = new DialogAddTable2;
+		
+		connect(m_dat2, SIGNAL(operateConfirm()),
+			this, SLOT(dialogAddTable2Comfirn()));
+		connect(m_dat2, SIGNAL(cancel()),
+			this, SLOT(dialogAddTable2Cancel()));
+		
+		connect(m_dat2, SIGNAL(startRecord()),
+			this, SLOT(startedRecordVoice()));
+		connect(m_dat2, SIGNAL(finishRecord()),
+			this, SLOT(finishedRecordVoice()));
+		int iRow = ui->tableWidgetOne->currentRow();
+		m_dat2->setItemText(ui->tableWidgetOne->item(iRow,0)->text(), 0);
+	}
+
+	m_dat2->show();
+	m_dat2->raise();
+	m_dat2->activateWindow();
+
+}
+
+
+void VoiceIden::btDeleteTable2Pushed()
+{
+	int r = QMessageBox::warning(this, tr("Confirm To Delete"),
+		tr("This execution will delete an item \n"
+			"which you have choose from the database\n"
+			"Are you sure ?"), QMessageBox::Yes | QMessageBox::No);
+
+	if (r == QMessageBox::No)
+		return;
+
+	int iRow = ui->tableWidgetTwo->currentRow();
+	if (iRow < 0 || iRow >= ui->tableWidgetTwo->rowCount())
+	{
+		QMessageBox::warning(this, tr("Edit Error"),
+			tr("No Item has been chose!"), QMessageBox::Yes);
+		return;
+	}
+
+	cout << "delete one item from WidgettableTwo and database's table" << endl;
+	QSqlQuery query(g_db);
+	QString table2Name = ui->tableWidgetTwo->item(iRow, 0)->text();
+	QString  name2 = ui->tableWidgetTwo->item(iRow, 2)->text();
+
+	QString queryString = tr("delete FROM %1 where name2='%2'").arg(table2Name).arg(name2);
+	//qDebug() << queryString ;
+	if ( !query.exec(queryString) ) qDebug() << query.lastError();
+	
+	ui->tableWidgetTwo->removeRow(iRow);
+}
+
+//双击，弹框，更新二级表中一项
+void VoiceIden::modifyTable2(int r, int c)
+{
+	cout << "d2" << r << c  << endl;
+}
+
+//根据一级表中数据当前选项变化更新对应二级表
+void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn)
+{
+	Q_UNUSED(previousRow);
+	Q_UNUSED(previousColumn);
+	Q_UNUSED(currentColumn);
+	
+	ui->tableWidgetTwo->clear();
+	//读取二级表名，显示
+	QString table2Name = ui->tableWidgetOne->item(currentRow, 0)->text();
+	//qDebug() << table2Name;
+	readDatabaseTable2(table2Name);
+}
+
+
+//数据表1 添加对话框确定写入触发
+void VoiceIden::dialogAddTable1Comfirn()
+{
+	QSqlQuery query(g_db);
+	//数据写入
+	//插入数据表格 1
+	query.prepare("insert into table1 (name, about) values(?,?)");
+	query.bindValue(0, m_dat1->getItemText(0));
+	query.bindValue(1, m_dat1->getItemText(1));
+	if ( !query.exec() ) 
+	{		
+		qDebug() << query.lastError();
+		cout << "Cant Insert to table1,  create table1" << endl;
+		//新建第一个一级数据表格
+		query.exec("create table table1 (id int primary key,"
+		   	"name varchar(20), about varchar(20))");
+		query.prepare("insert into table1 (name, about) values(?,?)");
+		query.bindValue(0, m_dat1->getItemText(0)); //插入带“”
+		query.bindValue(1, m_dat1->getItemText(1));
+		query.exec();
+	}
+	
+	//新建对应数据表格2 ,表格名对应表格1数据项目
+	QString  queryString = tr("create table %1 (id int primary key,"
+		      "name1 varchar(20), hecheng varchar(20), name2 varchar(20))").arg(m_dat1->getItemText(0)); //插入不带"",需要要自行添加
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+	queryString.clear();
+
+/*
+	queryString = tr("insert into %1 (name1, hecheng, name2) values('%2','aa','bb')").arg(m_dat1->getItemText(0)).arg(m_dat1->getItemText(0));
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+
+*/	
+	//更新表格1显示
+	int iRow = ui->tableWidgetOne->rowCount();
+	ui->tableWidgetOne->setRowCount(iRow+1);
+	ui->tableWidgetOne->setItem(iRow, 0,
+		new QTableWidgetItem(m_dat1->getItemText(0)));
+	ui->tableWidgetOne->setItem(iRow, 1,
+		new QTableWidgetItem(m_dat1->getItemText(1)));
+
+
+	//对话框撤消
+	disconnect(m_dat1, SIGNAL(operateConfirm()),
+		this, SLOT(dialogAddTable1Comfirn()));
+	disconnect(m_dat1, SIGNAL(cancel()),
+		this, SLOT(dialogAddTable1Cancel()));
+	disconnect(m_dat1, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dat1, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dat1;
+	m_dat1 = 0;
+	cout << "table1 add one item" << endl;
+}
+
+//数据表1 添加对话框取消操作对话框
+void VoiceIden::dialogAddTable1Cancel()
+{
+	disconnect(m_dat1, SIGNAL(operateConfirm()),
+		this, SLOT(dialogAddTable1Comfirn()));
+	disconnect(m_dat1, SIGNAL(cancel()),
+		this, SLOT(dialogAddTable1Cancel()));
+	disconnect(m_dat1, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dat1, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dat1;
+	m_dat1 = 0;
+}
+
+//数据表2 添加对话框确定写入触发
+void VoiceIden::dialogAddTable2Comfirn()
+{
+
+	QSqlQuery query(g_db);
+	//数据写入
+	QString table2Name = ui->tableWidgetOne->currentItem()->text();
+	
+	//插入数据表格 2
+	QString  queryString = tr("insert into %1 (name1, hecheng, name2) values('%2','%3','%4')").arg(table2Name).arg(table2Name).arg(m_dat2->getItemText(1)).arg(m_dat2->getItemText(2)); 
+	
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+
+	//更新表格2显示
+	int iRow = ui->tableWidgetTwo->rowCount();
+	ui->tableWidgetTwo->setRowCount(iRow+1);
+	ui->tableWidgetTwo->setItem(iRow, 0,
+		new QTableWidgetItem(m_dat2->getItemText(0)));
+	ui->tableWidgetTwo->setItem(iRow, 1,
+		new QTableWidgetItem(m_dat2->getItemText(1)));
+	ui->tableWidgetTwo->setItem(iRow, 2,
+		new QTableWidgetItem(m_dat2->getItemText(2)));
+
+
+	//对话框撤消
+	disconnect(m_dat2, SIGNAL(operateConfirm()),
+		this, SLOT(dialogAddTable2Comfirn()));
+	disconnect(m_dat2, SIGNAL(cancel()),
+		this, SLOT(dialogAddTable2Cancel()));
+	disconnect(m_dat2, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dat2, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dat2;
+	m_dat2 = 0;
+	cout << "table2 add one item" << endl;
+}
+
+//数据表2 添加对话框取消操作对话框
+void VoiceIden::dialogAddTable2Cancel()
+{
+	disconnect(m_dat2, SIGNAL(operateConfirm()),
+		this, SLOT(dialogAddTable2Comfirn()));
+	disconnect(m_dat2, SIGNAL(cancel()),
+		this, SLOT(dialogAddTable2Cancel()));
+	disconnect(m_dat2, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dat2, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dat2;
+	m_dat2 = 0;
+}
+
+
+//启动录音操作
+void VoiceIden::startedRecordVoice()
+{
+	cout << "Voice record start" << endl;
+
+}
+
+//结束录音操作
+void VoiceIden::finishedRecordVoice()
+{
+	cout << "Voice record finish" << endl;
+
+}
+
+void VoiceIden::readDatabaseTable1()
 {
 	QSqlQuery query(g_db);
 	query.prepare("SELECT * FROM table1");
@@ -207,8 +429,8 @@ void VoiceIden::readDatabaseTableOne()
 	{
 		int iRow = 0;
 		//table's item 
-		int iden = query.record().indexOf("Iden");
-		int shuoming = query.record().indexOf("Shuoming");
+		int iden = query.record().indexOf("name");
+		int shuoming = query.record().indexOf("about");
 		while( query.next())
 		{
 			ui->tableWidgetOne->setRowCount(iRow+1);
@@ -224,27 +446,30 @@ void VoiceIden::readDatabaseTableOne()
 	}
 }
 
-void VoiceIden::readDatabaseTableTwo()
+
+void VoiceIden::readDatabaseTable2(QString &tableName)
 {
 	QSqlQuery query(g_db);
-	query.prepare("SELECT * FROM table2");
-	if (query.exec())
+	QString  queryString = tr("SELECT * FROM %1").arg(tableName);
+//	qDebug() << queryString;
+	if ( query.exec(queryString) )
 	{
 		int iRow = 0;
-		int shibie_1 = query.record().indexOf("shibie1");
+		int name1 = query.record().indexOf("name1");
 		int hecheng = query.record().indexOf("hecheng");
-		int shibie_2 = query.record().indexOf("shibie2");
+		int name2 = query.record().indexOf("name2");
 		while (query.next())
 		{
+			
 			ui->tableWidgetTwo->setRowCount(iRow+1);
 			ui->tableWidgetTwo->setItem(iRow, 0,
-				new QTableWidgetItem(query.value(shibie_1).toString()));
+				new QTableWidgetItem(query.value(name1).toString()));
 
 			ui->tableWidgetTwo->setItem(iRow, 1,
 				new QTableWidgetItem(query.value(hecheng).toString()));
 
 			ui->tableWidgetTwo->setItem(iRow, 2,
-				new QTableWidgetItem(query.value(shibie_2).toString()));
+				new QTableWidgetItem(query.value(name2).toString()));
 			
 			iRow++;
 		}

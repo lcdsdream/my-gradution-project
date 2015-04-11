@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'configureMainWindow.ui'
 **
-** Created: Sun Apr 5 14:02:38 2015
+** Created: Wed Apr 8 00:23:25 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -33,7 +33,7 @@ public:
     QPushButton *buttonImage;
     QPushButton *buttonAvoid;
     QPushButton *buttonPlan;
-    QPushButton *buttonRemote;
+    QPushButton *buttonBA0;
     QPushButton *buttonBA1;
     QPushButton *buttonBA2;
     QPushButton *buttonFileManage;
@@ -85,16 +85,17 @@ public:
         buttonPlan->setGeometry(QRect(50, 220, 100, 60));
         buttonPlan->setFont(font1);
         buttonPlan->setIconSize(QSize(24, 24));
-        buttonRemote = new QPushButton(centralwidget);
-        buttonRemote->setObjectName(QString::fromUtf8("buttonRemote"));
-        buttonRemote->setGeometry(QRect(490, 170, 100, 60));
+        buttonBA0 = new QPushButton(centralwidget);
+        buttonBA0->setObjectName(QString::fromUtf8("buttonBA0"));
+        buttonBA0->setEnabled(true);
+        buttonBA0->setGeometry(QRect(490, 170, 100, 60));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(buttonRemote->sizePolicy().hasHeightForWidth());
-        buttonRemote->setSizePolicy(sizePolicy);
-        buttonRemote->setFont(font1);
-        buttonRemote->setIconSize(QSize(24, 24));
+        sizePolicy.setHeightForWidth(buttonBA0->sizePolicy().hasHeightForWidth());
+        buttonBA0->setSizePolicy(sizePolicy);
+        buttonBA0->setFont(font1);
+        buttonBA0->setIconSize(QSize(24, 24));
         buttonBA1 = new QPushButton(centralwidget);
         buttonBA1->setObjectName(QString::fromUtf8("buttonBA1"));
         buttonBA1->setEnabled(true);
@@ -162,11 +163,11 @@ public:
         buttonImage->setText(QApplication::translate("ConfigureMainWindow", "\345\233\276\345\203\217\350\257\206\345\210\253", 0, QApplication::UnicodeUTF8));
         buttonAvoid->setText(QApplication::translate("ConfigureMainWindow", "\350\277\220\345\212\250\351\201\277\351\232\234", 0, QApplication::UnicodeUTF8));
         buttonPlan->setText(QApplication::translate("ConfigureMainWindow", "\350\267\257\345\276\204\350\247\204\345\210\222", 0, QApplication::UnicodeUTF8));
-        buttonRemote->setText(QApplication::translate("ConfigureMainWindow", "\350\277\234\347\250\213\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        buttonBA0->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2500.0", 0, QApplication::UnicodeUTF8));
         buttonBA1->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2501.0", 0, QApplication::UnicodeUTF8));
         buttonBA2->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2502.0", 0, QApplication::UnicodeUTF8));
         buttonFileManage->setText(QApplication::translate("ConfigureMainWindow", "\346\226\207\344\273\266\347\256\241\347\220\206", 0, QApplication::UnicodeUTF8));
-        buttonLocal->setText(QApplication::translate("ConfigureMainWindow", "\346\234\254\345\234\260\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        buttonLocal->setText(QApplication::translate("ConfigureMainWindow", "\347\263\273\347\273\237\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         buttonQuit->setText(QApplication::translate("ConfigureMainWindow", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ConfigureMainWindow", "\345\244\232\345\212\237\350\203\275\346\234\272\345\231\250\344\272\272", 0, QApplication::UnicodeUTF8));
         buttonBA3->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2503.0", 0, QApplication::UnicodeUTF8));

@@ -9,6 +9,8 @@
 #include <QProcess>
 
 #include "ui_configureMainWindow.h"
+#include <QWSInputMethod>
+#include "TQInputMethod.h"  
 
 class ConfigureMainWindow : public QMainWindow
 {
@@ -24,14 +26,15 @@ public slots :
 	void buttonImagePressed();
 	void buttonAvoidPressed();
 	void buttonPlanPressed();
-	void buttonRemotePressed();
-	void buttonBA1Pressed();
-	void buttonBA2Pressed();
 	void buttonFileManagePressed();
 	void buttonLocalPressed();
 	void buttonQuitPressed();
+	//±∏”√∞¥≈•
 	void buttonBA3Pressed();
-
+	void buttonBA0Pressed();
+	void buttonBA1Pressed();
+	void buttonBA2Pressed();
+	
 	void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
 
 signals :
@@ -39,6 +42,7 @@ signals :
 private:
 	Ui::ConfigureMainWindow *ui;
 	QProcess process;
+ 	QWSInputMethod *im; 	
 };
 
 

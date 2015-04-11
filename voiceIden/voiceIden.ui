@@ -23,7 +23,7 @@
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>390</y>
+     <y>400</y>
      <width>81</width>
      <height>32</height>
     </rect>
@@ -77,11 +77,11 @@
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="buttonAdd">
+  <widget class="QPushButton" name="buttonAddTable1">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>380</y>
+     <y>360</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -90,11 +90,11 @@
     <string>增加表一数据</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonDelete">
+  <widget class="QPushButton" name="buttonDeleteTable1">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>380</y>
+     <x>150</x>
+     <y>360</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -103,17 +103,17 @@
     <string>删除表一数据</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonEdit">
+  <widget class="QPushButton" name="buttonAddTable2">
    <property name="geometry">
     <rect>
      <x>440</x>
-     <y>380</y>
+     <y>360</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>编辑表二数据</string>
+    <string>增加表二数据</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelOne">
@@ -152,17 +152,17 @@
     <string>数据表-2 在识别-1 数据表-1</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonSureWrite">
+  <widget class="QPushButton" name="buttonDeleteTable2">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>380</y>
+     <x>550</x>
+     <y>360</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>确定写入</string>
+    <string>删除表二数据</string>
    </property>
   </widget>
  </widget>
