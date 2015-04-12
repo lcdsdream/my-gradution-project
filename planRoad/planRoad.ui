@@ -1,107 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>PlanRoad</class>
- <widget class="QWidget" name="PlanRoad">
+ <widget class="QMainWindow" name="PlanRoad">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>788</width>
     <height>450</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>WenQuanYi Micro Hei</family>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+    <underline>false</underline>
+    <strikeout>false</strikeout>
+   </font>
   </property>
   <property name="windowTitle">
    <string>路径规划</string>
   </property>
-  <widget class="QPushButton" name="buttonQuit">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>380</y>
-     <width>81</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>返回</string>
-   </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonQuit">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>350</y>
+      <width>81</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPicture">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>300</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>WenQuanYi Micro Hei</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>55</y>
+      <width>131</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btSetOrigin">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>设置原点</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btSetX">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>设置坐标轴</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btSetBlock">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>设置障碍物</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btCreatePath">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>生成路线</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>50</y>
+      <width>121</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btLocation">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>定位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btDestination">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>目的地</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btFree">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>自由</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelOrigin">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>90</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>(0, 1)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDestination">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>170</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>(20,90)</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QPushButton" name="buttonSetLocation">
+  <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>90</y>
-     <width>131</width>
-     <height>71</height>
+     <x>0</x>
+     <y>0</y>
+     <width>788</width>
+     <height>27</height>
     </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionFromFile"/>
+    <addaction name="actionBuildMap"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionIden">
+   <property name="text">
+    <string>识别</string>
    </property>
    <property name="font">
     <font>
      <family>WenQuanYi Micro Hei</family>
-     <pointsize>12</pointsize>
     </font>
    </property>
+  </action>
+  <action name="actionZuoqu">
    <property name="text">
-    <string>定位</string>
+    <string>zhuqu</string>
    </property>
-  </widget>
-  <widget class="QPushButton" name="buttonDestination">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>160</y>
-     <width>131</width>
-     <height>71</height>
-    </rect>
+  </action>
+  <action name="actionXunliang">
+   <property name="text">
+    <string>xunliang</string>
+   </property>
+  </action>
+  <action name="actionFromFile">
+   <property name="text">
+    <string>载入地图</string>
    </property>
    <property name="font">
     <font>
      <family>WenQuanYi Micro Hei</family>
-     <pointsize>12</pointsize>
     </font>
    </property>
+  </action>
+  <action name="actionCatch">
    <property name="text">
-    <string>目的地</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="buttonBuildMap">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>230</y>
-     <width>131</width>
-     <height>71</height>
-    </rect>
+    <string>捕获</string>
    </property>
    <property name="font">
     <font>
      <family>WenQuanYi Micro Hei</family>
-     <pointsize>12</pointsize>
     </font>
    </property>
+  </action>
+  <action name="actionTrain">
    <property name="text">
-    <string>地图构建</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="buttonPath">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>300</y>
-     <width>131</width>
-     <height>71</height>
-    </rect>
+    <string>训练</string>
    </property>
    <property name="font">
     <font>
      <family>WenQuanYi Micro Hei</family>
-     <pointsize>12</pointsize>
     </font>
    </property>
-   <property name="text">
-    <string>路线</string>
+  </action>
+  <action name="actionFace">
+   <property name="checkable">
+    <bool>true</bool>
    </property>
-  </widget>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>人脸识别</string>
+   </property>
+   <property name="iconText">
+    <string>人脸识别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionDigit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>数字识别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionAa">
+   <property name="text">
+    <string>aa</string>
+   </property>
+  </action>
+  <action name="actionBuildMap">
+   <property name="text">
+    <string>动态地图</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+    </font>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -64,11 +64,13 @@ ImageIden::ImageIden(QWidget *parent):
 	
 	connect(ui->buttonQuit, SIGNAL(clicked()), this, SLOT(buttonQuit()));
 	
+	connect(ui->buttonDelete, SIGNAL(clicked()), this, SLOT(deleteFaceID()));
+	
 	setModelFace();
 	m_digit = 0;
 
-	m_getImg->load("/opt/gb_ms/picture/background.jpg");
-	*m_getImg = m_getImg->scaled(QSize(300,300), Qt::IgnoreAspectRatio); //photo size
+	m_getImg->load("/opt/gb_ms/picture/melcd.jpg");
+	*m_getImg = m_getImg->scaled(QSize(250,330), Qt::IgnoreAspectRatio); //photo size
 	ui->labelPicture->setPixmap(QPixmap::fromImage(*m_getImg));
 	
 }
@@ -97,7 +99,7 @@ void ImageIden::loadPicture()
 					tr("Open img error!"));
 			return;
 		}
-		*m_getImg = m_getImg->scaled(QSize(300,300), Qt::IgnoreAspectRatio); //photo size
+		*m_getImg = m_getImg->scaled(QSize(250,330), Qt::IgnoreAspectRatio); //photo size
 		ui->labelPicture->setPixmap(QPixmap::fromImage(*m_getImg));
 	}
 }
@@ -125,6 +127,8 @@ void ImageIden::setModelFace()
 	ui->actionTrain->setEnabled(true);
 	ui->buttonTrain->setVisible(true);
 	ui->buttonTrain->setEnabled(true);
+	ui->buttonDelete->setVisible(true);
+	ui->buttonDelete->setEnabled(true);
 	
 	ui->labelInputID->setVisible(true);
 	ui->labelIndentID->setVisible(true);
@@ -154,6 +158,8 @@ void ImageIden::setModelDigit()
 	ui->actionTrain->setEnabled(false);
 	ui->buttonTrain->setVisible(false);
 	ui->buttonTrain->setEnabled(false);
+	ui->buttonDelete->setVisible(false);
+	ui->buttonDelete->setEnabled(false);
 	
 	ui->labelInputID->setVisible(false);
 	ui->labelIndentID->setVisible(false);
@@ -192,4 +198,10 @@ void ImageIden::startTrain()
 
 }
 
+void ImageIden::deleteFaceID()
+{
+	m_inputId = ui->comboBoxID->currentText();
+	qDebug() << m_inputId ;
 
+
+}

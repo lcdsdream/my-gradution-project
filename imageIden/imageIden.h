@@ -23,10 +23,11 @@ public slots :
 	void setModelFace();
 	void setModelDigit();
 
+	
 	void startIden();
 	void startCatch();
 	void startTrain();
-
+	void deleteFaceID();
 signals :
 	void returned();
 private:
