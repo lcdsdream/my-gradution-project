@@ -5,6 +5,10 @@
  ** class Ui::VoiceIden : public Ui_VoiceIden {}
  ** VoiceIden 
  ****************************************************************************/
+/*
+ 数据库操作使用语句拼接，主要注意参数是否需要加 '' 
+ luchaodong 20150412
+*/
 
 #include <QtGui>
 #include <QPixmap>
@@ -18,7 +22,13 @@
 #include <QSqlQueryModel>
 #include <QSqlRecord>
 #include <QSqlError>
+
 #include "voiceIden.h"
+#include "dialogAddTable1.h"
+#include "dialogAddTable2.h"
+#include "dialogModifyTable1.h"
+#include "dialogModifyTable2.h"
+
 
 using namespace std;
 
@@ -27,7 +37,9 @@ QSqlDatabase g_db;
 VoiceIden::VoiceIden(QWidget *parent):
 	QWidget(parent),
 	ui(new Ui::VoiceIden),//Ui namespace ,not this 
-	im(new TQInputMethod), m_dat1(0), m_dat2(0), m_dmt2(0)
+	im(new TQInputMethod), 
+	m_dat1(0), m_dat2(0), m_dmt1(0), m_dmt2(0),
+	m_isVoiseSource(false), m_currentTable2Name("")
 {
 	ui->setupUi(this);
 
@@ -38,7 +50,6 @@ VoiceIden::VoiceIden(QWidget *parent):
 	ui->tableWidgetTwo->setColumnWidth(1, 110);
 	ui->tableWidgetTwo->setColumnWidth(2, 110);
 
-	
 	//input
 	QWSServer::setCurrentInputMethod(im);
 	((TQInputMethod*)im)->setVisible(false);
@@ -98,8 +109,8 @@ VoiceIden::VoiceIden(QWidget *parent):
 		readDatabaseTable1();
 		if (ui->tableWidgetOne->item(0, 0))
 		{
-			QString table2Name = ui->tableWidgetOne->item(0, 0)->text();
-			readDatabaseTable2(table2Name);
+			m_currentTable2Name = ui->tableWidgetOne->item(0, 0)->text();
+			readDatabaseTable2(m_currentTable2Name);
 		}
 	}
 
@@ -115,10 +126,10 @@ VoiceIden::~VoiceIden()
 
 	delete ui;
 	delete im;
-	if (m_dat1) delete m_dat1;
-	if (m_dat2) delete m_dat2;
-	//if (m_dmt1) delete m_dmt1;
-	if (m_dmt2) delete m_dmt2;
+	if (m_dat1 != 0) delete m_dat1;
+	if (m_dat2 != 0) delete m_dat2;
+	if (m_dmt1 != 0) delete m_dmt1;
+	if (m_dmt2 != 0) delete m_dmt2;
 }
 
 
@@ -149,9 +160,9 @@ void VoiceIden::btAddTable1Pushed()
 	m_dat1->show();
 	m_dat1->raise();
 	m_dat1->activateWindow();
-	//ui->buttonAddTable1->setEnabled(false);
 }
-	
+
+
 void VoiceIden::btDeleteTable1Pushed()
 {
 	int r = QMessageBox::warning(this, tr("Confirm To Delete"),
@@ -185,16 +196,39 @@ void VoiceIden::btDeleteTable1Pushed()
 	queryString = tr("DROP TABLE IF EXISTS %1").arg(table2Name);
 	if ( !query.exec(queryString) ) qDebug() << query.lastError();
 
-	
+	//删除tablewidget 中显示项目	
 	ui->tableWidgetOne->removeRow(iRow);
 }
+
 
 //双击，弹框，更新一级表中一项
 void VoiceIden::modifyTable1(int r, int c)
 {
-	cout << "d1" << r << c << endl; 
+	Q_UNUSED(c);
 
+	if ( !m_dmt1 )
+	{
+		m_dmt1 = new DialogModifyTable1;
+		
+		connect(m_dmt1, SIGNAL(operateConfirm()),
+  			this, SLOT(dialogModifyTable1Comfirn()));
+  		connect(m_dmt1, SIGNAL(cancel()),
+  			this, SLOT(dialogModifyTable1Cancel()));
+	
+		connect(m_dmt1, SIGNAL(startRecord()),
+			this, SLOT(startedRecordVoice()));
+		connect(m_dmt1, SIGNAL(finishRecord()),
+			this, SLOT(finishedRecordVoice()));
+		
+	}
+	//读取当前文本
+	//int iRow = ui->tableWidgetOne->currentRow();  //-1 
+	m_dmt1->setItemText(ui->tableWidgetOne->item(r,0)->text(), 0);
+	m_dmt1->setItemText(ui->tableWidgetOne->item(r,1)->text(), 1);
 
+	m_dmt1->show();
+	m_dmt1->raise();
+	m_dmt1->activateWindow();
 }
 
 
@@ -214,14 +248,12 @@ void VoiceIden::btAddTable2Pushed()
 			this, SLOT(startedRecordVoice()));
 		connect(m_dat2, SIGNAL(finishRecord()),
 			this, SLOT(finishedRecordVoice()));
-		int iRow = ui->tableWidgetOne->currentRow();
-		m_dat2->setItemText(ui->tableWidgetOne->item(iRow,0)->text(), 0);
 	}
 
+	m_dat2->setItemText(m_currentTable2Name, 0);
 	m_dat2->show();
 	m_dat2->raise();
 	m_dat2->activateWindow();
-
 }
 
 
@@ -258,30 +290,32 @@ void VoiceIden::btDeleteTable2Pushed()
 //双击，弹框，更新二级表中一项
 void VoiceIden::modifyTable2(int r, int c)
 {
+	Q_UNUSED(c);
 	if ( !m_dmt2 )
 	{
 		m_dmt2 = new DialogModifyTable2;
 		
 		connect(m_dmt2, SIGNAL(operateConfirm()),
-  		this, SLOT(dialogModifyTable2Comfirn()));
+  			this, SLOT(dialogModifyTable2Comfirn()));
   		connect(m_dmt2, SIGNAL(cancel()),
-  		this, SLOT(dialogModifyTable2Cancel()));
+  			this, SLOT(dialogModifyTable2Cancel()));
 	
 		connect(m_dmt2, SIGNAL(startRecord()),
 			this, SLOT(startedRecordVoice()));
 		connect(m_dmt2, SIGNAL(finishRecord()),
 			this, SLOT(finishedRecordVoice()));
 		
-		int iRow = ui->tableWidgetTwo->currentRow();
-		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,0)->text(), 0);
-		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,1)->text(), 1);
-		m_dmt2->setItemText(ui->tableWidgetTwo->item(iRow,2)->text(), 2);
 	}
+	//int iRow = ui->tableWidgetTwo->currentRow();  //-1 
+	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,0)->text(), 0);
+	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,1)->text(), 1);
+	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,2)->text(), 2);
 
 	m_dmt2->show();
 	m_dmt2->raise();
 	m_dmt2->activateWindow();
 }
+
 
 //根据一级表中数据当前选项变化更新对应二级表
 void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn)
@@ -290,11 +324,13 @@ void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,in
 	Q_UNUSED(previousColumn);
 	Q_UNUSED(currentColumn);
 	
-	ui->tableWidgetTwo->clear();
-	//读取二级表名，显示
-	QString table2Name = ui->tableWidgetOne->item(currentRow, 0)->text();
+//	ui->tableWidgetTwo->clear();
+	//更新当前二级表名，显示
+	m_currentTable2Name = ui->tableWidgetOne->item(currentRow, 0)->text();
 	//qDebug() << table2Name;
-	readDatabaseTable2(table2Name);
+	readDatabaseTable2(m_currentTable2Name);
+
+	((TQInputMethod*)im)->setVisible(false);
 }
 
 
@@ -360,6 +396,7 @@ void VoiceIden::dialogAddTable1Comfirn()
 	cout << "table1 add one item" << endl;
 }
 
+
 //数据表1 添加对话框取消操作对话框
 void VoiceIden::dialogAddTable1Cancel()
 {
@@ -381,8 +418,7 @@ void VoiceIden::dialogAddTable2Comfirn()
 
 	QSqlQuery query(g_db);
 	//数据表名
-	int iRow = ui->tableWidgetOne->currentRow();
-	QString table2Name = ui->tableWidgetOne->item(iRow,0)->text();
+	QString table2Name = m_currentTable2Name;
 	
 	//插入数据表格 2
 	QString  queryString = tr("insert into %1 (name1, hecheng, name2) values('%2','%3','%4')").arg(table2Name).arg(table2Name).arg(m_dat2->getItemText(1)).arg(m_dat2->getItemText(2)); 
@@ -393,7 +429,7 @@ void VoiceIden::dialogAddTable2Comfirn()
 	}
 
 	//更新表格2显示
-	iRow = ui->tableWidgetTwo->rowCount();
+	int iRow = ui->tableWidgetTwo->rowCount();
 	ui->tableWidgetTwo->setRowCount(iRow+1);
 	ui->tableWidgetTwo->setItem(iRow, 0,
 		new QTableWidgetItem(m_dat2->getItemText(0)));
@@ -432,10 +468,85 @@ void VoiceIden::dialogAddTable2Cancel()
 	m_dat2 = 0;
 }
 
-//void VoiceIden::dialogModifyTable1Comfirn()
-//{}
-//void VoiceIden::dialogModifyTable1Cancel()
-//{}
+void VoiceIden::dialogModifyTable1Comfirn()
+{
+
+	QSqlQuery query(g_db);
+	//数据写入
+	int iRow = ui->tableWidgetOne->currentRow();
+	QString table2OldName = ui->tableWidgetOne->item(iRow,0)->text();
+	QString table2NewName = m_dmt1->getItemText(0);
+	
+	//更新数据表格1
+	QString  queryString = tr("update table1 set name='%1', about='%2' where name='%3'").arg(table2NewName).arg(m_dmt1->getItemText(1)).arg(table2OldName); 
+	
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+
+	if (m_dmt1->isVoiceRecordChecked())  //选择更新语音
+	{
+		cout << "update voice record" << endl;
+	
+	
+	}
+
+	queryString.clear();
+	//关联数据表二处理 对应更新
+	/////修改表名
+	queryString = tr("alter table %1 rename to %2").arg(table2OldName).arg(table2NewName); 
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+		cout << "1" << endl;
+	}
+	queryString.clear();
+	//更新表格2项目
+	queryString = tr("update %1 set name1='%2'").arg(table2NewName).arg(table2NewName); 
+	if ( !query.exec(queryString) )
+	{		
+		qDebug() << query.lastError();
+	}
+
+
+	ui->tableWidgetOne->setItem(iRow, 0,
+	         new QTableWidgetItem(m_dmt1->getItemText(0)));
+	
+	ui->tableWidgetOne->setItem(iRow, 1,
+	         new QTableWidgetItem(m_dmt1->getItemText(1)));
+
+	
+	disconnect(m_dmt1, SIGNAL(operateConfirm()),
+  		this, SLOT(dialogModifyTable1Comfirn()));
+  	disconnect(m_dmt1, SIGNAL(cancel()),
+  		this, SLOT(dialogModifyTable1Cancel()));
+	
+	disconnect(m_dmt1, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dmt1, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dmt1;
+	m_dmt1 = 0;
+}
+
+
+void VoiceIden::dialogModifyTable1Cancel()
+{
+	disconnect(m_dmt1, SIGNAL(operateConfirm()),
+  		this, SLOT(dialogModifyTable1Comfirn()));
+  	disconnect(m_dmt1, SIGNAL(cancel()),
+  		this, SLOT(dialogModifyTable1Cancel()));
+	
+	disconnect(m_dmt1, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(m_dmt1, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	delete m_dmt1;
+	m_dmt1 = 0;
+}
+
+
 
 void VoiceIden::dialogModifyTable2Comfirn()
 {
@@ -444,7 +555,8 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	//数据写入
 	int iRow = ui->tableWidgetTwo->currentRow();
 	QString table2Name = ui->tableWidgetTwo->item(iRow,0)->text();
-	QString name2 =  ui->tableWidgetTwo->item(iRow,2)->text();
+	QString name2 =  ui->tableWidgetTwo->item(iRow,2)->text();  //区分项
+	
 	//插入数据表格 2
 	QString  queryString = tr("update %1 set name1='%2', hecheng='%3', name2='%4'where name2=%5").arg(table2Name).arg(table2Name).arg(m_dmt2->getItemText(1)).arg(m_dmt2->getItemText(2)).arg(name2); 
 	
@@ -452,7 +564,13 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	{		
 		qDebug() << query.lastError();
 	}
+
+	if (m_dmt2->isVoiceRecordChecked())  //选择更新语音
+	{
+		cout << "update voice record" << endl;
 	
+	
+	}
 	//ui->tableWidgetTwo->setItem(iRow, 0,
 	//         new QTableWidgetItem(m_dmt2->getItemText(0)));
 	
@@ -496,6 +614,7 @@ void VoiceIden::dialogModifyTable2Cancel()
 void VoiceIden::startedRecordVoice()
 {
 	cout << "Voice record start" << endl;
+	m_isVoiseSource = false;
 
 }
 
@@ -503,6 +622,7 @@ void VoiceIden::startedRecordVoice()
 void VoiceIden::finishedRecordVoice()
 {
 	cout << "Voice record finish" << endl;
+	m_isVoiseSource = true;
 
 }
 
@@ -537,6 +657,7 @@ void VoiceIden::readDatabaseTable2(QString &tableName)
 	QSqlQuery query(g_db);
 	QString  queryString = tr("SELECT * FROM %1").arg(tableName);
 //	qDebug() << queryString;
+	ui->tableWidgetTwo->setRowCount(0);
 	if ( query.exec(queryString) )
 	{
 		int iRow = 0;
@@ -561,5 +682,4 @@ void VoiceIden::readDatabaseTable2(QString &tableName)
 	}
 
 }
-
 
