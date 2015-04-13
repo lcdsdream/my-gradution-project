@@ -86,6 +86,9 @@ VoiceIden::VoiceIden(QWidget *parent):
 	connect(ui->buttonDeleteTable2, SIGNAL(clicked()),
 		this, SLOT(btDeleteTable2Pushed()));
 
+	connect(ui->buttonVoiceShow, SIGNAL(clicked()),
+		this, SLOT(btVoiceShowPushed()));
+
 	connect(ui->tableWidgetTwo, SIGNAL(cellDoubleClicked(int, int)),
 		this, SLOT(modifyTable2(int, int)));
 
@@ -93,6 +96,13 @@ VoiceIden::VoiceIden(QWidget *parent):
 		this, SLOT(modifyTable1(int, int)));
 	connect(ui->tableWidgetOne, SIGNAL(currentCellChanged(int,int,int,int)),
 		this, SLOT(updateTable2(int, int,int, int)));
+
+	connect(ui->lineEditSelectOne, SIGNAL(textChanged(const QString&)),
+		this, SLOT(setTableOneSelectItem(const QString&)));
+
+	connect(ui->lineEditSelectTwo, SIGNAL(textChanged(const QString&)),
+		this, SLOT(setTableTwoSelectItem(const QString&)));
+
 
 //数据库建立连接
 	g_db = QSqlDatabase::addDatabase("QSQLITE", "voiceIden");
@@ -287,6 +297,16 @@ void VoiceIden::btDeleteTable2Pushed()
 	ui->tableWidgetTwo->removeRow(iRow);
 }
 
+void VoiceIden::btVoiceShowPushed()
+{
+	cout << "start voice iden" << endl;
+
+
+
+
+}
+
+
 //双击，弹框，更新二级表中一项
 void VoiceIden::modifyTable2(int r, int c)
 {
@@ -333,6 +353,49 @@ void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,in
 	((TQInputMethod*)im)->setVisible(false);
 }
 
+//根据输入框搜索定位到当前项目
+void VoiceIden::setTableOneSelectItem(const QString& text)
+{
+	if (text.length() <= 0)
+		return;
+	
+	QSqlQuery query(g_db);
+	//输入name 查找 
+	QString  queryString = tr("SELECT * FROM table1 where name='%1'").arg(text);
+	//qDebug() << queryString; 
+
+	query.exec(queryString);
+	//record 停留在第一条记录之前，需要执行next或者first 到第一条记录
+	if (query.next())  //注意这里
+	{		
+		int thisId = query.record().indexOf("id");
+		int row = query.value(thisId).toInt() -1 ;  //对应显示table上的编号，0开始
+		ui->tableWidgetOne->setCurrentCell(row, 0);
+	}	
+
+}
+
+
+void VoiceIden::setTableTwoSelectItem(const QString& text)
+{
+	if (text.length() <= 0)
+		return;
+	QSqlQuery query(g_db);
+	//输入name 查找 
+	QString  queryString = tr("SELECT * FROM %1 where name2='%2'").arg(m_currentTable2Name).arg(text);
+	//qDebug() << queryString; 
+
+	query.exec(queryString);
+	//record 停留在第一条记录之前，需要执行next或者first 到第一条记录
+	if (query.next())  //注意这里
+	{		
+		int thisId = query.record().indexOf("id");
+		int row = query.value(thisId).toInt() -1 ;  //对应显示table上的编号，0开始
+		ui->tableWidgetTwo->setCurrentCell(row, 0);
+	}	
+
+
+}
 
 //数据表1 添加对话框确定写入触发
 void VoiceIden::dialogAddTable1Comfirn()
@@ -348,7 +411,7 @@ void VoiceIden::dialogAddTable1Comfirn()
 		qDebug() << query.lastError();
 		cout << "Cant Insert to table1,  create table1" << endl;
 		//新建第一个一级数据表格
-		query.exec("create table table1 (id int primary key,"
+		query.exec("create table table1 (id integer primary key,"
 		   	"name varchar(20), about varchar(20))");
 		query.prepare("insert into table1 (name, about) values(?,?)");
 		query.bindValue(0, m_dat1->getItemText(0)); //插入带“”
@@ -357,7 +420,7 @@ void VoiceIden::dialogAddTable1Comfirn()
 	}
 	
 	//新建对应数据表格2 ,表格名对应表格1数据项目
-	QString  queryString = tr("create table %1 (id int primary key,"
+	QString  queryString = tr("create table %1 (id integer primary key,"
 		      "name1 varchar(20), hecheng varchar(20), name2 varchar(20))").arg(m_dat1->getItemText(0)); //插入不带"",需要要自行添加
 	if ( !query.exec(queryString) )
 	{		

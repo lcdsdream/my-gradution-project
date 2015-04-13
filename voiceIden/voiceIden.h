@@ -30,11 +30,13 @@ public slots :
 	void btDeleteTable1Pushed();
 	void btAddTable2Pushed(); 
 	void btDeleteTable2Pushed();
-
+	void btVoiceShowPushed();
 	void modifyTable1(int, int);
 	void modifyTable2(int, int);
 	void updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn);
 	
+	void setTableOneSelectItem(const QString&);
+	void setTableTwoSelectItem(const QString&);
 
 	//数据表操作函数
 	void dialogAddTable1Comfirn();
