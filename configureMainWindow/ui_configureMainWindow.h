@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'configureMainWindow.ui'
 **
-** Created: Wed Apr 8 00:23:25 2015
+** Created: Tue Apr 14 16:28:39 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -161,7 +161,7 @@ public:
         action_4->setText(QApplication::translate("ConfigureMainWindow", "\345\205\266\344\273\226", 0, QApplication::UnicodeUTF8));
         buttonVoice->setText(QApplication::translate("ConfigureMainWindow", "\350\257\255\351\237\263\350\257\206\345\210\253", 0, QApplication::UnicodeUTF8));
         buttonImage->setText(QApplication::translate("ConfigureMainWindow", "\345\233\276\345\203\217\350\257\206\345\210\253", 0, QApplication::UnicodeUTF8));
-        buttonAvoid->setText(QApplication::translate("ConfigureMainWindow", "\350\277\220\345\212\250\351\201\277\351\232\234", 0, QApplication::UnicodeUTF8));
+        buttonAvoid->setText(QApplication::translate("ConfigureMainWindow", "\350\277\220\345\212\250\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
         buttonPlan->setText(QApplication::translate("ConfigureMainWindow", "\350\267\257\345\276\204\350\247\204\345\210\222", 0, QApplication::UnicodeUTF8));
         buttonBA0->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2500.0", 0, QApplication::UnicodeUTF8));
         buttonBA1->setText(QApplication::translate("ConfigureMainWindow", "\345\244\207\347\224\2501.0", 0, QApplication::UnicodeUTF8));

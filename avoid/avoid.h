@@ -24,7 +24,8 @@ public :
 
 public slots :
 	void quitAvoid(); //退出
-	
+
+//运动控制
 	void ctrlUp();
 	void ctrlDown();
 	void ctrlLeft();
@@ -32,11 +33,16 @@ public slots :
 	void ctrlStop();
 	void ctrlSpin();
 
-	void ctrlTrack();
-	void ctrlVoiceTrack();
-	void ctrlInit();
+	void ctrlTrack(); //目标跟踪
+	void ctrlVoiceTrack(); //声音跟随
+	void ctrlInit(); //停止/继续
 	
-	void setSpeed();
+	void voiceCtrl(); //语音控制
+	void wallTrack(); //贴壁行走
+	void lineTrack(); //循迹行走
+	void remoteCtrl(); //遥控控制
+
+	void setSpeed(); 
 	void setDirectionAngle();
 	void setSafeDistance();
 

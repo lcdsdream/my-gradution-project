@@ -88,7 +88,7 @@
      </font>
     </property>
     <property name="text">
-     <string>运动避障</string>
+     <string>运动控制</string>
     </property>
     <property name="iconSize">
      <size>

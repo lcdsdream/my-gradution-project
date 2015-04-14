@@ -140,6 +140,15 @@ Avoid::Avoid(QWidget *parent):
 	connect(ui->buttonInit, SIGNAL(clicked()),
 		this, SLOT(ctrlInit()) );
 
+	connect(ui->buttonVoiceCtrl, SIGNAL(clicked()),
+		this, SLOT(voiceCtrl()) );
+	connect(ui->buttonLineTrack, SIGNAL(clicked()),
+		this, SLOT(lineTrack()) );
+	connect(ui->buttonWallTrack, SIGNAL(clicked()),
+		this, SLOT(wallTrack()) );
+	connect(ui->buttonRemoteCtrl, SIGNAL(clicked()),
+		this, SLOT(remoteCtrl()) );
+
 
 	connect(ui->buttonSetSpeed, SIGNAL(clicked()),
 		this, SLOT(setSpeed()) );
@@ -224,6 +233,27 @@ void Avoid::ctrlInit()
 
 }
 
+void Avoid::voiceCtrl() //语音控制
+{
+	cout << "voice ctrl"<< endl;
+}
+
+void Avoid::wallTrack() //贴壁行走
+{
+	cout << "wall track" << endl;
+}
+
+
+void Avoid::lineTrack() //循迹行走
+{
+	cout << "line track" << endl;
+}
+
+
+void Avoid::remoteCtrl() //遥控控制
+{
+	cout << "remote ctrl" << endl;
+}
 
 void Avoid::setSpeed()
 {
