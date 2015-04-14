@@ -16,6 +16,7 @@ class DialogAddTable1;
 class DialogAddTable2;
 class DialogModifyTable1;
 class DialogModifyTable2;
+class DialogShowVoice;
 
 class VoiceIden : public QWidget
 {

@@ -28,7 +28,7 @@
 #include "dialogAddTable2.h"
 #include "dialogModifyTable1.h"
 #include "dialogModifyTable2.h"
-
+#include "dialogShowVoice.h"
 
 using namespace std;
 
@@ -127,6 +127,7 @@ VoiceIden::VoiceIden(QWidget *parent):
 
 }
 
+
 VoiceIden::~VoiceIden()
 {
 	//disconnect with database 
@@ -148,6 +149,7 @@ void VoiceIden::btQuitPushed()
 	emit returned();
 	close();
 }
+
 
 //弹框，向一级表添加新一项
 void VoiceIden::btAddTable1Pushed()
@@ -298,13 +300,26 @@ void VoiceIden::btDeleteTable2Pushed()
 	ui->tableWidgetTwo->removeRow(iRow);
 }
 
+
 void VoiceIden::btVoiceShowPushed()
 {
 	cout << "start voice iden" << endl;
-
-
-
-
+	DialogShowVoice dsv;
+	connect(&dsv, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	connect(&dsv, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	
+	dsv.setText(m_currentTable2Name);	
+	dsv.exec();
+	//挂起
+	//取消连接等
+	//{}
+	disconnect(&dsv, SIGNAL(startRecord()),
+		this, SLOT(startedRecordVoice()));
+	disconnect(&dsv, SIGNAL(finishRecord()),
+		this, SLOT(finishedRecordVoice()));
+	
 }
 
 
@@ -355,6 +370,7 @@ void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,in
 	((TQInputMethod*)im)->setVisible(false);
 }
 
+
 //根据输入框搜索定位到当前项目
 void VoiceIden::setTableOneSelectItem(const QString& text)
 {
@@ -398,6 +414,7 @@ void VoiceIden::setTableTwoSelectItem(const QString& text)
 
 
 }
+
 
 //数据表1 添加对话框确定写入触发
 void VoiceIden::dialogAddTable1Comfirn()
@@ -477,6 +494,7 @@ void VoiceIden::dialogAddTable1Cancel()
 	m_dat1 = 0;
 }
 
+
 //数据表2 添加对话框确定写入触发
 void VoiceIden::dialogAddTable2Comfirn()
 {
@@ -518,6 +536,7 @@ void VoiceIden::dialogAddTable2Comfirn()
 	cout << "table2 add one item" << endl;
 }
 
+
 //数据表2 添加对话框取消操作对话框
 void VoiceIden::dialogAddTable2Cancel()
 {
@@ -532,6 +551,7 @@ void VoiceIden::dialogAddTable2Cancel()
 	delete m_dat2;
 	m_dat2 = 0;
 }
+
 
 void VoiceIden::dialogModifyTable1Comfirn()
 {
@@ -564,7 +584,6 @@ void VoiceIden::dialogModifyTable1Comfirn()
 	if ( !query.exec(queryString) )
 	{		
 		qDebug() << query.lastError();
-		cout << "1" << endl;
 	}
 	queryString.clear();
 	//更新表格2项目
@@ -636,6 +655,7 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	
 	
 	}
+
 	//ui->tableWidgetTwo->setItem(iRow, 0,
 	//         new QTableWidgetItem(m_dmt2->getItemText(0)));
 	
@@ -659,6 +679,7 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	m_dmt2 = 0;
 }
 
+
 void VoiceIden::dialogModifyTable2Cancel()
 {
 	disconnect(m_dmt2, SIGNAL(operateConfirm()),
@@ -681,7 +702,10 @@ void VoiceIden::startedRecordVoice()
 	cout << "Voice record start" << endl;
 	m_isVoiseSource = false;
 
+
+
 }
+
 
 //结束录音操作
 void VoiceIden::finishedRecordVoice()
@@ -689,7 +713,10 @@ void VoiceIden::finishedRecordVoice()
 	cout << "Voice record finish" << endl;
 	m_isVoiseSource = true;
 
+
+
 }
+
 
 void VoiceIden::readDatabaseTable1()
 {
@@ -745,6 +772,5 @@ void VoiceIden::readDatabaseTable2(QString &tableName)
 			iRow++;
 		}
 	}
-
 }
 
