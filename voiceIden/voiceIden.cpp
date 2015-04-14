@@ -166,7 +166,7 @@ void VoiceIden::btAddTable1Pushed()
 		connect(m_dat1, SIGNAL(finishRecord()),
 			this, SLOT(finishedRecordVoice()));
 	}
-
+	m_dat1->move(1,1);
 	m_dat1->show();
 	m_dat1->raise();
 	m_dat1->activateWindow();
@@ -236,6 +236,7 @@ void VoiceIden::modifyTable1(int r, int c)
 	m_dmt1->setItemText(ui->tableWidgetOne->item(r,0)->text(), 0);
 	m_dmt1->setItemText(ui->tableWidgetOne->item(r,1)->text(), 1);
 
+	m_dmt1->move(420,1);
 	m_dmt1->show();
 	m_dmt1->raise();
 	m_dmt1->activateWindow();
@@ -259,7 +260,7 @@ void VoiceIden::btAddTable2Pushed()
 		connect(m_dat2, SIGNAL(finishRecord()),
 			this, SLOT(finishedRecordVoice()));
 	}
-
+	m_dat2->move(1,1);
 	m_dat2->setItemText(m_currentTable2Name, 0);
 	m_dat2->show();
 	m_dat2->raise();
@@ -330,7 +331,8 @@ void VoiceIden::modifyTable2(int r, int c)
 	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,0)->text(), 0);
 	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,1)->text(), 1);
 	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,2)->text(), 2);
-
+	
+	m_dmt2->move(1, 1);
 	m_dmt2->show();
 	m_dmt2->raise();
 	m_dmt2->activateWindow();
