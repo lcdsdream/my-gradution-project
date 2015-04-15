@@ -258,9 +258,8 @@ void Avoid::remoteCtrl() //遥控控制
 void Avoid::setSpeed()
 {
 	cout << "SetSpeed" << endl;
-	int leftSpeed, rightSpeed;
-	leftSpeed = ui->spinBoxLeftSpeed->value();
-	rightSpeed = ui->spinBoxRightSpeed->value();
+	int leftSpeed = ui->spinBoxLeftSpeed->value();
+	int rightSpeed = ui->spinBoxRightSpeed->value();
 
 	cout << leftSpeed  << "  " << rightSpeed << endl; 
 
@@ -287,6 +286,7 @@ void Avoid::setSafeDistance()
 	cout << safeDis << endl;
 }
 
+//从文件目录读取下载文件, 文件名保存 m_loadFileName
 void Avoid::loadProgram()
 {
 	cout << "Load Program" << endl;
@@ -296,15 +296,75 @@ void Avoid::loadProgram()
 	if (m_loadFileName.isEmpty())
 		return;
 	ui->lineEditLoadFilePath->setText(m_loadFileName);
-
 }
 
+//下载文件
 void Avoid::downloadProgram()
 {
-	cout << "Download" << endl;
+	//对应选择下载片区
+	if (ui->rbt1->isChecked())
+	{	
+		cout << "Download-1" << endl;
+	}
+	else if (ui->rbt2->isChecked())
+	{
+		cout << "Download-2" << endl;	
+	}
+	else if (ui->rbt3->isChecked())
+	{
+		cout << "Download-3" << endl;
+	}
+	else if (ui->rbt4->isChecked())
+	{
+		cout << "Download-4" << endl;
+	}
+	else if (ui->rbt5->isChecked())
+	{
+		cout << "Download-5" << endl;
+	}
+	else if (ui->rbt6->isChecked())
+	{
+		cout << "Download-6" << endl;
+	}
+	else
+	{	
+		cout << "不是吧" << endl;
+	}
+
 }
 
+
+//擦除指定片区
 void Avoid::programEreasure()
 {
-	cout << "Ereasure" << endl;
+	//对应选择下载片区
+	if (ui->rbt1->isChecked())
+	{	
+		cout << "Ereasure-1" << endl;
+	}
+	else if (ui->rbt2->isChecked())
+	{
+		cout << "Ereasure-2" << endl;	
+	}
+	else if (ui->rbt3->isChecked())
+	{
+		cout << "Ereasure-3" << endl;
+	}
+	else if (ui->rbt4->isChecked())
+	{
+		cout << "Ereasure-4" << endl;
+	}
+	else if (ui->rbt5->isChecked())
+	{
+		cout << "Ereasure-5" << endl;
+	}
+	else if (ui->rbt6->isChecked())
+	{
+		cout << "Ereasure-6" << endl;
+	}
+	else
+	{	
+		cout << "不是吧" << endl;
+	}
+
 }
