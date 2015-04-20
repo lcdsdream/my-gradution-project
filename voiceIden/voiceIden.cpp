@@ -43,12 +43,16 @@ VoiceIden::VoiceIden(QWidget *parent):
 {
 	ui->setupUi(this);
 
-	ui->tableWidgetOne->setColumnWidth(0, 150);
-	ui->tableWidgetOne->setColumnWidth(1, 200);
+	ui->tableWidgetOne->setColumnWidth(0, 50);
+	ui->tableWidgetOne->setColumnWidth(1, 150);
+	ui->tableWidgetOne->setColumnWidth(2, 200);
+	ui->tableWidgetOne->setColumnWidth(3, 100);
 
-	ui->tableWidgetTwo->setColumnWidth(0, 110);
-	ui->tableWidgetTwo->setColumnWidth(1, 110);
-	ui->tableWidgetTwo->setColumnWidth(2, 110);
+	ui->tableWidgetTwo->setColumnWidth(0, 50);
+	ui->tableWidgetTwo->setColumnWidth(1, 50);
+	ui->tableWidgetTwo->setColumnWidth(2, 150);
+	ui->tableWidgetTwo->setColumnWidth(3, 200);
+	ui->tableWidgetTwo->setColumnWidth(4, 100);
 
 	//input
 	QWSServer::setCurrentInputMethod(im);
@@ -96,7 +100,10 @@ VoiceIden::VoiceIden(QWidget *parent):
 		this, SLOT(modifyTable1(int, int)));
 	connect(ui->tableWidgetOne, SIGNAL(currentCellChanged(int,int,int,int)),
 		this, SLOT(updateTable2(int, int,int, int)));
-
+	
+	connect(ui->tableWidgetTwo, SIGNAL(currentCellChanged(int,int,int,int)),
+		this, SLOT(updateTable2_2(int, int,int, int)));
+	
 	connect(ui->lineEditSelectOne, SIGNAL(textChanged(const QString&)),
 		this, SLOT(setTableOneSelectItem(const QString&)));
 
@@ -119,7 +126,7 @@ VoiceIden::VoiceIden(QWidget *parent):
 		readDatabaseTable1();
 		if (ui->tableWidgetOne->item(0, 0))
 		{
-			m_currentTable2Name = ui->tableWidgetOne->item(0, 0)->text();
+			m_currentTable2Name = ui->tableWidgetOne->item(0, 1)->text();
 			readDatabaseTable2(m_currentTable2Name);
 		}
 	}
@@ -196,16 +203,16 @@ void VoiceIden::btDeleteTable1Pushed()
 	cout << "delete one item from WidgettableOne and database's table" << endl;
 	QSqlQuery query(g_db);
 	
-	//读取name
-	QString table2Name = ui->tableWidgetOne->item(iRow, 0)->text();
+	//读取 table1 语音识别内容
+	QString content = ui->tableWidgetOne->item(iRow, 1)->text();
 	
 	//删除一级数据表中的项目
-	QString queryString = tr("delete FROM table1 where name='%1'").arg(table2Name);
+	QString queryString = tr("delete FROM table1 where contentIden='%1'").arg(content);
 	if ( !query.exec(queryString) ) qDebug() << query.lastError();
 	queryString.clear();
 	
 	//删除对应二级表
-	queryString = tr("DROP TABLE IF EXISTS %1").arg(table2Name);
+	queryString = tr("DROP TABLE IF EXISTS %1").arg(content);
 	if ( !query.exec(queryString) ) qDebug() << query.lastError();
 
 	//删除tablewidget 中显示项目	
@@ -235,8 +242,8 @@ void VoiceIden::modifyTable1(int r, int c)
 	}
 	//读取当前文本
 	//int iRow = ui->tableWidgetOne->currentRow();  //-1 
-	m_dmt1->setItemText(ui->tableWidgetOne->item(r,0)->text(), 0);
-	m_dmt1->setItemText(ui->tableWidgetOne->item(r,1)->text(), 1);
+	m_dmt1->setItemText(ui->tableWidgetOne->item(r,1)->text(), 0);
+	m_dmt1->setItemText(ui->tableWidgetOne->item(r,2)->text(), 1);
 
 	m_dmt1->move(420,1);
 	m_dmt1->show();
@@ -263,7 +270,7 @@ void VoiceIden::btAddTable2Pushed()
 			this, SLOT(finishedRecordVoice()));
 	}
 	m_dat2->move(1,1);
-	m_dat2->setItemText(m_currentTable2Name, 0);
+	//m_dat2->setItemText(m_currentTable2Name, 0);
 	m_dat2->show();
 	m_dat2->raise();
 	m_dat2->activateWindow();
@@ -290,10 +297,9 @@ void VoiceIden::btDeleteTable2Pushed()
 
 	cout << "delete one item from WidgettableTwo and database's table" << endl;
 	QSqlQuery query(g_db);
-	QString table2Name = ui->tableWidgetTwo->item(iRow, 0)->text();
-	QString  name2 = ui->tableWidgetTwo->item(iRow, 2)->text();
+	QString  content = ui->tableWidgetTwo->item(iRow, 2)->text();
 
-	QString queryString = tr("delete FROM %1 where name2='%2'").arg(table2Name).arg(name2);
+	QString queryString = tr("delete FROM %1 where contentIden='%2'").arg(m_currentTable2Name).arg(content);
 	//qDebug() << queryString ;
 	if ( !query.exec(queryString) ) qDebug() << query.lastError();
 	
@@ -344,8 +350,8 @@ void VoiceIden::modifyTable2(int r, int c)
 	}
 	//int iRow = ui->tableWidgetTwo->currentRow();  //-1 
 	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,0)->text(), 0);
-	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,1)->text(), 1);
-	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,2)->text(), 2);
+	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,2)->text(), 1);
+	m_dmt2->setItemText(ui->tableWidgetTwo->item(r,3)->text(), 2);
 	
 	m_dmt2->move(1, 1);
 	m_dmt2->show();
@@ -363,9 +369,20 @@ void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,in
 	
 //	ui->tableWidgetTwo->clear();
 	//更新当前二级表名，显示
-	m_currentTable2Name = ui->tableWidgetOne->item(currentRow, 0)->text();
+	m_currentTable2Name = ui->tableWidgetOne->item(currentRow, 1)->text();
 	//qDebug() << table2Name;
 	readDatabaseTable2(m_currentTable2Name);
+
+	((TQInputMethod*)im)->setVisible(false);
+}
+
+void VoiceIden::updateTable2_2(int currentRow,int currentColumn,int previousRow,int previousColumn)
+{
+	Q_UNUSED(previousRow);
+	Q_UNUSED(previousColumn);
+	Q_UNUSED(currentColumn);
+	Q_UNUSED(currentRow);
+	
 
 	((TQInputMethod*)im)->setVisible(false);
 }
@@ -379,7 +396,7 @@ void VoiceIden::setTableOneSelectItem(const QString& text)
 	
 	QSqlQuery query(g_db);
 	//输入name 查找 
-	QString  queryString = tr("SELECT * FROM table1 where name='%1'").arg(text);
+	QString  queryString = tr("SELECT * FROM table1 where contentIden='%1'").arg(text);
 	//qDebug() << queryString; 
 
 	query.exec(queryString);
@@ -400,7 +417,7 @@ void VoiceIden::setTableTwoSelectItem(const QString& text)
 		return;
 	QSqlQuery query(g_db);
 	//输入name 查找 
-	QString  queryString = tr("SELECT * FROM %1 where name2='%2'").arg(m_currentTable2Name).arg(text);
+	QString  queryString = tr("SELECT * FROM %1 where contentIden='%2'").arg(m_currentTable2Name).arg(text);
 	//qDebug() << queryString; 
 
 	query.exec(queryString);
@@ -422,7 +439,7 @@ void VoiceIden::dialogAddTable1Comfirn()
 	QSqlQuery query(g_db);
 	//数据写入
 	//插入数据表格 1
-	query.prepare("insert into table1 (name, about) values(?,?)");
+	query.prepare("insert into table1 (grand, contentIden, contentCom, code) values(1,?,?,'CODE-XXX')");
 	query.bindValue(0, m_dat1->getItemText(0));
 	query.bindValue(1, m_dat1->getItemText(1));
 	if ( !query.exec() ) 
@@ -431,8 +448,8 @@ void VoiceIden::dialogAddTable1Comfirn()
 		cout << "Cant Insert to table1,  create table1" << endl;
 		//新建第一个一级数据表格
 		query.exec("create table table1 (id integer primary key,"
-		   	"name varchar(20), about varchar(20))");
-		query.prepare("insert into table1 (name, about) values(?,?)");
+		   	"grand integer, contentIden varchar(20), contentCom varchar(20), code varchar(20))");
+		query.prepare("insert into table1 (grand, contentIden, contentCom, code) values(1,?,?,'CODE-XXX')");
 		query.bindValue(0, m_dat1->getItemText(0)); //插入带“”
 		query.bindValue(1, m_dat1->getItemText(1));
 		query.exec();
@@ -440,7 +457,7 @@ void VoiceIden::dialogAddTable1Comfirn()
 	
 	//新建对应数据表格2 ,表格名对应表格1数据项目
 	QString  queryString = tr("create table %1 (id integer primary key,"
-		      "name1 varchar(20), hecheng varchar(20), name2 varchar(20))").arg(m_dat1->getItemText(0)); //插入不带"",需要要自行添加
+		      "id1 integer, grand integer, contentIden varchar(20), contentCom varchar(20), code varchar(20))").arg(m_dat1->getItemText(0)); 
 	if ( !query.exec(queryString) )
 	{		
 		qDebug() << query.lastError();
@@ -458,10 +475,14 @@ void VoiceIden::dialogAddTable1Comfirn()
 	//更新表格1显示
 	int iRow = ui->tableWidgetOne->rowCount();
 	ui->tableWidgetOne->setRowCount(iRow+1);
-	ui->tableWidgetOne->setItem(iRow, 0,
-		new QTableWidgetItem(m_dat1->getItemText(0)));
+	ui->tableWidgetOne->setItem(iRow, 0,  
+		new QTableWidgetItem("1"));  //分级
 	ui->tableWidgetOne->setItem(iRow, 1,
-		new QTableWidgetItem(m_dat1->getItemText(1)));
+		new QTableWidgetItem(m_dat1->getItemText(0))); //识别内容
+	ui->tableWidgetOne->setItem(iRow, 2,
+		new QTableWidgetItem(m_dat1->getItemText(1))); //合成内容
+	ui->tableWidgetOne->setItem(iRow, 3,
+		new QTableWidgetItem("CODE-XXX"));            //code
 
 
 	//对话框撤消
@@ -501,10 +522,10 @@ void VoiceIden::dialogAddTable2Comfirn()
 
 	QSqlQuery query(g_db);
 	//数据表名
-	QString table2Name = m_currentTable2Name;
+//	int grand = 0;
 	
 	//插入数据表格 2
-	QString  queryString = tr("insert into %1 (name1, hecheng, name2) values('%2','%3','%4')").arg(table2Name).arg(table2Name).arg(m_dat2->getItemText(1)).arg(m_dat2->getItemText(2)); 
+	QString  queryString = tr("insert into %1 (id1, grand, contentIden, contentCom, code) values(%2, 2,'%3','%4','CODE-YYY')").arg(m_currentTable2Name).arg(m_dat1->getItemText(0).toInt()).arg(m_dat2->getItemText(1)).arg(m_dat2->getItemText(2)); 
 	
 	if ( !query.exec(queryString) )
 	{		
@@ -515,11 +536,15 @@ void VoiceIden::dialogAddTable2Comfirn()
 	int iRow = ui->tableWidgetTwo->rowCount();
 	ui->tableWidgetTwo->setRowCount(iRow+1);
 	ui->tableWidgetTwo->setItem(iRow, 0,
-		new QTableWidgetItem(m_dat2->getItemText(0)));
+		new QTableWidgetItem(m_dat2->getItemText(0))); //id_1
 	ui->tableWidgetTwo->setItem(iRow, 1,
-		new QTableWidgetItem(m_dat2->getItemText(1)));
+		new QTableWidgetItem("2"));   //分级
 	ui->tableWidgetTwo->setItem(iRow, 2,
+		new QTableWidgetItem(m_dat2->getItemText(1)));
+	ui->tableWidgetTwo->setItem(iRow, 3,
 		new QTableWidgetItem(m_dat2->getItemText(2)));
+	ui->tableWidgetTwo->setItem(iRow, 4,
+		new QTableWidgetItem("CODE-YYY"));
 
 
 	//对话框撤消
@@ -559,11 +584,11 @@ void VoiceIden::dialogModifyTable1Comfirn()
 	QSqlQuery query(g_db);
 	//数据写入
 	int iRow = ui->tableWidgetOne->currentRow();
-	QString table2OldName = ui->tableWidgetOne->item(iRow,0)->text();
+	QString table2OldName = ui->tableWidgetOne->item(iRow,1)->text();
 	QString table2NewName = m_dmt1->getItemText(0);
 	
 	//更新数据表格1
-	QString  queryString = tr("update table1 set name='%1', about='%2' where name='%3'").arg(table2NewName).arg(m_dmt1->getItemText(1)).arg(table2OldName); 
+	QString  queryString = tr("update table1 set contentIden='%1', contentCom='%2' where contentIden='%3'").arg(table2NewName).arg(m_dmt1->getItemText(1)).arg(table2OldName); 
 	
 	if ( !query.exec(queryString) )
 	{		
@@ -587,18 +612,24 @@ void VoiceIden::dialogModifyTable1Comfirn()
 	}
 	queryString.clear();
 	//更新表格2项目
-	queryString = tr("update %1 set name1='%2'").arg(table2NewName).arg(table2NewName); 
-	if ( !query.exec(queryString) )
-	{		
-		qDebug() << query.lastError();
-	}
+	//queryString = tr("update %1 set name1='%2'").arg(table2NewName).arg(table2NewName); 
+	//if ( !query.exec(queryString) )
+	//{		
+	//	qDebug() << query.lastError();
+	//}
 
 
 	ui->tableWidgetOne->setItem(iRow, 0,
-	         new QTableWidgetItem(m_dmt1->getItemText(0)));
+	         new QTableWidgetItem("1"));
 	
 	ui->tableWidgetOne->setItem(iRow, 1,
+	         new QTableWidgetItem(m_dmt1->getItemText(0)));
+
+	ui->tableWidgetOne->setItem(iRow, 2,
 	         new QTableWidgetItem(m_dmt1->getItemText(1)));
+
+	ui->tableWidgetOne->setItem(iRow, 3,
+	         new QTableWidgetItem("CODE-XXX"));
 
 	
 	disconnect(m_dmt1, SIGNAL(operateConfirm()),
@@ -638,11 +669,11 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	QSqlQuery query(g_db);
 	//数据写入
 	int iRow = ui->tableWidgetTwo->currentRow();
-	QString table2Name = ui->tableWidgetTwo->item(iRow,0)->text();
-	QString name2 =  ui->tableWidgetTwo->item(iRow,2)->text();  //区分项
+	QString table2Name = m_currentTable2Name;
+	QString content =  ui->tableWidgetTwo->item(iRow,2)->text();  //区分项
 	
 	//插入数据表格 2
-	QString  queryString = tr("update %1 set name1='%2', hecheng='%3', name2='%4'where name2=%5").arg(table2Name).arg(table2Name).arg(m_dmt2->getItemText(1)).arg(m_dmt2->getItemText(2)).arg(name2); 
+	QString  queryString = tr("update %1 set id1=%2, contentIden='%3', contentCom='%4'where contentIden=%5").arg(table2Name).arg(m_dmt2->getItemText(0).toInt()).arg(m_dmt2->getItemText(1)).arg(m_dmt2->getItemText(2)).arg(content); 
 	
 	if ( !query.exec(queryString) )
 	{		
@@ -659,11 +690,17 @@ void VoiceIden::dialogModifyTable2Comfirn()
 	//ui->tableWidgetTwo->setItem(iRow, 0,
 	//         new QTableWidgetItem(m_dmt2->getItemText(0)));
 	
+	ui->tableWidgetTwo->setItem(iRow, 0,
+	         new QTableWidgetItem(m_dmt2->getItemText(0)));
 	ui->tableWidgetTwo->setItem(iRow, 1,
-	         new QTableWidgetItem(m_dmt2->getItemText(1)));
-	
+	         new QTableWidgetItem("2"));
 	ui->tableWidgetTwo->setItem(iRow, 2,
+	         new QTableWidgetItem(m_dmt2->getItemText(1)));
+	ui->tableWidgetTwo->setItem(iRow, 3,
 	         new QTableWidgetItem(m_dmt2->getItemText(2)));
+	ui->tableWidgetTwo->setItem(iRow, 4,
+	         new QTableWidgetItem("CODE-YYY"));
+
 
 	
 	disconnect(m_dmt2, SIGNAL(operateConfirm()),
@@ -726,17 +763,26 @@ void VoiceIden::readDatabaseTable1()
 	{
 		int iRow = 0;
 		//table's item 
-		int iden = query.record().indexOf("name");
-		int shuoming = query.record().indexOf("about");
+		int grand = query.record().indexOf("grand");
+		int contentIden = query.record().indexOf("contentIden");
+		int contentCom = query.record().indexOf("contentCom");
+		int theCode = query.record().indexOf("code");
+
 		while( query.next())
 		{
 			ui->tableWidgetOne->setRowCount(iRow+1);
 
 			ui->tableWidgetOne->setItem(iRow, 0,
-				new QTableWidgetItem(query.value(iden).toString()));
+				new QTableWidgetItem(query.value(grand).toString()));
 
 			ui->tableWidgetOne->setItem(iRow, 1,
-				new QTableWidgetItem(query.value(shuoming).toString()));
+				new QTableWidgetItem(query.value(contentIden).toString()));
+			
+			ui->tableWidgetOne->setItem(iRow, 2,
+				new QTableWidgetItem(query.value(contentCom).toString()));
+			
+			ui->tableWidgetOne->setItem(iRow, 3,
+				new QTableWidgetItem(query.value(theCode).toString()));
 			
 			iRow++;
 		}
@@ -748,26 +794,35 @@ void VoiceIden::readDatabaseTable2(QString &tableName)
 {
 	QSqlQuery query(g_db);
 	QString  queryString = tr("SELECT * FROM %1").arg(tableName);
-//	qDebug() << queryString;
+	qDebug() << queryString;
 	ui->tableWidgetTwo->setRowCount(0);
 	if ( query.exec(queryString) )
 	{
 		int iRow = 0;
-		int name1 = query.record().indexOf("name1");
-		int hecheng = query.record().indexOf("hecheng");
-		int name2 = query.record().indexOf("name2");
+		int id1 = query.record().indexOf("id1");
+		int grand = query.record().indexOf("grand");
+		int contentIden = query.record().indexOf("contentIden");
+		int contentCom = query.record().indexOf("contentCom");
+		int theCode = query.record().indexOf("code");
+
 		while (query.next())
 		{
 			
 			ui->tableWidgetTwo->setRowCount(iRow+1);
 			ui->tableWidgetTwo->setItem(iRow, 0,
-				new QTableWidgetItem(query.value(name1).toString()));
+				new QTableWidgetItem(query.value(id1).toString()));
 
 			ui->tableWidgetTwo->setItem(iRow, 1,
-				new QTableWidgetItem(query.value(hecheng).toString()));
+				new QTableWidgetItem(query.value(grand).toString()));
 
 			ui->tableWidgetTwo->setItem(iRow, 2,
-				new QTableWidgetItem(query.value(name2).toString()));
+				new QTableWidgetItem(query.value(contentIden).toString()));
+			
+			ui->tableWidgetTwo->setItem(iRow, 3,
+				new QTableWidgetItem(query.value(contentCom).toString()));
+			
+			ui->tableWidgetTwo->setItem(iRow, 4,
+				new QTableWidgetItem(query.value(theCode).toString()));
 			
 			iRow++;
 		}

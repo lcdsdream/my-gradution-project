@@ -35,45 +35,65 @@
   <widget class="QTableWidget" name="tableWidgetOne">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>29</x>
      <y>50</y>
-     <width>350</width>
+     <width>371</width>
      <height>281</height>
     </rect>
    </property>
    <column>
     <property name="text">
-     <string>识别-1</string>
+     <string>分级</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>说明</string>
+     <string>语音识别内容</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>语音合成内容</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>CODE_*</string>
     </property>
    </column>
   </widget>
   <widget class="QTableWidget" name="tableWidgetTwo">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>419</x>
      <y>50</y>
-     <width>330</width>
+     <width>361</width>
      <height>281</height>
     </rect>
    </property>
    <column>
     <property name="text">
-     <string>识别-1</string>
+     <string>ID_1</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>合成</string>
+     <string>分级</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>识别-2</string>
+     <string>语音识别内容</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>语音合成内容</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>CODE_*</string>
     </property>
    </column>
   </widget>
@@ -186,11 +206,11 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>定位 识别-2 </string>
+    <string>语音识别内容</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -204,11 +224,11 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>定位 识别-1 </string>
+    <string>语音识别内容</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditSelectOne">

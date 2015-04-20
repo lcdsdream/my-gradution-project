@@ -35,6 +35,7 @@ public slots :
 	void modifyTable1(int, int);
 	void modifyTable2(int, int);
 	void updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn);
+	void updateTable2_2(int currentRow,int currentColumn,int previousRow,int previousColumn);
 	
 	void setTableOneSelectItem(const QString&);
 	void setTableTwoSelectItem(const QString&);

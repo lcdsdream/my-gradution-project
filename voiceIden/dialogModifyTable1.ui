@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>305</width>
+    <width>324</width>
     <height>256</height>
    </rect>
   </property>
@@ -21,33 +21,44 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>15</y>
-     <width>61</width>
+     <width>101</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>识别1：</string>
+    <string>语音识别内容</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>59</y>
-     <width>61</width>
+     <width>101</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>WenQuanYi Micro Hei</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>说明 :</string>
+    <string>语音合成内容</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditItem0">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>120</x>
      <y>10</y>
      <width>191</width>
      <height>31</height>
@@ -57,7 +68,7 @@
   <widget class="QLineEdit" name="lineEditItem1">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>120</x>
      <y>50</y>
      <width>191</width>
      <height>31</height>
