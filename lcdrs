@@ -1,0 +1,41 @@
+#!/bin/sh
+
+echo Start Qt4 PDA > /dev/console
+
+export set HOME=/root
+export set QTDIR=/opt/PDA
+export set QPEDIR=/opt/PDA
+export set QWS_DISPLAY="LinuxFB:/dev/fb0"
+export set QWS_DISPLAY="LinuxFB:mmWidth130:mmHeight100:0"
+export set QWS_KEYBOARD="TTY:/dev/tty1"
+if [ -f /sys/devices/virtual/input/input2/uevent ] ; then
+	export set TSLIB_TSDEVICE=/dev/event2
+	export set TSLIB_CALIBFILE=/etc/pointercal
+	export set TSLIB_CONFFILE=/etc/ts.conf
+	export set TSLIB_PLUGINDIR=/lib/ts
+	export set QWS_MOUSE_PROTO="TSLIB:/dev/event2 Intellimouse:/dev/mouse1"
+else
+	export set QWS_MOUSE_PROTO="Intellimouse:/dev/mouse1"
+	if [ -f /etc/pointercal ] ; then
+		echo only use mouse > console
+	else
+		echo "1 0 1 0 1 1 65536" >/etc/pointercal
+	fi
+fi
+export set QT_PLUGIN_PATH=$QTDIR/plugins/
+export set QT_QWS_FONTDIR=$QTDIR/lib/fonts/
+export set PATH=$QPEDIR/bin:$PATH
+export set LD_LIBRARY_PATH=$QTDIR/lib:$QPEDIR/plugins/imageformats:$QPEDIR/plugins/accessible:$LD_LIBRARY_PATH
+
+if [ -f /etc/pointercal ] ; then
+	if [ -f /etc/autorun.conf ] ; then
+		source /etc/autorun.conf
+		$AUTORUN  > /dev/null 2>/dev/null
+	fi
+	/opt/gb_ms/app/configureMainWindowv1  -qws > /dev/null 2>/dev/null
+else
+	ts_calibrate
+	$QPEDIR/bin/mousecalibration
+	/opt/gb_ms/app/configureMainWindowv1  -qws > /dev/null 2>/dev/null
+fi
+
