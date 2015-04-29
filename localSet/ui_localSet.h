@@ -2,6 +2,9 @@
 ** Form generated from reading ui file 'localSet.ui'
 **
 ** Created: Wed Apr 29 17:27:45 2015
+=======
+** Created: Wed Apr 29 16:57:51 2015
+>>>>>>> 1ae026cc08cfe80ffc2e86af4668dbf83e526e24
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -43,7 +46,7 @@ public:
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_3;
-    QLineEdit *leGW1;
+   QLineEdit *leGW1;
     QLabel *label_7;
     QLineEdit *leGW2;
     QLabel *label_8;
@@ -53,7 +56,7 @@ public:
     QWidget *horizontalLayoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
-    QLineEdit *leCW1;
+   QLineEdit *leCW1;
     QLabel *label_10;
     QLineEdit *leCW2;
     QLabel *label_11;
@@ -86,13 +89,13 @@ public:
         horizontalLayoutWidget = new QWidget(groupBox);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
         horizontalLayoutWidget->setGeometry(QRect(0, 50, 341, 51));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+       horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(horizontalLayoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setMinimumSize(QSize(90, 48));
-        QFont font2;
+       QFont font2;
         font2.setPointSize(14);
         label->setFont(font2);
 
@@ -152,7 +155,6 @@ public:
         label_3->setFont(font4);
 
         horizontalLayout_2->addWidget(label_3);
-
         leGW1 = new QLineEdit(horizontalLayoutWidget_2);
         leGW1->setObjectName(QString::fromUtf8("leGW1"));
 
@@ -203,7 +205,6 @@ public:
         label_2->setFont(font4);
 
         horizontalLayout_3->addWidget(label_2);
-
         leCW1 = new QLineEdit(horizontalLayoutWidget_3);
         leCW1->setObjectName(QString::fromUtf8("leCW1"));
 
@@ -258,7 +259,6 @@ public:
         QFont font5;
         font5.setPointSize(10);
         label_13->setFont(font5);
-
         retranslateUi(LocalSet);
 
         QMetaObject::connectSlotsByName(LocalSet);
@@ -270,7 +270,7 @@ public:
         buttonQuit->setText(QApplication::translate("LocalSet", "PushButton", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("LocalSet", "\347\275\221\347\273\234\345\217\202\346\225\260\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("LocalSet", "IP          :", 0, QApplication::UnicodeUTF8));
-        leIP1->setText(QApplication::translate("LocalSet", "192", 0, QApplication::UnicodeUTF8));
+       leIP1->setText(QApplication::translate("LocalSet", "192", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
         leIP2->setText(QApplication::translate("LocalSet", "168", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
@@ -278,7 +278,7 @@ public:
         label_6->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
         leIP4->setText(QApplication::translate("LocalSet", "140", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("LocalSet", "\345\255\220\347\275\221\346\216\251\347\240\201 :", 0, QApplication::UnicodeUTF8));
-        leGW1->setText(QApplication::translate("LocalSet", "192", 0, QApplication::UnicodeUTF8));
+       leGW1->setText(QApplication::translate("LocalSet", "192", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
         leGW2->setText(QApplication::translate("LocalSet", "168", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
@@ -286,7 +286,7 @@ public:
         label_9->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
         leGW4->setText(QApplication::translate("LocalSet", "1", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("LocalSet", "\347\275\221\345\205\263        :", 0, QApplication::UnicodeUTF8));
-        leCW1->setText(QApplication::translate("LocalSet", "255", 0, QApplication::UnicodeUTF8));
+       leCW1->setText(QApplication::translate("LocalSet", "255", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));
         leCW2->setText(QApplication::translate("LocalSet", "255", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("LocalSet", ".", 0, QApplication::UnicodeUTF8));

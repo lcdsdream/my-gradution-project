@@ -56,7 +56,7 @@
       <y>50</y>
       <width>341</width>
      <height>51</height>
-     </rect>
+    </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
