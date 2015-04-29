@@ -1,10 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'localSet.ui'
 **
-** Created: Wed Apr 29 17:27:45 2015
-=======
-** Created: Wed Apr 29 16:57:51 2015
->>>>>>> 1ae026cc08cfe80ffc2e86af4668dbf83e526e24
+** Created: Wed Apr 29 17:38:09 2015
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
