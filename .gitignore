@@ -4,6 +4,4 @@
 *.o
 *.O
 moc*
-Makefile
-ui_*.h
 *.swp
