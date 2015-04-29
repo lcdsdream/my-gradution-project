@@ -1,6 +1,6 @@
 /****************************************************************************
- ** object : VoiceIden 
- ** 毕业设计三级菜单　远程设置
+ ** 	object : VoiceIden 
+ ** 	毕业设计三级菜单　语音识别模块
  ** by luchaodong
  ** class Ui::VoiceIden : public Ui_VoiceIden {}
  ** VoiceIden 
@@ -32,17 +32,19 @@
 
 using namespace std;
 
+
 QSqlDatabase g_db;
 
 VoiceIden::VoiceIden(QWidget *parent):
 	QWidget(parent),
-	ui(new Ui::VoiceIden),//Ui namespace ,not this 
+	ui(new Ui::VoiceIden),	//Ui namespace ,not this 
 	im(new TQInputMethod), 
 	m_dat1(0), m_dat2(0), m_dmt1(0), m_dmt2(0),
 	m_isVoiseSource(false), m_currentTable2Name("")
 {
 	ui->setupUi(this);
 
+	//数据库显示界面设置
 	ui->tableWidgetOne->setColumnWidth(0, 50);
 	ui->tableWidgetOne->setColumnWidth(1, 150);
 	ui->tableWidgetOne->setColumnWidth(2, 200);
@@ -54,7 +56,7 @@ VoiceIden::VoiceIden(QWidget *parent):
 	ui->tableWidgetTwo->setColumnWidth(3, 200);
 	ui->tableWidgetTwo->setColumnWidth(4, 100);
 
-	//input
+	//输入法
 	QWSServer::setCurrentInputMethod(im);
 	((TQInputMethod*)im)->setVisible(false);
 
@@ -66,7 +68,7 @@ VoiceIden::VoiceIden(QWidget *parent):
 	palette.setBrush(backgroundRole(), QBrush(pix));
 	setPalette(palette);
 
-//按钮背景
+	//按钮背景
 	ui->buttonQuit->setText("");
 	ui->buttonQuit->setFixedSize(81,32);
 	ui->buttonQuit->setIconSize(QSize(81,32));
@@ -111,9 +113,9 @@ VoiceIden::VoiceIden(QWidget *parent):
 		this, SLOT(setTableTwoSelectItem(const QString&)));
 
 
-//数据库建立连接
+	//数据库建立连接
 	g_db = QSqlDatabase::addDatabase("QSQLITE", "voiceIden");
-	g_db.setDatabaseName("voice.db");
+	g_db.setDatabaseName("voice.db");	//指定打开数据库
 	if ( !g_db.open() )
 	{
 		QMessageBox::critical(NULL, QObject::trUtf8("无法打开数据库\n"),
@@ -144,16 +146,18 @@ VoiceIden::~VoiceIden()
 
 	delete ui;
 	delete im;
-	if (m_dat1 != 0) delete m_dat1;
-	if (m_dat2 != 0) delete m_dat2;
-	if (m_dmt1 != 0) delete m_dmt1;
-	if (m_dmt2 != 0) delete m_dmt2;
 }
 
 
 void VoiceIden::btQuitPushed()
 {
 	emit returned();
+	
+	if (m_dat1 != 0) delete m_dat1;
+	if (m_dat2 != 0) delete m_dat2;
+	if (m_dmt1 != 0) delete m_dmt1;
+	if (m_dmt2 != 0) delete m_dmt2;
+	
 	close();
 }
 
@@ -201,8 +205,8 @@ void VoiceIden::btDeleteTable1Pushed()
 	}
 
 	cout << "delete one item from WidgettableOne and database's table" << endl;
-	QSqlQuery query(g_db);
 	
+	QSqlQuery query(g_db);
 	//读取 table1 语音识别内容
 	QString content = ui->tableWidgetOne->item(iRow, 1)->text();
 	

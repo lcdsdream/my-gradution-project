@@ -5,6 +5,10 @@
  ** class Ui::ConfigureMainWindow: public Ui_ConfigureMainWindow {}
  ** ConfigureMainWindow 
  ****************************************************************************/
+/*
+ * 根据已有模块, 设置克执行文件路径以及运行时需要传递得参数
+ * 可以启用备用按钮
+ */
 
 #include <QtGui>
 #include <QPixmap>
@@ -43,6 +47,7 @@ ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):
 	ui->buttonQuit->setIcon(QIcon(pix));
 	
 //备用按钮失能
+//后续使用对应启用
 	ui->buttonBA0->setEnabled(false);
 	ui->buttonBA1->setEnabled(false);
 	ui->buttonBA2->setEnabled(false);

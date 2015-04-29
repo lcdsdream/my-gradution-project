@@ -1,14 +1,20 @@
+/*
+ *  驱动测试用
+ *  lcd at jnu 
+ *  lcdsdream@126.com
+ *  20150428
+ */
 
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <unistd.h>  
 #include <sys/ioctl.h>
 
+
 int main(int argc, char *argv[])
 {
 	int fd;
 	int val;
-	int i;
 	int key_value;
 
 	fd = open("/dev/orientButton",0);
@@ -20,7 +26,9 @@ int main(int argc, char *argv[])
 
 	while (1)
 	{
+		/*对应驱动添加外部中断个数*/
 		val = read(fd, (char*)&key_value, sizeof(key_value));
+		
 		printf("----------\n");
 		if(val < 0)
 		{

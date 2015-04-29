@@ -1,10 +1,11 @@
-/*
+/**********************************************************************************
  *	button 驱动程序TQ6410
  *	使用标准字符设备驱动编写方法
  * 	中断 EINT8  --> GPN8 
  * 	目标平台  : tq6410s
- *	luchaodong 20150428 JNU
+ *	luchaodong 20150428@JNU
  * 	lcdsdream@126.com
+ **********************************************************************************
  */
 
 #include <linux/kernel.h>  
@@ -43,7 +44,9 @@ struct button_irq_des
 	
 };
 
-static struct button_irq_des button_irqs[] = 
+/*定义使用中断*/
+static struct button_irq_des 
+button_irqs[] = 
 {
 	{IRQ_EINT(8), S3C64XX_GPN(8), IRQF_TRIGGER_FALLING, "Button1"},  	
 };
@@ -52,6 +55,7 @@ static struct button_irq_des button_irqs[] =
  等待队列,按钮中断, read时,没有按下挂起休眠,按下时中断唤醒
  */
 static DECLARE_WAIT_QUEUE_HEAD(button_waitq);
+
 
 /*中断事件标识 中断处理程序置1, read 清除*/
 static volatile int ev_press = 0;
@@ -127,7 +131,11 @@ static int button_open(struct inode *inode, struct file *file)
 	for (num=0; num<KEYNUM; ++num)
 	{
 		/* 中断号 中断处理函数, 中断设置, 中断名, 中断传递参数*/
-		val = request_irq(button_irqs[num].irq, buttons_interrupt, button_irqs[num].setting, button_irqs[num].name, (void*)&button_cnt[num]);
+		val = request_irq(button_irqs[num].irq, 
+				  buttons_interrupt, 
+				  button_irqs[num].setting, 
+				  button_irqs[num].name, 
+				  (void*)&button_cnt[num]);
 		if (val !=0)
 		{
 			printk(KERN_ALERT "error while irq request\n");
@@ -143,7 +151,8 @@ static int button_close(struct inode *inode, struct file *file)
 	//释放中断号
 	for (num=0; num<KEYNUM; ++num)
 	{
-		free_irq(button_irqs[num].irq, (void*)&button_cnt[num]);
+		free_irq(button_irqs[num].irq, 
+				(void*)&button_cnt[num]);
 	}
 	up(&button_lock);
 	
@@ -159,10 +168,12 @@ static int button_read(struct file *filp, char __user *buff, size_t count, loff_
 	/*判断阻塞与否*/
 	if (filp->f_flags & O_NONBLOCK)
 	{
+		/*非阻塞读取 没有按钮按下立刻返回*/
 		if (!ev_press) return -EAGAIN;
 	}
 	else
 	{
+		/*阻塞读取, 挂起等待唤醒*/
 		wait_event_interruptible(button_waitq, ev_press);
 	}
 
@@ -187,7 +198,6 @@ static struct file_operations button_ops =
 
 static struct cdev *cdev_button;
 static struct class *button_class;
-
 
 static int __init s3c6410_button_init(void)
 {

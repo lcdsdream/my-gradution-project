@@ -1,6 +1,6 @@
 /****************************************************************************
- ** object : VoiceIden 
- ** 毕业设计三级菜单　语音识别
+ ** 	object : VoiceIden 
+ ** 	毕业设计三级菜单　语音识别
  ** by luchaodong
  ** class Ui::VoiceIden : public Ui_VoiceIden {}
  ** VoiceIden 

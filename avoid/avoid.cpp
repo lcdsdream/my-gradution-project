@@ -1,6 +1,6 @@
 /****************************************************************************
- ** object : Avoid 
- ** 毕业设计三级菜单　图像识别
+ ** 	object : Avoid 
+ **	毕业设计三级菜单　运动控制模块
  ** by luchaodong
  ** class Ui::Avoid : public Ui_Avoid {}
  ** Avoid 
@@ -14,10 +14,12 @@
 #include <QPalette>
 #include <iostream>
 #include "avoid.h"
+
 using namespace std;
+
 Avoid::Avoid(QWidget *parent):
 	QTabWidget(parent),
-	ui(new Ui::Avoid) //Ui namespace ,not this 
+	ui(new Ui::Avoid) 	//Ui namespace ,not this 
 {
 	ui->setupUi(this);
 	
@@ -34,7 +36,7 @@ Avoid::Avoid(QWidget *parent):
 	palette.setBrush(backgroundRole(), QBrush(pix));
 	setPalette(palette);
 
-//按钮背景
+	//按钮背景
 	ui->buttonQuit1->setText("");
 	ui->buttonQuit1->setFixedSize(81,32);
 	ui->buttonQuit1->setIconSize(QSize(81,32));
@@ -113,7 +115,7 @@ Avoid::Avoid(QWidget *parent):
 	pix = pix.scaled(75, 45, Qt::IgnoreAspectRatio);
 	ui->buttonDownload->setIcon(QIcon(pix));
 
-//signal and slots
+	//signal and slots
 	connect(ui->buttonQuit1, SIGNAL(clicked()),
 		this, SLOT(quitAvoid()) );
 	connect(ui->buttonQuit2, SIGNAL(clicked()),
@@ -173,89 +175,104 @@ Avoid::~Avoid()
 	delete im;
 }
 
-void Avoid::quitAvoid()
+void
+Avoid::quitAvoid()
 {
 	emit returned();
 	close();
 }
 	
-void Avoid::ctrlUp()
+void
+Avoid::ctrlUp()
 {
 	cout << "Up" << endl;
 
 }
 
-void Avoid::ctrlDown()
+void
+Avoid::ctrlDown()
 {
 	cout << "Down" << endl;
 
 }
 
-void Avoid::ctrlLeft()
+void
+Avoid::ctrlLeft()
 {
 	cout << "Left" << endl;
 
 }
 
-void Avoid::ctrlRight()
+void
+Avoid::ctrlRight()
 {
 	cout << "Right" << endl;
 
 }
 
-void Avoid::ctrlStop()
+void
+Avoid::ctrlStop()
 {
 	cout << "Stop" << endl;
 
 }
 
-void Avoid::ctrlSpin()
+void
+Avoid::ctrlSpin()
 {
 	cout << "Spin" << endl;
 
 }
 
-void Avoid::ctrlTrack()
+void
+Avoid::ctrlTrack()
 {
 	cout << "Track" << endl;
 
 }
 
-void Avoid::ctrlVoiceTrack()
+void
+Avoid::ctrlVoiceTrack()
 {
 	cout << "Voide Track" << endl;
 
 }
 
-void Avoid::ctrlInit()
+void
+Avoid::ctrlInit()
 {
 	cout << "Init " << endl;
 
 }
 
-void Avoid::voiceCtrl() //语音控制
+void
+Avoid::voiceCtrl() //语音控制
 {
 	cout << "voice ctrl"<< endl;
 }
 
-void Avoid::wallTrack() //贴壁行走
+void
+Avoid::wallTrack() //贴壁行走
 {
 	cout << "wall track" << endl;
 }
 
 
-void Avoid::lineTrack() //循迹行走
+void
+Avoid::lineTrack() //循迹行走
 {
 	cout << "line track" << endl;
 }
 
 
-void Avoid::remoteCtrl() //遥控控制
+void 
+Avoid::remoteCtrl() //遥控控制
 {
 	cout << "remote ctrl" << endl;
 }
 
-void Avoid::setSpeed()
+void 
+Avoid::setSpeed()
 {
 	cout << "SetSpeed" << endl;
 	int leftSpeed = ui->spinBoxLeftSpeed->value();
@@ -269,7 +286,8 @@ void Avoid::setSpeed()
 
 
 //设置方向角
-void Avoid::setDirectionAngle()
+void 
+Avoid::setDirectionAngle()
 {
 	cout << "setDirection Angle" << endl;
 	int dirAngle = ui->spinBoxDirectionAngle->value();
@@ -279,7 +297,8 @@ void Avoid::setDirectionAngle()
 }
 
 //设置安全距离
-void Avoid::setSafeDistance()
+void 
+Avoid::setSafeDistance()
 {
 	cout << "setSafeDistance" << endl;
 	int safeDis = ui->spinBoxSafeDis->value();
@@ -287,7 +306,8 @@ void Avoid::setSafeDistance()
 }
 
 //从文件目录读取下载文件, 文件名保存 m_loadFileName
-void Avoid::loadProgram()
+void 
+Avoid::loadProgram()
 {
 	cout << "Load Program" << endl;
 	m_loadFileName = QFileDialog::getOpenFileName(this, tr("Open download file"), "", 
@@ -299,7 +319,8 @@ void Avoid::loadProgram()
 }
 
 //下载文件
-void Avoid::downloadProgram()
+void 
+Avoid::downloadProgram()
 {
 	//对应选择下载片区
 	if (ui->rbt1->isChecked())
@@ -335,7 +356,8 @@ void Avoid::downloadProgram()
 
 
 //擦除指定片区
-void Avoid::programEreasure()
+void 
+Avoid::programEreasure()
 {
 	//对应选择下载片区
 	if (ui->rbt1->isChecked())
@@ -368,3 +390,6 @@ void Avoid::programEreasure()
 	}
 
 }
+
+
+
