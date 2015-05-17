@@ -1,0 +1,294 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	./Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+ARM	./TQInputMethod.h	26;"	d
+CC	./Makefile	/^CC            = arm-linux-gcc$/;"	m
+CFLAGS	./Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	./Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	./Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	./Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	./Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_FILE	./Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+CXX	./Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXXFLAGS	./Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+DEFINES	./Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEL_DIR	./Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	./Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	./Makefile	/^DESTDIR       = $/;"	m
+DIALOG_ADD_TABLE1_20150409_DEF	./dialogAddTable1.h	7;"	d
+DIALOG_ADD_TABLE2_20150411_DEF	./dialogAddTable2.h	7;"	d
+DIALOG_MODIFY_TABLE1_20150412_DEF	./dialogModifyTable1.h	7;"	d
+DIALOG_MODIFY_TABLE2_20150411_DEF	./dialogModifyTable2.h	7;"	d
+DIALOG_SHOWVOICE_20150414_DEF	./dialogShowVoice.h	7;"	d
+DIST	./Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DialogAddTable1	./dialogAddTable1.cpp	/^DialogAddTable1::DialogAddTable1(QWidget *parent):$/;"	f	class:DialogAddTable1
+DialogAddTable1	./dialogAddTable1.h	/^class DialogAddTable1 : public QDialog$/;"	c
+DialogAddTable1	./ui_dialogAddTable1.h	/^    class DialogAddTable1: public Ui_DialogAddTable1 {};$/;"	c	namespace:Ui
+DialogAddTable2	./dialogAddTable2.cpp	/^DialogAddTable2::DialogAddTable2(QWidget *parent):$/;"	f	class:DialogAddTable2
+DialogAddTable2	./dialogAddTable2.h	/^class DialogAddTable2 : public QDialog$/;"	c
+DialogAddTable2	./ui_dialogAddTable2.h	/^    class DialogAddTable2: public Ui_DialogAddTable2 {};$/;"	c	namespace:Ui
+DialogModifyTable1	./dialogModifyTable1.cpp	/^DialogModifyTable1::DialogModifyTable1(QWidget *parent):$/;"	f	class:DialogModifyTable1
+DialogModifyTable1	./dialogModifyTable1.h	/^class DialogModifyTable1 : public QDialog$/;"	c
+DialogModifyTable1	./ui_dialogModifyTable1.h	/^    class DialogModifyTable1: public Ui_DialogModifyTable1 {};$/;"	c	namespace:Ui
+DialogModifyTable2	./dialogModifyTable2.cpp	/^DialogModifyTable2::DialogModifyTable2(QWidget *parent):$/;"	f	class:DialogModifyTable2
+DialogModifyTable2	./dialogModifyTable2.h	/^class DialogModifyTable2 : public QDialog$/;"	c
+DialogModifyTable2	./ui_dialogModifyTable2.h	/^    class DialogModifyTable2: public Ui_DialogModifyTable2 {};$/;"	c	namespace:Ui
+DialogShowVoice	./dialogShowVoice.cpp	/^DialogShowVoice::DialogShowVoice(QWidget *parent):$/;"	f	class:DialogShowVoice
+DialogShowVoice	./dialogShowVoice.h	/^class DialogShowVoice : public QDialog$/;"	c
+DialogShowVoice	./ui_dialogShowVoice.h	/^    class DialogShowVoice: public Ui_DialogShowVoice {};$/;"	c	namespace:Ui
+INCPATH	./Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include\/QtSql -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INSTALL_DIR	./Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	./Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	./Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+LFLAGS	./Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LIBS	./Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtSql -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lQtGui -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LINK	./Makefile	/^LINK          = arm-linux-g++$/;"	m
+MKDIR	./Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	./Makefile	/^MOVE          = mv -f$/;"	m
+OBJECTS	./Makefile	/^OBJECTS       = dialogAddTable1.o \\$/;"	m
+OBJECTS_DIR	./Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+QMAKE	./Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE_TARGET	./Makefile	/^QMAKE_TARGET  = voiceIden$/;"	m
+RANLIB	./Makefile	/^RANLIB        = $/;"	m
+SED	./Makefile	/^SED           = sed$/;"	m
+SOURCES	./Makefile	/^SOURCES       = dialogAddTable1.cpp \\$/;"	m
+SYMLINK	./Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYSZUXIM_H	./TQInputMethod.h	25;"	d
+TAR	./Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	./Makefile	/^TARGET        = voiceIden$/;"	m
+TQInputMethod	./TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+UI_DIALOGADDTABLE1_H	./ui_dialogAddTable1.h	11;"	d
+UI_DIALOGADDTABLE2_H	./ui_dialogAddTable2.h	11;"	d
+UI_DIALOGMODIFYTABLE1_H	./ui_dialogModifyTable1.h	11;"	d
+UI_DIALOGMODIFYTABLE2_H	./ui_dialogModifyTable2.h	11;"	d
+UI_DIALOGSHOWVOICE_H	./ui_dialogShowVoice.h	11;"	d
+UI_VOICEIDEN_H	./ui_voiceIden.h	11;"	d
+Ui	./ui_dialogAddTable1.h	/^namespace Ui {$/;"	n
+Ui	./ui_dialogAddTable2.h	/^namespace Ui {$/;"	n
+Ui	./ui_dialogModifyTable1.h	/^namespace Ui {$/;"	n
+Ui	./ui_dialogModifyTable2.h	/^namespace Ui {$/;"	n
+Ui	./ui_dialogShowVoice.h	/^namespace Ui {$/;"	n
+Ui	./ui_voiceIden.h	/^namespace Ui {$/;"	n
+Ui_DialogAddTable1	./ui_dialogAddTable1.h	/^class Ui_DialogAddTable1$/;"	c
+Ui_DialogAddTable2	./ui_dialogAddTable2.h	/^class Ui_DialogAddTable2$/;"	c
+Ui_DialogModifyTable1	./ui_dialogModifyTable1.h	/^class Ui_DialogModifyTable1$/;"	c
+Ui_DialogModifyTable2	./ui_dialogModifyTable2.h	/^class Ui_DialogModifyTable2$/;"	c
+Ui_DialogShowVoice	./ui_dialogShowVoice.h	/^class Ui_DialogShowVoice$/;"	c
+Ui_VoiceIden	./ui_voiceIden.h	/^class Ui_VoiceIden$/;"	c
+VOICEIDEN_20150403_DEF	./voiceIden.h	9;"	d
+VoiceIden	./ui_voiceIden.h	/^    class VoiceIden: public Ui_VoiceIden {};$/;"	c	namespace:Ui
+VoiceIden	./voiceIden.cpp	/^VoiceIden::VoiceIden(QWidget *parent):$/;"	f	class:VoiceIden
+VoiceIden	./voiceIden.h	/^class VoiceIden : public QWidget$/;"	c
+btAddConfirm	./ui_dialogAddTable1.h	/^    QPushButton *btAddConfirm;$/;"	m	class:Ui_DialogAddTable1
+btAddConfirm	./ui_dialogAddTable2.h	/^    QPushButton *btAddConfirm;$/;"	m	class:Ui_DialogAddTable2
+btAddConfirmPushed	./dialogAddTable1.cpp	/^void DialogAddTable1::btAddConfirmPushed()$/;"	f	class:DialogAddTable1
+btAddConfirmPushed	./dialogAddTable2.cpp	/^void DialogAddTable2::btAddConfirmPushed()$/;"	f	class:DialogAddTable2
+btAddTable1Pushed	./voiceIden.cpp	/^void VoiceIden::btAddTable1Pushed()$/;"	f	class:VoiceIden
+btAddTable2Pushed	./voiceIden.cpp	/^void VoiceIden::btAddTable2Pushed()$/;"	f	class:VoiceIden
+btDeleteTable1Pushed	./voiceIden.cpp	/^void VoiceIden::btDeleteTable1Pushed()$/;"	f	class:VoiceIden
+btDeleteTable2Pushed	./voiceIden.cpp	/^void VoiceIden::btDeleteTable2Pushed()$/;"	f	class:VoiceIden
+btModifyConfirm	./ui_dialogModifyTable1.h	/^    QPushButton *btModifyConfirm;$/;"	m	class:Ui_DialogModifyTable1
+btModifyConfirm	./ui_dialogModifyTable2.h	/^    QPushButton *btModifyConfirm;$/;"	m	class:Ui_DialogModifyTable2
+btModifyConfirmPushed	./dialogModifyTable1.cpp	/^void DialogModifyTable1::btModifyConfirmPushed()$/;"	f	class:DialogModifyTable1
+btModifyConfirmPushed	./dialogModifyTable2.cpp	/^void DialogModifyTable2::btModifyConfirmPushed()$/;"	f	class:DialogModifyTable2
+btQuit	./ui_dialogAddTable1.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogAddTable1
+btQuit	./ui_dialogAddTable2.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogAddTable2
+btQuit	./ui_dialogModifyTable1.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogModifyTable1
+btQuit	./ui_dialogModifyTable2.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogModifyTable2
+btQuitPushed	./dialogAddTable1.cpp	/^void DialogAddTable1::btQuitPushed()$/;"	f	class:DialogAddTable1
+btQuitPushed	./dialogAddTable2.cpp	/^void DialogAddTable2::btQuitPushed()$/;"	f	class:DialogAddTable2
+btQuitPushed	./dialogModifyTable1.cpp	/^void DialogModifyTable1::btQuitPushed()$/;"	f	class:DialogModifyTable1
+btQuitPushed	./dialogModifyTable2.cpp	/^void DialogModifyTable2::btQuitPushed()$/;"	f	class:DialogModifyTable2
+btQuitPushed	./voiceIden.cpp	/^void VoiceIden::btQuitPushed()$/;"	f	class:VoiceIden
+btRecordFinish	./ui_dialogAddTable1.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogAddTable1
+btRecordFinish	./ui_dialogAddTable2.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogAddTable2
+btRecordFinish	./ui_dialogModifyTable1.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogModifyTable1
+btRecordFinish	./ui_dialogModifyTable2.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogModifyTable2
+btRecordFinish	./ui_dialogShowVoice.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogShowVoice
+btRecordFinishedPushed	./dialogAddTable1.cpp	/^void DialogAddTable1::btRecordFinishedPushed()$/;"	f	class:DialogAddTable1
+btRecordFinishedPushed	./dialogAddTable2.cpp	/^void DialogAddTable2::btRecordFinishedPushed()$/;"	f	class:DialogAddTable2
+btRecordFinishedPushed	./dialogModifyTable1.cpp	/^void DialogModifyTable1::btRecordFinishedPushed()$/;"	f	class:DialogModifyTable1
+btRecordFinishedPushed	./dialogModifyTable2.cpp	/^void DialogModifyTable2::btRecordFinishedPushed()$/;"	f	class:DialogModifyTable2
+btRecordFinishedPushed	./dialogShowVoice.cpp	/^void DialogShowVoice::btRecordFinishedPushed()$/;"	f	class:DialogShowVoice
+btRecordStart	./ui_dialogAddTable1.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogAddTable1
+btRecordStart	./ui_dialogAddTable2.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogAddTable2
+btRecordStart	./ui_dialogModifyTable1.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogModifyTable1
+btRecordStart	./ui_dialogModifyTable2.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogModifyTable2
+btRecordStart	./ui_dialogShowVoice.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogShowVoice
+btRecordStartPushed	./dialogAddTable1.cpp	/^void DialogAddTable1::btRecordStartPushed()$/;"	f	class:DialogAddTable1
+btRecordStartPushed	./dialogAddTable2.cpp	/^void DialogAddTable2::btRecordStartPushed()$/;"	f	class:DialogAddTable2
+btRecordStartPushed	./dialogModifyTable1.cpp	/^void DialogModifyTable1::btRecordStartPushed()$/;"	f	class:DialogModifyTable1
+btRecordStartPushed	./dialogModifyTable2.cpp	/^void DialogModifyTable2::btRecordStartPushed()$/;"	f	class:DialogModifyTable2
+btRecordStartPushed	./dialogShowVoice.cpp	/^void DialogShowVoice::btRecordStartPushed()$/;"	f	class:DialogShowVoice
+btVoiceShowPushed	./voiceIden.cpp	/^void VoiceIden::btVoiceShowPushed()$/;"	f	class:VoiceIden
+buttonAddTable1	./ui_voiceIden.h	/^    QPushButton *buttonAddTable1;$/;"	m	class:Ui_VoiceIden
+buttonAddTable2	./ui_voiceIden.h	/^    QPushButton *buttonAddTable2;$/;"	m	class:Ui_VoiceIden
+buttonDeleteTable1	./ui_voiceIden.h	/^    QPushButton *buttonDeleteTable1;$/;"	m	class:Ui_VoiceIden
+buttonDeleteTable2	./ui_voiceIden.h	/^    QPushButton *buttonDeleteTable2;$/;"	m	class:Ui_VoiceIden
+buttonQuit	./ui_voiceIden.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_VoiceIden
+buttonVoiceShow	./ui_voiceIden.h	/^    QPushButton *buttonVoiceShow;$/;"	m	class:Ui_VoiceIden
+cancel	./moc_dialogAddTable1.cpp	/^void DialogAddTable1::cancel()$/;"	f	class:DialogAddTable1
+cancel	./moc_dialogAddTable2.cpp	/^void DialogAddTable2::cancel()$/;"	f	class:DialogAddTable2
+cancel	./moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::cancel()$/;"	f	class:DialogModifyTable1
+cancel	./moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::cancel()$/;"	f	class:DialogModifyTable2
+checkBox	./ui_dialogModifyTable1.h	/^    QCheckBox *checkBox;$/;"	m	class:Ui_DialogModifyTable1
+checkBox	./ui_dialogModifyTable2.h	/^    QCheckBox *checkBox;$/;"	m	class:Ui_DialogModifyTable2
+dialogAddTable1Cancel	./voiceIden.cpp	/^void VoiceIden::dialogAddTable1Cancel()$/;"	f	class:VoiceIden
+dialogAddTable1Comfirn	./voiceIden.cpp	/^void VoiceIden::dialogAddTable1Comfirn()$/;"	f	class:VoiceIden
+dialogAddTable2Cancel	./voiceIden.cpp	/^void VoiceIden::dialogAddTable2Cancel()$/;"	f	class:VoiceIden
+dialogAddTable2Comfirn	./voiceIden.cpp	/^void VoiceIden::dialogAddTable2Comfirn()$/;"	f	class:VoiceIden
+dialogModifyTable1Cancel	./voiceIden.cpp	/^void VoiceIden::dialogModifyTable1Cancel()$/;"	f	class:VoiceIden
+dialogModifyTable1Comfirn	./voiceIden.cpp	/^void VoiceIden::dialogModifyTable1Comfirn()$/;"	f	class:VoiceIden
+dialogModifyTable2Cancel	./voiceIden.cpp	/^void VoiceIden::dialogModifyTable2Cancel()$/;"	f	class:VoiceIden
+dialogModifyTable2Comfirn	./voiceIden.cpp	/^void VoiceIden::dialogModifyTable2Comfirn()$/;"	f	class:VoiceIden
+finishRecord	./moc_dialogAddTable1.cpp	/^void DialogAddTable1::finishRecord()$/;"	f	class:DialogAddTable1
+finishRecord	./moc_dialogAddTable2.cpp	/^void DialogAddTable2::finishRecord()$/;"	f	class:DialogAddTable2
+finishRecord	./moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::finishRecord()$/;"	f	class:DialogModifyTable1
+finishRecord	./moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::finishRecord()$/;"	f	class:DialogModifyTable2
+finishRecord	./moc_dialogShowVoice.cpp	/^void DialogShowVoice::finishRecord()$/;"	f	class:DialogShowVoice
+finishedRecordVoice	./voiceIden.cpp	/^void VoiceIden::finishedRecordVoice()$/;"	f	class:VoiceIden
+getItemText	./dialogAddTable1.cpp	/^QString DialogAddTable1::getItemText(int num) const$/;"	f	class:DialogAddTable1
+getItemText	./dialogAddTable2.cpp	/^QString DialogAddTable2::getItemText(int num) const$/;"	f	class:DialogAddTable2
+getItemText	./dialogModifyTable1.cpp	/^QString DialogModifyTable1::getItemText(int num) const$/;"	f	class:DialogModifyTable1
+getItemText	./dialogModifyTable2.cpp	/^QString DialogModifyTable2::getItemText(int num) const$/;"	f	class:DialogModifyTable2
+groupBox	./ui_dialogModifyTable1.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_DialogModifyTable1
+groupBox	./ui_dialogModifyTable2.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_DialogModifyTable2
+im	./voiceIden.h	/^	QWSInputMethod *im;	$/;"	m	class:VoiceIden
+isVoiceRecordChecked	./dialogModifyTable1.cpp	/^bool DialogModifyTable1::isVoiceRecordChecked()$/;"	f	class:DialogModifyTable1
+isVoiceRecordChecked	./dialogModifyTable2.cpp	/^bool DialogModifyTable2::isVoiceRecordChecked()$/;"	f	class:DialogModifyTable2
+label	./ui_dialogAddTable1.h	/^    QLabel *label;$/;"	m	class:Ui_DialogAddTable1
+label	./ui_dialogAddTable2.h	/^    QLabel *label;$/;"	m	class:Ui_DialogAddTable2
+label	./ui_dialogModifyTable1.h	/^    QLabel *label;$/;"	m	class:Ui_DialogModifyTable1
+label	./ui_dialogModifyTable2.h	/^    QLabel *label;$/;"	m	class:Ui_DialogModifyTable2
+label	./ui_dialogShowVoice.h	/^    QLabel *label;$/;"	m	class:Ui_DialogShowVoice
+label	./ui_voiceIden.h	/^    QLabel *label;$/;"	m	class:Ui_VoiceIden
+labelOne	./ui_voiceIden.h	/^    QLabel *labelOne;$/;"	m	class:Ui_VoiceIden
+labelTwo	./ui_voiceIden.h	/^    QLabel *labelTwo;$/;"	m	class:Ui_VoiceIden
+label_2	./ui_dialogAddTable1.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogAddTable1
+label_2	./ui_dialogAddTable2.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogAddTable2
+label_2	./ui_dialogModifyTable1.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogModifyTable1
+label_2	./ui_dialogModifyTable2.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogModifyTable2
+label_2	./ui_voiceIden.h	/^    QLabel *label_2;$/;"	m	class:Ui_VoiceIden
+label_3	./ui_dialogAddTable2.h	/^    QLabel *label_3;$/;"	m	class:Ui_DialogAddTable2
+label_3	./ui_dialogModifyTable2.h	/^    QLabel *label_3;$/;"	m	class:Ui_DialogModifyTable2
+leChanged	./dialogAddTable1.cpp	/^void DialogAddTable1::leChanged(const QString &text)$/;"	f	class:DialogAddTable1
+leChanged	./dialogAddTable2.cpp	/^void DialogAddTable2::leChanged(const QString &text)$/;"	f	class:DialogAddTable2
+leChanged	./dialogModifyTable1.cpp	/^void DialogModifyTable1::leChanged(const QString &text)$/;"	f	class:DialogModifyTable1
+leChanged	./dialogModifyTable2.cpp	/^void DialogModifyTable2::leChanged(const QString &text)$/;"	f	class:DialogModifyTable2
+lineEditItem0	./ui_dialogAddTable1.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogAddTable1
+lineEditItem0	./ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem0	./ui_dialogModifyTable1.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogModifyTable1
+lineEditItem0	./ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogModifyTable2
+lineEditItem1	./ui_dialogAddTable1.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogAddTable1
+lineEditItem1	./ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem1	./ui_dialogModifyTable1.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogModifyTable1
+lineEditItem1	./ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogModifyTable2
+lineEditItem2	./ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem2;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem2	./ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem2;$/;"	m	class:Ui_DialogModifyTable2
+lineEditSelectOne	./ui_voiceIden.h	/^    QLineEdit *lineEditSelectOne;$/;"	m	class:Ui_VoiceIden
+lineEditSelectTwo	./ui_voiceIden.h	/^    QLineEdit *lineEditSelectTwo;$/;"	m	class:Ui_VoiceIden
+m_currentTable2Name	./voiceIden.h	/^	QString m_currentTable2Name;$/;"	m	class:VoiceIden
+m_dat1	./voiceIden.h	/^	DialogAddTable1 *m_dat1;$/;"	m	class:VoiceIden
+m_dat2	./voiceIden.h	/^	DialogAddTable2 *m_dat2;$/;"	m	class:VoiceIden
+m_dmt1	./voiceIden.h	/^	DialogModifyTable1 *m_dmt1;$/;"	m	class:VoiceIden
+m_dmt2	./voiceIden.h	/^	DialogModifyTable2 *m_dmt2;$/;"	m	class:VoiceIden
+m_isVoiseSource	./voiceIden.h	/^	bool m_isVoiseSource;  \/\/录音资源是否可用$/;"	m	class:VoiceIden
+main	./main.cpp	/^int main(int argc, char *argv[])$/;"	f
+metaObject	./moc_TQInputMethod.cpp	/^const QMetaObject *TQInputMethod::metaObject() const$/;"	f	class:TQInputMethod
+metaObject	./moc_dialogAddTable1.cpp	/^const QMetaObject *DialogAddTable1::metaObject() const$/;"	f	class:DialogAddTable1
+metaObject	./moc_dialogAddTable2.cpp	/^const QMetaObject *DialogAddTable2::metaObject() const$/;"	f	class:DialogAddTable2
+metaObject	./moc_dialogModifyTable1.cpp	/^const QMetaObject *DialogModifyTable1::metaObject() const$/;"	f	class:DialogModifyTable1
+metaObject	./moc_dialogModifyTable2.cpp	/^const QMetaObject *DialogModifyTable2::metaObject() const$/;"	f	class:DialogModifyTable2
+metaObject	./moc_dialogShowVoice.cpp	/^const QMetaObject *DialogShowVoice::metaObject() const$/;"	f	class:DialogShowVoice
+metaObject	./moc_voiceIden.cpp	/^const QMetaObject *VoiceIden::metaObject() const$/;"	f	class:VoiceIden
+modifyTable1	./voiceIden.cpp	/^void VoiceIden::modifyTable1(int r, int c)$/;"	f	class:VoiceIden
+modifyTable2	./voiceIden.cpp	/^void VoiceIden::modifyTable2(int r, int c)$/;"	f	class:VoiceIden
+operateConfirm	./moc_dialogAddTable1.cpp	/^void DialogAddTable1::operateConfirm()$/;"	f	class:DialogAddTable1
+operateConfirm	./moc_dialogAddTable2.cpp	/^void DialogAddTable2::operateConfirm()$/;"	f	class:DialogAddTable2
+operateConfirm	./moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::operateConfirm()$/;"	f	class:DialogModifyTable1
+operateConfirm	./moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::operateConfirm()$/;"	f	class:DialogModifyTable2
+qt_meta_data_DialogAddTable1	./moc_dialogAddTable1.cpp	/^static const uint qt_meta_data_DialogAddTable1[] = {$/;"	v	file:
+qt_meta_data_DialogAddTable2	./moc_dialogAddTable2.cpp	/^static const uint qt_meta_data_DialogAddTable2[] = {$/;"	v	file:
+qt_meta_data_DialogModifyTable1	./moc_dialogModifyTable1.cpp	/^static const uint qt_meta_data_DialogModifyTable1[] = {$/;"	v	file:
+qt_meta_data_DialogModifyTable2	./moc_dialogModifyTable2.cpp	/^static const uint qt_meta_data_DialogModifyTable2[] = {$/;"	v	file:
+qt_meta_data_DialogShowVoice	./moc_dialogShowVoice.cpp	/^static const uint qt_meta_data_DialogShowVoice[] = {$/;"	v	file:
+qt_meta_data_TQInputMethod	./moc_TQInputMethod.cpp	/^static const uint qt_meta_data_TQInputMethod[] = {$/;"	v	file:
+qt_meta_data_VoiceIden	./moc_voiceIden.cpp	/^static const uint qt_meta_data_VoiceIden[] = {$/;"	v	file:
+qt_meta_stringdata_DialogAddTable1	./moc_dialogAddTable1.cpp	/^static const char qt_meta_stringdata_DialogAddTable1[] = {$/;"	v	file:
+qt_meta_stringdata_DialogAddTable2	./moc_dialogAddTable2.cpp	/^static const char qt_meta_stringdata_DialogAddTable2[] = {$/;"	v	file:
+qt_meta_stringdata_DialogModifyTable1	./moc_dialogModifyTable1.cpp	/^static const char qt_meta_stringdata_DialogModifyTable1[] = {$/;"	v	file:
+qt_meta_stringdata_DialogModifyTable2	./moc_dialogModifyTable2.cpp	/^static const char qt_meta_stringdata_DialogModifyTable2[] = {$/;"	v	file:
+qt_meta_stringdata_DialogShowVoice	./moc_dialogShowVoice.cpp	/^static const char qt_meta_stringdata_DialogShowVoice[] = {$/;"	v	file:
+qt_meta_stringdata_TQInputMethod	./moc_TQInputMethod.cpp	/^static const char qt_meta_stringdata_TQInputMethod[] = {$/;"	v	file:
+qt_meta_stringdata_VoiceIden	./moc_voiceIden.cpp	/^static const char qt_meta_stringdata_VoiceIden[] = {$/;"	v	file:
+qt_metacall	./moc_TQInputMethod.cpp	/^int TQInputMethod::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:TQInputMethod
+qt_metacall	./moc_dialogAddTable1.cpp	/^int DialogAddTable1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogAddTable1
+qt_metacall	./moc_dialogAddTable2.cpp	/^int DialogAddTable2::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogAddTable2
+qt_metacall	./moc_dialogModifyTable1.cpp	/^int DialogModifyTable1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogModifyTable1
+qt_metacall	./moc_dialogModifyTable2.cpp	/^int DialogModifyTable2::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogModifyTable2
+qt_metacall	./moc_dialogShowVoice.cpp	/^int DialogShowVoice::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogShowVoice
+qt_metacall	./moc_voiceIden.cpp	/^int VoiceIden::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:VoiceIden
+qt_metacast	./moc_TQInputMethod.cpp	/^void *TQInputMethod::qt_metacast(const char *_clname)$/;"	f	class:TQInputMethod
+qt_metacast	./moc_dialogAddTable1.cpp	/^void *DialogAddTable1::qt_metacast(const char *_clname)$/;"	f	class:DialogAddTable1
+qt_metacast	./moc_dialogAddTable2.cpp	/^void *DialogAddTable2::qt_metacast(const char *_clname)$/;"	f	class:DialogAddTable2
+qt_metacast	./moc_dialogModifyTable1.cpp	/^void *DialogModifyTable1::qt_metacast(const char *_clname)$/;"	f	class:DialogModifyTable1
+qt_metacast	./moc_dialogModifyTable2.cpp	/^void *DialogModifyTable2::qt_metacast(const char *_clname)$/;"	f	class:DialogModifyTable2
+qt_metacast	./moc_dialogShowVoice.cpp	/^void *DialogShowVoice::qt_metacast(const char *_clname)$/;"	f	class:DialogShowVoice
+qt_metacast	./moc_voiceIden.cpp	/^void *VoiceIden::qt_metacast(const char *_clname)$/;"	f	class:VoiceIden
+readDatabaseTable1	./voiceIden.cpp	/^void VoiceIden::readDatabaseTable1()$/;"	f	class:VoiceIden
+readDatabaseTable2	./voiceIden.cpp	/^void VoiceIden::readDatabaseTable2(QString &tableName)$/;"	f	class:VoiceIden
+retranslateUi	./ui_dialogAddTable1.h	/^    void retranslateUi(QDialog *DialogAddTable1)$/;"	f	class:Ui_DialogAddTable1
+retranslateUi	./ui_dialogAddTable2.h	/^    void retranslateUi(QDialog *DialogAddTable2)$/;"	f	class:Ui_DialogAddTable2
+retranslateUi	./ui_dialogModifyTable1.h	/^    void retranslateUi(QDialog *DialogModifyTable1)$/;"	f	class:Ui_DialogModifyTable1
+retranslateUi	./ui_dialogModifyTable2.h	/^    void retranslateUi(QDialog *DialogModifyTable2)$/;"	f	class:Ui_DialogModifyTable2
+retranslateUi	./ui_dialogShowVoice.h	/^    void retranslateUi(QDialog *DialogShowVoice)$/;"	f	class:Ui_DialogShowVoice
+retranslateUi	./ui_voiceIden.h	/^    void retranslateUi(QWidget *VoiceIden)$/;"	f	class:Ui_VoiceIden
+returned	./moc_voiceIden.cpp	/^void VoiceIden::returned()$/;"	f	class:VoiceIden
+setItemText	./dialogAddTable2.cpp	/^void DialogAddTable2::setItemText(const QString &string, int item)$/;"	f	class:DialogAddTable2
+setItemText	./dialogModifyTable1.cpp	/^void DialogModifyTable1::setItemText(const QString &string, int item)$/;"	f	class:DialogModifyTable1
+setItemText	./dialogModifyTable2.cpp	/^void DialogModifyTable2::setItemText(const QString &string, int item)$/;"	f	class:DialogModifyTable2
+setTableOneSelectItem	./voiceIden.cpp	/^void VoiceIden::setTableOneSelectItem(const QString& text)$/;"	f	class:VoiceIden
+setTableTwoSelectItem	./voiceIden.cpp	/^void VoiceIden::setTableTwoSelectItem(const QString& text)$/;"	f	class:VoiceIden
+setText	./dialogShowVoice.cpp	/^void DialogShowVoice::setText(QString &string)$/;"	f	class:DialogShowVoice
+setupUi	./ui_dialogAddTable1.h	/^    void setupUi(QDialog *DialogAddTable1)$/;"	f	class:Ui_DialogAddTable1
+setupUi	./ui_dialogAddTable2.h	/^    void setupUi(QDialog *DialogAddTable2)$/;"	f	class:Ui_DialogAddTable2
+setupUi	./ui_dialogModifyTable1.h	/^    void setupUi(QDialog *DialogModifyTable1)$/;"	f	class:Ui_DialogModifyTable1
+setupUi	./ui_dialogModifyTable2.h	/^    void setupUi(QDialog *DialogModifyTable2)$/;"	f	class:Ui_DialogModifyTable2
+setupUi	./ui_dialogShowVoice.h	/^    void setupUi(QDialog *DialogShowVoice)$/;"	f	class:Ui_DialogShowVoice
+setupUi	./ui_voiceIden.h	/^    void setupUi(QWidget *VoiceIden)$/;"	f	class:Ui_VoiceIden
+startRecord	./moc_dialogAddTable1.cpp	/^void DialogAddTable1::startRecord()$/;"	f	class:DialogAddTable1
+startRecord	./moc_dialogAddTable2.cpp	/^void DialogAddTable2::startRecord()$/;"	f	class:DialogAddTable2
+startRecord	./moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::startRecord()$/;"	f	class:DialogModifyTable1
+startRecord	./moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::startRecord()$/;"	f	class:DialogModifyTable2
+startRecord	./moc_dialogShowVoice.cpp	/^void DialogShowVoice::startRecord()$/;"	f	class:DialogShowVoice
+startedRecordVoice	./voiceIden.cpp	/^void VoiceIden::startedRecordVoice()$/;"	f	class:VoiceIden
+staticMetaObject	./moc_TQInputMethod.cpp	/^const QMetaObject TQInputMethod::staticMetaObject = {$/;"	m	class:TQInputMethod	file:
+staticMetaObject	./moc_dialogAddTable1.cpp	/^const QMetaObject DialogAddTable1::staticMetaObject = {$/;"	m	class:DialogAddTable1	file:
+staticMetaObject	./moc_dialogAddTable2.cpp	/^const QMetaObject DialogAddTable2::staticMetaObject = {$/;"	m	class:DialogAddTable2	file:
+staticMetaObject	./moc_dialogModifyTable1.cpp	/^const QMetaObject DialogModifyTable1::staticMetaObject = {$/;"	m	class:DialogModifyTable1	file:
+staticMetaObject	./moc_dialogModifyTable2.cpp	/^const QMetaObject DialogModifyTable2::staticMetaObject = {$/;"	m	class:DialogModifyTable2	file:
+staticMetaObject	./moc_dialogShowVoice.cpp	/^const QMetaObject DialogShowVoice::staticMetaObject = {$/;"	m	class:DialogShowVoice	file:
+staticMetaObject	./moc_voiceIden.cpp	/^const QMetaObject VoiceIden::staticMetaObject = {$/;"	m	class:VoiceIden	file:
+syszuxpinyin	./TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+tableWidgetOne	./ui_voiceIden.h	/^    QTableWidget *tableWidgetOne;$/;"	m	class:Ui_VoiceIden
+tableWidgetTwo	./ui_voiceIden.h	/^    QTableWidget *tableWidgetTwo;$/;"	m	class:Ui_VoiceIden
+ui	./dialogAddTable1.h	/^	Ui::DialogAddTable1 *ui;$/;"	m	class:DialogAddTable1
+ui	./dialogAddTable2.h	/^	Ui::DialogAddTable2 *ui;$/;"	m	class:DialogAddTable2
+ui	./dialogModifyTable1.h	/^	Ui::DialogModifyTable1 *ui;$/;"	m	class:DialogModifyTable1
+ui	./dialogModifyTable2.h	/^	Ui::DialogModifyTable2 *ui;$/;"	m	class:DialogModifyTable2
+ui	./dialogShowVoice.h	/^	Ui::DialogShowVoice *ui;$/;"	m	class:DialogShowVoice
+ui	./voiceIden.h	/^	Ui::VoiceIden *ui;$/;"	m	class:VoiceIden
+updateTable2	./voiceIden.cpp	/^void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn)$/;"	f	class:VoiceIden
+updateTable2_2	./voiceIden.cpp	/^void VoiceIden::updateTable2_2(int currentRow,int currentColumn,int previousRow,int previousColumn)$/;"	f	class:VoiceIden
+voiceRecordCheckChanged	./dialogModifyTable1.cpp	/^void DialogModifyTable1::voiceRecordCheckChanged(int state)$/;"	f	class:DialogModifyTable1
+voiceRecordCheckChanged	./dialogModifyTable2.cpp	/^void DialogModifyTable2::voiceRecordCheckChanged(int state)$/;"	f	class:DialogModifyTable2
+~DialogAddTable1	./dialogAddTable1.cpp	/^DialogAddTable1::~DialogAddTable1()$/;"	f	class:DialogAddTable1
+~DialogAddTable2	./dialogAddTable2.cpp	/^DialogAddTable2::~DialogAddTable2()$/;"	f	class:DialogAddTable2
+~DialogModifyTable1	./dialogModifyTable1.cpp	/^DialogModifyTable1::~DialogModifyTable1()$/;"	f	class:DialogModifyTable1
+~DialogModifyTable2	./dialogModifyTable2.cpp	/^DialogModifyTable2::~DialogModifyTable2()$/;"	f	class:DialogModifyTable2
+~DialogShowVoice	./dialogShowVoice.cpp	/^DialogShowVoice::~DialogShowVoice()$/;"	f	class:DialogShowVoice
+~VoiceIden	./voiceIden.cpp	/^VoiceIden::~VoiceIden()$/;"	f	class:VoiceIden

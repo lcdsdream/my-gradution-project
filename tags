@@ -1,0 +1,1034 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	./avoid/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./configureMainWindow/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./configureMainWindowv1.0/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./imageIden/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./localSet/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./planRoad/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./useByTaoImageIden/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+AR	./voiceIden/Makefile	/^AR            = arm-linux-ar cqs$/;"	m
+ARM	./TQInputMethod.h	26;"	d
+ARM	./avoid/TQInputMethod.h	26;"	d
+ARM	./configureMainWindow/TQInputMethod.h	26;"	d
+ARM	./configureMainWindowv1.0/TQInputMethod.h	26;"	d
+ARM	./localSet/TQInputMethod.h	26;"	d
+ARM	./useByTaoImageIden/TQInputMethod.h	26;"	d
+ARM	./voiceIden/TQInputMethod.h	26;"	d
+AVOID_20150403_DEF	./avoid/avoid.h	9;"	d
+Avoid	./avoid/avoid.cpp	/^Avoid::Avoid(QWidget *parent):$/;"	f	class:Avoid
+Avoid	./avoid/avoid.h	/^class Avoid : public QTabWidget$/;"	c
+Avoid	./avoid/ui_avoid.h	/^    class Avoid: public Ui_Avoid {};$/;"	c	namespace:Ui
+CC	./avoid/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./configureMainWindow/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./configureMainWindowv1.0/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./imageIden/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./localSet/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./planRoad/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./useByTaoImageIden/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CC	./voiceIden/Makefile	/^CC            = arm-linux-gcc$/;"	m
+CFLAGS	./avoid/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./configureMainWindow/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./configureMainWindowv1.0/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./imageIden/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./localSet/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./planRoad/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./useByTaoImageIden/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	./voiceIden/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	./avoid/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./configureMainWindow/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./configureMainWindowv1.0/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./imageIden/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./localSet/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./planRoad/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./useByTaoImageIden/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	./voiceIden/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	./avoid/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./configureMainWindow/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./configureMainWindowv1.0/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./imageIden/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./localSet/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./planRoad/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./useByTaoImageIden/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	./voiceIden/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+CONFIGURE_MAIN_WINDOW_201503_DEF	./configureMainWindow/configureMainWindow.h	8;"	d
+CONFIGURE_MAIN_WINDOW_201503_DEF	./configureMainWindowv1.0/configureMainWindow.h	8;"	d
+COPY	./avoid/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./configureMainWindow/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./configureMainWindowv1.0/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./imageIden/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./localSet/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./planRoad/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./useByTaoImageIden/Makefile	/^COPY          = cp -f$/;"	m
+COPY	./voiceIden/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	./avoid/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./configureMainWindow/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./configureMainWindowv1.0/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./imageIden/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./localSet/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./planRoad/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./useByTaoImageIden/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_DIR	./voiceIden/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_FILE	./avoid/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./configureMainWindow/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./configureMainWindowv1.0/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./imageIden/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./localSet/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./planRoad/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./useByTaoImageIden/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+COPY_FILE	./voiceIden/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+CXX	./avoid/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./configureMainWindow/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./configureMainWindowv1.0/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./imageIden/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./localSet/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./planRoad/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./useByTaoImageIden/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXX	./voiceIden/Makefile	/^CXX           = arm-linux-g++$/;"	m
+CXXFLAGS	./avoid/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./configureMainWindow/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./configureMainWindowv1.0/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./imageIden/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./localSet/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./planRoad/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./useByTaoImageIden/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	./voiceIden/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+ConfigureMainWindow	./configureMainWindow/configureMainWindow.cpp	/^ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):$/;"	f	class:ConfigureMainWindow
+ConfigureMainWindow	./configureMainWindow/configureMainWindow.h	/^class ConfigureMainWindow : public QMainWindow$/;"	c
+ConfigureMainWindow	./configureMainWindow/ui_configureMainWindow.h	/^    class ConfigureMainWindow: public Ui_ConfigureMainWindow {};$/;"	c	namespace:Ui
+ConfigureMainWindow	./configureMainWindowv1.0/configureMainWindow.cpp	/^ConfigureMainWindow::ConfigureMainWindow(QWidget *parent):$/;"	f	class:ConfigureMainWindow
+ConfigureMainWindow	./configureMainWindowv1.0/configureMainWindow.h	/^class ConfigureMainWindow : public QMainWindow$/;"	c
+ConfigureMainWindow	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    class ConfigureMainWindow: public Ui_ConfigureMainWindow {};$/;"	c	namespace:Ui
+DEFINES	./avoid/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./configureMainWindow/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./configureMainWindowv1.0/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./imageIden/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./localSet/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./planRoad/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./useByTaoImageIden/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEFINES	./voiceIden/Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEL_DIR	./avoid/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./configureMainWindow/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./configureMainWindowv1.0/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./imageIden/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./localSet/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./planRoad/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./useByTaoImageIden/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	./voiceIden/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	./avoid/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./configureMainWindow/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./configureMainWindowv1.0/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./imageIden/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./localSet/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./planRoad/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./useByTaoImageIden/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	./voiceIden/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	./avoid/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./configureMainWindow/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./configureMainWindowv1.0/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./imageIden/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./localSet/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./planRoad/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./useByTaoImageIden/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	./voiceIden/Makefile	/^DESTDIR       = $/;"	m
+DEVICE_NAME	./deviceDrive/orient_button.c	29;"	d	file:
+DIALOG_ADD_TABLE1_20150409_DEF	./voiceIden/dialogAddTable1.h	7;"	d
+DIALOG_ADD_TABLE2_20150411_DEF	./voiceIden/dialogAddTable2.h	7;"	d
+DIALOG_MODIFY_TABLE1_20150412_DEF	./voiceIden/dialogModifyTable1.h	7;"	d
+DIALOG_MODIFY_TABLE2_20150411_DEF	./voiceIden/dialogModifyTable2.h	7;"	d
+DIALOG_SHOWVOICE_20150414_DEF	./voiceIden/dialogShowVoice.h	7;"	d
+DIGITMODEL	./imageIden/imageIden.h	/^		DIGITMODEL = 2$/;"	e	enum:ImageIden::IdentModelType
+DIST	./avoid/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./configureMainWindow/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./configureMainWindowv1.0/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./imageIden/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./localSet/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./planRoad/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./useByTaoImageIden/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DIST	./voiceIden/Makefile	/^DIST          = \/opt\/qt-4.5\/__install\/arm\/mkspecs\/common\/g++.conf \\$/;"	m
+DialogAddTable1	./voiceIden/dialogAddTable1.cpp	/^DialogAddTable1::DialogAddTable1(QWidget *parent):$/;"	f	class:DialogAddTable1
+DialogAddTable1	./voiceIden/dialogAddTable1.h	/^class DialogAddTable1 : public QDialog$/;"	c
+DialogAddTable1	./voiceIden/ui_dialogAddTable1.h	/^    class DialogAddTable1: public Ui_DialogAddTable1 {};$/;"	c	namespace:Ui
+DialogAddTable2	./voiceIden/dialogAddTable2.cpp	/^DialogAddTable2::DialogAddTable2(QWidget *parent):$/;"	f	class:DialogAddTable2
+DialogAddTable2	./voiceIden/dialogAddTable2.h	/^class DialogAddTable2 : public QDialog$/;"	c
+DialogAddTable2	./voiceIden/ui_dialogAddTable2.h	/^    class DialogAddTable2: public Ui_DialogAddTable2 {};$/;"	c	namespace:Ui
+DialogModifyTable1	./voiceIden/dialogModifyTable1.cpp	/^DialogModifyTable1::DialogModifyTable1(QWidget *parent):$/;"	f	class:DialogModifyTable1
+DialogModifyTable1	./voiceIden/dialogModifyTable1.h	/^class DialogModifyTable1 : public QDialog$/;"	c
+DialogModifyTable1	./voiceIden/ui_dialogModifyTable1.h	/^    class DialogModifyTable1: public Ui_DialogModifyTable1 {};$/;"	c	namespace:Ui
+DialogModifyTable2	./voiceIden/dialogModifyTable2.cpp	/^DialogModifyTable2::DialogModifyTable2(QWidget *parent):$/;"	f	class:DialogModifyTable2
+DialogModifyTable2	./voiceIden/dialogModifyTable2.h	/^class DialogModifyTable2 : public QDialog$/;"	c
+DialogModifyTable2	./voiceIden/ui_dialogModifyTable2.h	/^    class DialogModifyTable2: public Ui_DialogModifyTable2 {};$/;"	c	namespace:Ui
+DialogShowVoice	./voiceIden/dialogShowVoice.cpp	/^DialogShowVoice::DialogShowVoice(QWidget *parent):$/;"	f	class:DialogShowVoice
+DialogShowVoice	./voiceIden/dialogShowVoice.h	/^class DialogShowVoice : public QDialog$/;"	c
+DialogShowVoice	./voiceIden/ui_dialogShowVoice.h	/^    class DialogShowVoice: public Ui_DialogShowVoice {};$/;"	c	namespace:Ui
+FACEMODEL	./imageIden/imageIden.h	/^		FACEMODEL  = 1,$/;"	e	enum:ImageIden::IdentModelType
+IMAGEIDE_20150402_DEF	./imageIden/imageIden.h	9;"	d
+IMAGEIDE_20150420_DEF	./useByTaoImageIden/imageIden.h	9;"	d
+INCPATH	./avoid/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./configureMainWindow/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./configureMainWindowv1.0/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./imageIden/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./localSet/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./planRoad/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./useByTaoImageIden/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INCPATH	./voiceIden/Makefile	/^INCPATH       = -I\/opt\/qt-4.5\/__install\/arm\/mkspecs\/default -I. -I\/opt\/qt-4.5\/__install\/arm\/include\/QtCore -I\/opt\/qt-4.5\/__install\/arm\/include\/QtNetwork -I\/opt\/qt-4.5\/__install\/arm\/include\/QtGui -I\/opt\/qt-4.5\/__install\/arm\/include\/QtSql -I\/opt\/qt-4.5\/__install\/arm\/include -I. -I. -I.$/;"	m
+INSTALL_DIR	./avoid/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./configureMainWindow/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./configureMainWindowv1.0/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./imageIden/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./localSet/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./planRoad/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./useByTaoImageIden/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_DIR	./voiceIden/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	./avoid/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./configureMainWindow/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./configureMainWindowv1.0/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./imageIden/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./localSet/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./planRoad/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./useByTaoImageIden/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	./voiceIden/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	./avoid/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./configureMainWindow/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./configureMainWindowv1.0/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./imageIden/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./localSet/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./planRoad/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./useByTaoImageIden/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	./voiceIden/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+IdentModelType	./imageIden/imageIden.h	/^	enum IdentModelType$/;"	g	class:ImageIden
+ImageIden	./imageIden/imageIden.cpp	/^ImageIden::ImageIden(QWidget *parent):$/;"	f	class:ImageIden
+ImageIden	./imageIden/imageIden.h	/^class ImageIden : public QMainWindow$/;"	c
+ImageIden	./imageIden/ui_imageIden.h	/^    class ImageIden: public Ui_ImageIden {};$/;"	c	namespace:Ui
+ImageIden	./useByTaoImageIden/imageIden.cpp	/^ImageIden::ImageIden(QWidget *parent):$/;"	f	class:ImageIden
+ImageIden	./useByTaoImageIden/imageIden.h	/^class ImageIden : public QMainWindow$/;"	c
+ImageIden	./useByTaoImageIden/ui_imageIden.h	/^    class ImageIden: public Ui_ImageIden {};$/;"	c	namespace:Ui
+KEYNUM	./deviceDrive/orient_button.c	30;"	d	file:
+LFLAGS	./avoid/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./configureMainWindow/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./configureMainWindowv1.0/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./imageIden/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./localSet/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./planRoad/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./useByTaoImageIden/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LFLAGS	./voiceIden/Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/qt-4.5\/__install\/arm\/lib$/;"	m
+LIBS	./avoid/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./configureMainWindow/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./configureMainWindowv1.0/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./imageIden/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./localSet/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./planRoad/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./useByTaoImageIden/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtGui -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LIBS	./voiceIden/Makefile	/^LIBS          = $(SUBLIBS)  -L\/opt\/qt-4.5\/__install\/arm\/\/lib -L. -lTQInputMethod -lQtSql -L\/tslib-1.4\/lib -L\/opt\/qt-4.5\/__install\/arm\/\/lib -lQtGui -lts -lQtNetwork -lQtCore -lm -lrt -ldl -lpthread$/;"	m
+LINK	./avoid/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./configureMainWindow/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./configureMainWindowv1.0/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./imageIden/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./localSet/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./planRoad/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./useByTaoImageIden/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LINK	./voiceIden/Makefile	/^LINK          = arm-linux-g++$/;"	m
+LOCALSET_20150403_DEF	./localSet/localSet.h	9;"	d
+LocalSet	./localSet/localSet.cpp	/^LocalSet::LocalSet(QWidget *parent):$/;"	f	class:LocalSet
+LocalSet	./localSet/localSet.h	/^class LocalSet : public QWidget$/;"	c
+LocalSet	./localSet/ui_localSet.h	/^    class LocalSet: public Ui_LocalSet {};$/;"	c	namespace:Ui
+MKDIR	./avoid/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./configureMainWindow/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./configureMainWindowv1.0/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./imageIden/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./localSet/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./planRoad/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./useByTaoImageIden/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	./voiceIden/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	./avoid/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./configureMainWindow/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./configureMainWindowv1.0/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./imageIden/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./localSet/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./planRoad/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./useByTaoImageIden/Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	./voiceIden/Makefile	/^MOVE          = mv -f$/;"	m
+OBJECTS	./avoid/Makefile	/^OBJECTS       = avoid.o \\$/;"	m
+OBJECTS	./configureMainWindow/Makefile	/^OBJECTS       = configureMainWindow.o \\$/;"	m
+OBJECTS	./configureMainWindowv1.0/Makefile	/^OBJECTS       = configureMainWindow.o \\$/;"	m
+OBJECTS	./imageIden/Makefile	/^OBJECTS       = imageIden.o \\$/;"	m
+OBJECTS	./localSet/Makefile	/^OBJECTS       = localSet.o \\$/;"	m
+OBJECTS	./planRoad/Makefile	/^OBJECTS       = main.o \\$/;"	m
+OBJECTS	./useByTaoImageIden/Makefile	/^OBJECTS       = imageIden.o \\$/;"	m
+OBJECTS	./voiceIden/Makefile	/^OBJECTS       = dialogAddTable1.o \\$/;"	m
+OBJECTS_DIR	./avoid/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./configureMainWindow/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./configureMainWindowv1.0/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./imageIden/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./localSet/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./planRoad/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./useByTaoImageIden/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	./voiceIden/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+PLANRODA_20150412_DEF	./planRoad/planRoad.h	9;"	d
+PlanRoad	./planRoad/planRoad.cpp	/^PlanRoad::PlanRoad(QWidget *parent):$/;"	f	class:PlanRoad
+PlanRoad	./planRoad/planRoad.h	/^class PlanRoad : public QMainWindow$/;"	c
+PlanRoad	./planRoad/ui_planRoad.h	/^    class PlanRoad: public Ui_PlanRoad {};$/;"	c	namespace:Ui
+QMAKE	./avoid/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./configureMainWindow/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./configureMainWindowv1.0/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./imageIden/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./localSet/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./planRoad/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./useByTaoImageIden/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE	./voiceIden/Makefile	/^QMAKE         = \/usr\/bin\/qmake-arm$/;"	m
+QMAKE_TARGET	./avoid/Makefile	/^QMAKE_TARGET  = avoid$/;"	m
+QMAKE_TARGET	./configureMainWindow/Makefile	/^QMAKE_TARGET  = configureMainWindow$/;"	m
+QMAKE_TARGET	./configureMainWindowv1.0/Makefile	/^QMAKE_TARGET  = configureMainWindow$/;"	m
+QMAKE_TARGET	./imageIden/Makefile	/^QMAKE_TARGET  = imageIden$/;"	m
+QMAKE_TARGET	./localSet/Makefile	/^QMAKE_TARGET  = localSet$/;"	m
+QMAKE_TARGET	./planRoad/Makefile	/^QMAKE_TARGET  = planRoad$/;"	m
+QMAKE_TARGET	./useByTaoImageIden/Makefile	/^QMAKE_TARGET  = useByTaoImageIden$/;"	m
+QMAKE_TARGET	./voiceIden/Makefile	/^QMAKE_TARGET  = voiceIden$/;"	m
+RANLIB	./avoid/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./configureMainWindow/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./configureMainWindowv1.0/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./imageIden/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./localSet/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./planRoad/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./useByTaoImageIden/Makefile	/^RANLIB        = $/;"	m
+RANLIB	./voiceIden/Makefile	/^RANLIB        = $/;"	m
+RemoteSetCheckBoxStatusChanged	./localSet/localSet.cpp	/^void LocalSet::RemoteSetCheckBoxStatusChanged(int state)$/;"	f	class:LocalSet
+SED	./avoid/Makefile	/^SED           = sed$/;"	m
+SED	./configureMainWindow/Makefile	/^SED           = sed$/;"	m
+SED	./configureMainWindowv1.0/Makefile	/^SED           = sed$/;"	m
+SED	./imageIden/Makefile	/^SED           = sed$/;"	m
+SED	./localSet/Makefile	/^SED           = sed$/;"	m
+SED	./planRoad/Makefile	/^SED           = sed$/;"	m
+SED	./useByTaoImageIden/Makefile	/^SED           = sed$/;"	m
+SED	./voiceIden/Makefile	/^SED           = sed$/;"	m
+SOURCES	./avoid/Makefile	/^SOURCES       = avoid.cpp \\$/;"	m
+SOURCES	./configureMainWindow/Makefile	/^SOURCES       = configureMainWindow.cpp \\$/;"	m
+SOURCES	./configureMainWindowv1.0/Makefile	/^SOURCES       = configureMainWindow.cpp \\$/;"	m
+SOURCES	./imageIden/Makefile	/^SOURCES       = imageIden.cpp \\$/;"	m
+SOURCES	./localSet/Makefile	/^SOURCES       = localSet.cpp \\$/;"	m
+SOURCES	./planRoad/Makefile	/^SOURCES       = main.cpp \\$/;"	m
+SOURCES	./useByTaoImageIden/Makefile	/^SOURCES       = imageIden.cpp \\$/;"	m
+SOURCES	./voiceIden/Makefile	/^SOURCES       = dialogAddTable1.cpp \\$/;"	m
+SYMLINK	./avoid/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./configureMainWindow/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./configureMainWindowv1.0/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./imageIden/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./localSet/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./planRoad/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./useByTaoImageIden/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYMLINK	./voiceIden/Makefile	/^SYMLINK       = ln -sf$/;"	m
+SYSZUXIM_H	./TQInputMethod.h	25;"	d
+SYSZUXIM_H	./avoid/TQInputMethod.h	25;"	d
+SYSZUXIM_H	./configureMainWindow/TQInputMethod.h	25;"	d
+SYSZUXIM_H	./configureMainWindowv1.0/TQInputMethod.h	25;"	d
+SYSZUXIM_H	./localSet/TQInputMethod.h	25;"	d
+SYSZUXIM_H	./useByTaoImageIden/TQInputMethod.h	25;"	d
+SYSZUXIM_H	./voiceIden/TQInputMethod.h	25;"	d
+TAR	./avoid/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./configureMainWindow/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./configureMainWindowv1.0/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./imageIden/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./localSet/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./planRoad/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./useByTaoImageIden/Makefile	/^TAR           = tar -cf$/;"	m
+TAR	./voiceIden/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	./avoid/Makefile	/^TARGET        = avoid$/;"	m
+TARGET	./configureMainWindow/Makefile	/^TARGET        = configureMainWindow$/;"	m
+TARGET	./configureMainWindowv1.0/Makefile	/^TARGET        = configureMainWindow$/;"	m
+TARGET	./imageIden/Makefile	/^TARGET        = imageIden$/;"	m
+TARGET	./localSet/Makefile	/^TARGET        = localSet$/;"	m
+TARGET	./planRoad/Makefile	/^TARGET        = planRoad$/;"	m
+TARGET	./useByTaoImageIden/Makefile	/^TARGET        = useByTaoImageIden$/;"	m
+TARGET	./voiceIden/Makefile	/^TARGET        = voiceIden$/;"	m
+TQInputMethod	./TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./avoid/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./configureMainWindow/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./configureMainWindowv1.0/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./localSet/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./useByTaoImageIden/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+TQInputMethod	./voiceIden/TQInputMethod.h	/^class TQInputMethod:public QWSInputMethod$/;"	c
+UI_AVOID_H	./avoid/ui_avoid.h	11;"	d
+UI_CONFIGUREMAINWINDOW_H	./configureMainWindow/ui_configureMainWindow.h	11;"	d
+UI_CONFIGUREMAINWINDOW_H	./configureMainWindowv1.0/ui_configureMainWindow.h	11;"	d
+UI_DIALOGADDTABLE1_H	./voiceIden/ui_dialogAddTable1.h	11;"	d
+UI_DIALOGADDTABLE2_H	./voiceIden/ui_dialogAddTable2.h	11;"	d
+UI_DIALOGMODIFYTABLE1_H	./voiceIden/ui_dialogModifyTable1.h	11;"	d
+UI_DIALOGMODIFYTABLE2_H	./voiceIden/ui_dialogModifyTable2.h	11;"	d
+UI_DIALOGSHOWVOICE_H	./voiceIden/ui_dialogShowVoice.h	11;"	d
+UI_IMAGEIDEN_H	./imageIden/ui_imageIden.h	11;"	d
+UI_IMAGEIDEN_H	./useByTaoImageIden/ui_imageIden.h	11;"	d
+UI_LOCALSET_H	./localSet/ui_localSet.h	11;"	d
+UI_PLANROAD_H	./planRoad/ui_planRoad.h	11;"	d
+UI_VOICEIDEN_H	./voiceIden/ui_voiceIden.h	11;"	d
+Ui	./avoid/ui_avoid.h	/^namespace Ui {$/;"	n
+Ui	./configureMainWindow/ui_configureMainWindow.h	/^namespace Ui {$/;"	n
+Ui	./configureMainWindowv1.0/ui_configureMainWindow.h	/^namespace Ui {$/;"	n
+Ui	./imageIden/ui_imageIden.h	/^namespace Ui {$/;"	n
+Ui	./localSet/ui_localSet.h	/^namespace Ui {$/;"	n
+Ui	./planRoad/ui_planRoad.h	/^namespace Ui {$/;"	n
+Ui	./useByTaoImageIden/ui_imageIden.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_dialogAddTable1.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_dialogAddTable2.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_dialogModifyTable1.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_dialogModifyTable2.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_dialogShowVoice.h	/^namespace Ui {$/;"	n
+Ui	./voiceIden/ui_voiceIden.h	/^namespace Ui {$/;"	n
+Ui_Avoid	./avoid/ui_avoid.h	/^class Ui_Avoid$/;"	c
+Ui_ConfigureMainWindow	./configureMainWindow/ui_configureMainWindow.h	/^class Ui_ConfigureMainWindow$/;"	c
+Ui_ConfigureMainWindow	./configureMainWindowv1.0/ui_configureMainWindow.h	/^class Ui_ConfigureMainWindow$/;"	c
+Ui_DialogAddTable1	./voiceIden/ui_dialogAddTable1.h	/^class Ui_DialogAddTable1$/;"	c
+Ui_DialogAddTable2	./voiceIden/ui_dialogAddTable2.h	/^class Ui_DialogAddTable2$/;"	c
+Ui_DialogModifyTable1	./voiceIden/ui_dialogModifyTable1.h	/^class Ui_DialogModifyTable1$/;"	c
+Ui_DialogModifyTable2	./voiceIden/ui_dialogModifyTable2.h	/^class Ui_DialogModifyTable2$/;"	c
+Ui_DialogShowVoice	./voiceIden/ui_dialogShowVoice.h	/^class Ui_DialogShowVoice$/;"	c
+Ui_ImageIden	./imageIden/ui_imageIden.h	/^class Ui_ImageIden$/;"	c
+Ui_ImageIden	./useByTaoImageIden/ui_imageIden.h	/^class Ui_ImageIden$/;"	c
+Ui_LocalSet	./localSet/ui_localSet.h	/^class Ui_LocalSet$/;"	c
+Ui_PlanRoad	./planRoad/ui_planRoad.h	/^class Ui_PlanRoad$/;"	c
+Ui_VoiceIden	./voiceIden/ui_voiceIden.h	/^class Ui_VoiceIden$/;"	c
+VOICEIDEN_20150403_DEF	./voiceIden/voiceIden.h	9;"	d
+VoiceIden	./voiceIden/ui_voiceIden.h	/^    class VoiceIden: public Ui_VoiceIden {};$/;"	c	namespace:Ui
+VoiceIden	./voiceIden/voiceIden.cpp	/^VoiceIden::VoiceIden(QWidget *parent):$/;"	f	class:VoiceIden
+VoiceIden	./voiceIden/voiceIden.h	/^class VoiceIden : public QWidget$/;"	c
+action	./configureMainWindow/ui_configureMainWindow.h	/^    QAction *action;$/;"	m	class:Ui_ConfigureMainWindow
+action	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QAction *action;$/;"	m	class:Ui_ConfigureMainWindow
+actionAa	./imageIden/ui_imageIden.h	/^    QAction *actionAa;$/;"	m	class:Ui_ImageIden
+actionAa	./planRoad/ui_planRoad.h	/^    QAction *actionAa;$/;"	m	class:Ui_PlanRoad
+actionAa	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionAa;$/;"	m	class:Ui_ImageIden
+actionBuildMap	./planRoad/ui_planRoad.h	/^    QAction *actionBuildMap;$/;"	m	class:Ui_PlanRoad
+actionCatch	./imageIden/ui_imageIden.h	/^    QAction *actionCatch;$/;"	m	class:Ui_ImageIden
+actionCatch	./planRoad/ui_planRoad.h	/^    QAction *actionCatch;$/;"	m	class:Ui_PlanRoad
+actionCatch	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionCatch;$/;"	m	class:Ui_ImageIden
+actionDigit	./imageIden/ui_imageIden.h	/^    QAction *actionDigit;$/;"	m	class:Ui_ImageIden
+actionDigit	./planRoad/ui_planRoad.h	/^    QAction *actionDigit;$/;"	m	class:Ui_PlanRoad
+actionDigit	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionDigit;$/;"	m	class:Ui_ImageIden
+actionFace	./imageIden/ui_imageIden.h	/^    QAction *actionFace;$/;"	m	class:Ui_ImageIden
+actionFace	./planRoad/ui_planRoad.h	/^    QAction *actionFace;$/;"	m	class:Ui_PlanRoad
+actionFace	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionFace;$/;"	m	class:Ui_ImageIden
+actionFromFile	./imageIden/ui_imageIden.h	/^    QAction *actionFromFile;$/;"	m	class:Ui_ImageIden
+actionFromFile	./planRoad/ui_planRoad.h	/^    QAction *actionFromFile;$/;"	m	class:Ui_PlanRoad
+actionFromFile	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionFromFile;$/;"	m	class:Ui_ImageIden
+actionIden	./imageIden/ui_imageIden.h	/^    QAction *actionIden;$/;"	m	class:Ui_ImageIden
+actionIden	./planRoad/ui_planRoad.h	/^    QAction *actionIden;$/;"	m	class:Ui_PlanRoad
+actionIden	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionIden;$/;"	m	class:Ui_ImageIden
+actionQuit	./imageIden/ui_imageIden.h	/^    QAction *actionQuit;$/;"	m	class:Ui_ImageIden
+actionQuit	./planRoad/ui_planRoad.h	/^    QAction *actionQuit;$/;"	m	class:Ui_PlanRoad
+actionQuit	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionQuit;$/;"	m	class:Ui_ImageIden
+actionTrain	./imageIden/ui_imageIden.h	/^    QAction *actionTrain;$/;"	m	class:Ui_ImageIden
+actionTrain	./planRoad/ui_planRoad.h	/^    QAction *actionTrain;$/;"	m	class:Ui_PlanRoad
+actionTrain	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionTrain;$/;"	m	class:Ui_ImageIden
+actionXunliang	./imageIden/ui_imageIden.h	/^    QAction *actionXunliang;$/;"	m	class:Ui_ImageIden
+actionXunliang	./planRoad/ui_planRoad.h	/^    QAction *actionXunliang;$/;"	m	class:Ui_PlanRoad
+actionXunliang	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionXunliang;$/;"	m	class:Ui_ImageIden
+actionZuoqu	./imageIden/ui_imageIden.h	/^    QAction *actionZuoqu;$/;"	m	class:Ui_ImageIden
+actionZuoqu	./planRoad/ui_planRoad.h	/^    QAction *actionZuoqu;$/;"	m	class:Ui_PlanRoad
+actionZuoqu	./useByTaoImageIden/ui_imageIden.h	/^    QAction *actionZuoqu;$/;"	m	class:Ui_ImageIden
+action_4	./configureMainWindow/ui_configureMainWindow.h	/^    QAction *action_4;$/;"	m	class:Ui_ConfigureMainWindow
+action_4	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QAction *action_4;$/;"	m	class:Ui_ConfigureMainWindow
+btAddConfirm	./voiceIden/ui_dialogAddTable1.h	/^    QPushButton *btAddConfirm;$/;"	m	class:Ui_DialogAddTable1
+btAddConfirm	./voiceIden/ui_dialogAddTable2.h	/^    QPushButton *btAddConfirm;$/;"	m	class:Ui_DialogAddTable2
+btAddConfirmPushed	./voiceIden/dialogAddTable1.cpp	/^void DialogAddTable1::btAddConfirmPushed()$/;"	f	class:DialogAddTable1
+btAddConfirmPushed	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::btAddConfirmPushed()$/;"	f	class:DialogAddTable2
+btAddTable1Pushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btAddTable1Pushed()$/;"	f	class:VoiceIden
+btAddTable2Pushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btAddTable2Pushed()$/;"	f	class:VoiceIden
+btCreatePath	./planRoad/ui_planRoad.h	/^    QPushButton *btCreatePath;$/;"	m	class:Ui_PlanRoad
+btCreatePathPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btCreatePathPushed()$/;"	f	class:PlanRoad
+btDeleteTable1Pushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btDeleteTable1Pushed()$/;"	f	class:VoiceIden
+btDeleteTable2Pushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btDeleteTable2Pushed()$/;"	f	class:VoiceIden
+btDestination	./planRoad/ui_planRoad.h	/^    QPushButton *btDestination;$/;"	m	class:Ui_PlanRoad
+btDestinationPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btDestinationPushed()$/;"	f	class:PlanRoad
+btDown	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *btDown;$/;"	m	class:Ui_ImageIden
+btDownPushed	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::btDownPushed()$/;"	f	class:ImageIden
+btFree	./planRoad/ui_planRoad.h	/^    QPushButton *btFree;$/;"	m	class:Ui_PlanRoad
+btFreePushed	./planRoad/planRoad.cpp	/^void PlanRoad::btFreePushed()$/;"	f	class:PlanRoad
+btLeft	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *btLeft;$/;"	m	class:Ui_ImageIden
+btLeftPushed	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::btLeftPushed()$/;"	f	class:ImageIden
+btLocation	./planRoad/ui_planRoad.h	/^    QPushButton *btLocation;$/;"	m	class:Ui_PlanRoad
+btLocationPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btLocationPushed()$/;"	f	class:PlanRoad
+btModifyConfirm	./voiceIden/ui_dialogModifyTable1.h	/^    QPushButton *btModifyConfirm;$/;"	m	class:Ui_DialogModifyTable1
+btModifyConfirm	./voiceIden/ui_dialogModifyTable2.h	/^    QPushButton *btModifyConfirm;$/;"	m	class:Ui_DialogModifyTable2
+btModifyConfirmPushed	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::btModifyConfirmPushed()$/;"	f	class:DialogModifyTable1
+btModifyConfirmPushed	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::btModifyConfirmPushed()$/;"	f	class:DialogModifyTable2
+btQuit	./voiceIden/ui_dialogAddTable1.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogAddTable1
+btQuit	./voiceIden/ui_dialogAddTable2.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogAddTable2
+btQuit	./voiceIden/ui_dialogModifyTable1.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogModifyTable1
+btQuit	./voiceIden/ui_dialogModifyTable2.h	/^    QPushButton *btQuit;$/;"	m	class:Ui_DialogModifyTable2
+btQuitPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btQuitPushed()$/;"	f	class:PlanRoad
+btQuitPushed	./voiceIden/dialogAddTable1.cpp	/^void DialogAddTable1::btQuitPushed()$/;"	f	class:DialogAddTable1
+btQuitPushed	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::btQuitPushed()$/;"	f	class:DialogAddTable2
+btQuitPushed	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::btQuitPushed()$/;"	f	class:DialogModifyTable1
+btQuitPushed	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::btQuitPushed()$/;"	f	class:DialogModifyTable2
+btQuitPushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btQuitPushed()$/;"	f	class:VoiceIden
+btRecordFinish	./voiceIden/ui_dialogAddTable1.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogAddTable1
+btRecordFinish	./voiceIden/ui_dialogAddTable2.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogAddTable2
+btRecordFinish	./voiceIden/ui_dialogModifyTable1.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogModifyTable1
+btRecordFinish	./voiceIden/ui_dialogModifyTable2.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogModifyTable2
+btRecordFinish	./voiceIden/ui_dialogShowVoice.h	/^    QPushButton *btRecordFinish;$/;"	m	class:Ui_DialogShowVoice
+btRecordFinishedPushed	./voiceIden/dialogAddTable1.cpp	/^void DialogAddTable1::btRecordFinishedPushed()$/;"	f	class:DialogAddTable1
+btRecordFinishedPushed	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::btRecordFinishedPushed()$/;"	f	class:DialogAddTable2
+btRecordFinishedPushed	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::btRecordFinishedPushed()$/;"	f	class:DialogModifyTable1
+btRecordFinishedPushed	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::btRecordFinishedPushed()$/;"	f	class:DialogModifyTable2
+btRecordFinishedPushed	./voiceIden/dialogShowVoice.cpp	/^void DialogShowVoice::btRecordFinishedPushed()$/;"	f	class:DialogShowVoice
+btRecordStart	./voiceIden/ui_dialogAddTable1.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogAddTable1
+btRecordStart	./voiceIden/ui_dialogAddTable2.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogAddTable2
+btRecordStart	./voiceIden/ui_dialogModifyTable1.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogModifyTable1
+btRecordStart	./voiceIden/ui_dialogModifyTable2.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogModifyTable2
+btRecordStart	./voiceIden/ui_dialogShowVoice.h	/^    QPushButton *btRecordStart;$/;"	m	class:Ui_DialogShowVoice
+btRecordStartPushed	./voiceIden/dialogAddTable1.cpp	/^void DialogAddTable1::btRecordStartPushed()$/;"	f	class:DialogAddTable1
+btRecordStartPushed	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::btRecordStartPushed()$/;"	f	class:DialogAddTable2
+btRecordStartPushed	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::btRecordStartPushed()$/;"	f	class:DialogModifyTable1
+btRecordStartPushed	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::btRecordStartPushed()$/;"	f	class:DialogModifyTable2
+btRecordStartPushed	./voiceIden/dialogShowVoice.cpp	/^void DialogShowVoice::btRecordStartPushed()$/;"	f	class:DialogShowVoice
+btRight	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *btRight;$/;"	m	class:Ui_ImageIden
+btRightPushed	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::btRightPushed()$/;"	f	class:ImageIden
+btSave	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *btSave;$/;"	m	class:Ui_ImageIden
+btSavePushed	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::btSavePushed()$/;"	f	class:ImageIden
+btSetBlock	./planRoad/ui_planRoad.h	/^    QPushButton *btSetBlock;$/;"	m	class:Ui_PlanRoad
+btSetBlockPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btSetBlockPushed()$/;"	f	class:PlanRoad
+btSetOrigin	./planRoad/ui_planRoad.h	/^    QPushButton *btSetOrigin;$/;"	m	class:Ui_PlanRoad
+btSetOriginPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btSetOriginPushed()$/;"	f	class:PlanRoad
+btSetX	./planRoad/ui_planRoad.h	/^    QPushButton *btSetX;$/;"	m	class:Ui_PlanRoad
+btSetXPushed	./planRoad/planRoad.cpp	/^void PlanRoad::btSetXPushed()$/;"	f	class:PlanRoad
+btUp	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *btUp;$/;"	m	class:Ui_ImageIden
+btUpPushed	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::btUpPushed()$/;"	f	class:ImageIden
+btVoiceShowPushed	./voiceIden/voiceIden.cpp	/^void VoiceIden::btVoiceShowPushed()$/;"	f	class:VoiceIden
+buildMap	./planRoad/planRoad.cpp	/^void PlanRoad::buildMap()$/;"	f	class:PlanRoad
+buttonAddTable1	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonAddTable1;$/;"	m	class:Ui_VoiceIden
+buttonAddTable2	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonAddTable2;$/;"	m	class:Ui_VoiceIden
+buttonAvoid	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonAvoid;$/;"	m	class:Ui_ConfigureMainWindow
+buttonAvoid	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonAvoid;$/;"	m	class:Ui_ConfigureMainWindow
+buttonAvoidPressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonAvoidPressed()$/;"	f	class:ConfigureMainWindow
+buttonAvoidPressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonAvoidPressed()$/;"	f	class:ConfigureMainWindow
+buttonBA0	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonBA0;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA0	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonBA0;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA0Pressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA0Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA0Pressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA0Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA1	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonBA1;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA1	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonBA1;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA1Pressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA1Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA1Pressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA1Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA2	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonBA2;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA2	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonBA2;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA2Pressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA2Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA2Pressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA2Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA3	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonBA3;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA3	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonBA3;$/;"	m	class:Ui_ConfigureMainWindow
+buttonBA3Pressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA3Pressed()$/;"	f	class:ConfigureMainWindow
+buttonBA3Pressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonBA3Pressed()$/;"	f	class:ConfigureMainWindow
+buttonCatch	./imageIden/ui_imageIden.h	/^    QPushButton *buttonCatch;$/;"	m	class:Ui_ImageIden
+buttonDelete	./imageIden/ui_imageIden.h	/^    QPushButton *buttonDelete;$/;"	m	class:Ui_ImageIden
+buttonDeleteTable1	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonDeleteTable1;$/;"	m	class:Ui_VoiceIden
+buttonDeleteTable2	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonDeleteTable2;$/;"	m	class:Ui_VoiceIden
+buttonDown	./avoid/ui_avoid.h	/^    QPushButton *buttonDown;$/;"	m	class:Ui_Avoid
+buttonDownload	./avoid/ui_avoid.h	/^    QPushButton *buttonDownload;$/;"	m	class:Ui_Avoid
+buttonEreasure	./avoid/ui_avoid.h	/^    QPushButton *buttonEreasure;$/;"	m	class:Ui_Avoid
+buttonFileManage	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonFileManage;$/;"	m	class:Ui_ConfigureMainWindow
+buttonFileManage	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonFileManage;$/;"	m	class:Ui_ConfigureMainWindow
+buttonFileManagePressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonFileManagePressed()$/;"	f	class:ConfigureMainWindow
+buttonFileManagePressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonFileManagePressed()$/;"	f	class:ConfigureMainWindow
+buttonIden	./imageIden/ui_imageIden.h	/^    QPushButton *buttonIden;$/;"	m	class:Ui_ImageIden
+buttonImage	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonImage;$/;"	m	class:Ui_ConfigureMainWindow
+buttonImage	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonImage;$/;"	m	class:Ui_ConfigureMainWindow
+buttonImagePressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonImagePressed()$/;"	f	class:ConfigureMainWindow
+buttonImagePressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonImagePressed()$/;"	f	class:ConfigureMainWindow
+buttonInit	./avoid/ui_avoid.h	/^    QPushButton *buttonInit;$/;"	m	class:Ui_Avoid
+buttonLeft	./avoid/ui_avoid.h	/^    QPushButton *buttonLeft;$/;"	m	class:Ui_Avoid
+buttonLineTrack	./avoid/ui_avoid.h	/^    QPushButton *buttonLineTrack;$/;"	m	class:Ui_Avoid
+buttonLoad	./avoid/ui_avoid.h	/^    QPushButton *buttonLoad;$/;"	m	class:Ui_Avoid
+buttonLocal	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonLocal;$/;"	m	class:Ui_ConfigureMainWindow
+buttonLocal	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonLocal;$/;"	m	class:Ui_ConfigureMainWindow
+buttonLocalPressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonLocalPressed()$/;"	f	class:ConfigureMainWindow
+buttonLocalPressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonLocalPressed()$/;"	f	class:ConfigureMainWindow
+buttonPlan	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonPlan;$/;"	m	class:Ui_ConfigureMainWindow
+buttonPlan	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonPlan;$/;"	m	class:Ui_ConfigureMainWindow
+buttonPlanPressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonPlanPressed()$/;"	f	class:ConfigureMainWindow
+buttonPlanPressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonPlanPressed()$/;"	f	class:ConfigureMainWindow
+buttonQuit	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_ConfigureMainWindow
+buttonQuit	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_ConfigureMainWindow
+buttonQuit	./imageIden/imageIden.cpp	/^void ImageIden::buttonQuit()$/;"	f	class:ImageIden
+buttonQuit	./imageIden/ui_imageIden.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_ImageIden
+buttonQuit	./localSet/ui_localSet.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_LocalSet
+buttonQuit	./planRoad/ui_planRoad.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_PlanRoad
+buttonQuit	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::buttonQuit()$/;"	f	class:ImageIden
+buttonQuit	./useByTaoImageIden/ui_imageIden.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_ImageIden
+buttonQuit	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonQuit;$/;"	m	class:Ui_VoiceIden
+buttonQuit1	./avoid/ui_avoid.h	/^    QPushButton *buttonQuit1;$/;"	m	class:Ui_Avoid
+buttonQuit2	./avoid/ui_avoid.h	/^    QPushButton *buttonQuit2;$/;"	m	class:Ui_Avoid
+buttonQuitPressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonQuitPressed()$/;"	f	class:ConfigureMainWindow
+buttonQuitPressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonQuitPressed()$/;"	f	class:ConfigureMainWindow
+buttonQuitPushed	./localSet/localSet.cpp	/^void LocalSet::buttonQuitPushed()$/;"	f	class:LocalSet
+buttonRemoteCtrl	./avoid/ui_avoid.h	/^    QPushButton *buttonRemoteCtrl;$/;"	m	class:Ui_Avoid
+buttonRight	./avoid/ui_avoid.h	/^    QPushButton *buttonRight;$/;"	m	class:Ui_Avoid
+buttonSetDirectionAngle	./avoid/ui_avoid.h	/^    QPushButton *buttonSetDirectionAngle;$/;"	m	class:Ui_Avoid
+buttonSetSafeDis	./avoid/ui_avoid.h	/^    QPushButton *buttonSetSafeDis;$/;"	m	class:Ui_Avoid
+buttonSetSpeed	./avoid/ui_avoid.h	/^    QPushButton *buttonSetSpeed;$/;"	m	class:Ui_Avoid
+buttonSpin	./avoid/ui_avoid.h	/^    QPushButton *buttonSpin;$/;"	m	class:Ui_Avoid
+buttonStop	./avoid/ui_avoid.h	/^    QPushButton *buttonStop;$/;"	m	class:Ui_Avoid
+buttonTrack	./avoid/ui_avoid.h	/^    QPushButton *buttonTrack;$/;"	m	class:Ui_Avoid
+buttonTrain	./imageIden/ui_imageIden.h	/^    QPushButton *buttonTrain;$/;"	m	class:Ui_ImageIden
+buttonUp	./avoid/ui_avoid.h	/^    QPushButton *buttonUp;$/;"	m	class:Ui_Avoid
+buttonVoice	./configureMainWindow/ui_configureMainWindow.h	/^    QPushButton *buttonVoice;$/;"	m	class:Ui_ConfigureMainWindow
+buttonVoice	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QPushButton *buttonVoice;$/;"	m	class:Ui_ConfigureMainWindow
+buttonVoiceCtrl	./avoid/ui_avoid.h	/^    QPushButton *buttonVoiceCtrl;$/;"	m	class:Ui_Avoid
+buttonVoicePressed	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonVoicePressed()$/;"	f	class:ConfigureMainWindow
+buttonVoicePressed	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::buttonVoicePressed()$/;"	f	class:ConfigureMainWindow
+buttonVoiceShow	./voiceIden/ui_voiceIden.h	/^    QPushButton *buttonVoiceShow;$/;"	m	class:Ui_VoiceIden
+buttonVoiceTrack	./avoid/ui_avoid.h	/^    QPushButton *buttonVoiceTrack;$/;"	m	class:Ui_Avoid
+buttonWallTrack	./avoid/ui_avoid.h	/^    QPushButton *buttonWallTrack;$/;"	m	class:Ui_Avoid
+button_async	./deviceDrive/orient_button.c	/^static struct fasync_strcut *button_async;	$/;"	v	typeref:struct:fasync_strcut	file:
+button_class	./deviceDrive/orient_button.c	/^static struct class *button_class;$/;"	v	typeref:struct:class	file:
+button_close	./deviceDrive/orient_button.c	/^static int button_close(struct inode *inode, struct file *file)$/;"	f	file:
+button_cnt	./deviceDrive/orient_button.c	/^static volatile int button_cnt[] = {0};$/;"	v	file:
+button_fasync	./deviceDrive/orient_button.c	/^static int button_fasync(int fd, struct file *filp, int on)$/;"	f	file:
+button_irq_des	./deviceDrive/orient_button.c	/^struct button_irq_des$/;"	s	file:
+button_irqs	./deviceDrive/orient_button.c	/^button_irqs[] = $/;"	v	typeref:struct:button_irq_des	file:
+button_lock	./deviceDrive/orient_button.c	/^struct semaphore button_lock;  			\/\/‰∫íÊñ•ÈîÅ ÊéßÂà∂ÊâìÂºÄËøõÁ®ãÊï∞ $/;"	v	typeref:struct:semaphore
+button_open	./deviceDrive/orient_button.c	/^static int button_open(struct inode *inode, struct file *file)$/;"	f	file:
+button_ops	./deviceDrive/orient_button.c	/^static struct file_operations button_ops = $/;"	v	typeref:struct:file_operations	file:
+button_pool	./deviceDrive/orient_button.c	/^static unsigned button_pool(struct file *file, poll_table *wait)$/;"	f	file:
+button_read	./deviceDrive/orient_button.c	/^static int button_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)$/;"	f	file:
+button_timer	./deviceDrive/orient_button.c	/^static struct timer_list button_timer;$/;"	v	typeref:struct:timer_list	file:
+buttons_interrupt	./deviceDrive/orient_button.c	/^static irqreturn_t buttons_interrupt(int irq, void *dev_id)$/;"	f	file:
+buttons_timer_func	./deviceDrive/orient_button.c	/^static void buttons_timer_func(unsigned long data)$/;"	f	file:
+cancel	./voiceIden/moc_dialogAddTable1.cpp	/^void DialogAddTable1::cancel()$/;"	f	class:DialogAddTable1
+cancel	./voiceIden/moc_dialogAddTable2.cpp	/^void DialogAddTable2::cancel()$/;"	f	class:DialogAddTable2
+cancel	./voiceIden/moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::cancel()$/;"	f	class:DialogModifyTable1
+cancel	./voiceIden/moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::cancel()$/;"	f	class:DialogModifyTable2
+cdev_button	./deviceDrive/orient_button.c	/^static struct cdev *cdev_button;$/;"	v	typeref:struct:cdev	file:
+centralwidget	./configureMainWindow/ui_configureMainWindow.h	/^    QWidget *centralwidget;$/;"	m	class:Ui_ConfigureMainWindow
+centralwidget	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QWidget *centralwidget;$/;"	m	class:Ui_ConfigureMainWindow
+centralwidget	./imageIden/ui_imageIden.h	/^    QWidget *centralwidget;$/;"	m	class:Ui_ImageIden
+centralwidget	./planRoad/ui_planRoad.h	/^    QWidget *centralwidget;$/;"	m	class:Ui_PlanRoad
+centralwidget	./useByTaoImageIden/ui_imageIden.h	/^    QWidget *centralwidget;$/;"	m	class:Ui_ImageIden
+checkBox	./voiceIden/ui_dialogModifyTable1.h	/^    QCheckBox *checkBox;$/;"	m	class:Ui_DialogModifyTable1
+checkBox	./voiceIden/ui_dialogModifyTable2.h	/^    QCheckBox *checkBox;$/;"	m	class:Ui_DialogModifyTable2
+checkBoxRemoteSet	./localSet/ui_localSet.h	/^    QCheckBox *checkBoxRemoteSet;$/;"	m	class:Ui_LocalSet
+comboBoxID	./imageIden/ui_imageIden.h	/^    QComboBox *comboBoxID;$/;"	m	class:Ui_ImageIden
+ctrlDown	./avoid/avoid.cpp	/^Avoid::ctrlDown()$/;"	f	class:Avoid
+ctrlInit	./avoid/avoid.cpp	/^Avoid::ctrlInit()$/;"	f	class:Avoid
+ctrlLeft	./avoid/avoid.cpp	/^Avoid::ctrlLeft()$/;"	f	class:Avoid
+ctrlRight	./avoid/avoid.cpp	/^Avoid::ctrlRight()$/;"	f	class:Avoid
+ctrlSpin	./avoid/avoid.cpp	/^Avoid::ctrlSpin()$/;"	f	class:Avoid
+ctrlStop	./avoid/avoid.cpp	/^Avoid::ctrlStop()$/;"	f	class:Avoid
+ctrlTrack	./avoid/avoid.cpp	/^Avoid::ctrlTrack()$/;"	f	class:Avoid
+ctrlUp	./avoid/avoid.cpp	/^Avoid::ctrlUp()$/;"	f	class:Avoid
+ctrlVoiceTrack	./avoid/avoid.cpp	/^Avoid::ctrlVoiceTrack()$/;"	f	class:Avoid
+deleteFaceID	./imageIden/imageIden.cpp	/^void ImageIden::deleteFaceID()$/;"	f	class:ImageIden
+devid	./deviceDrive/orient_button.c	/^dev_t devid;$/;"	v
+dialogAddTable1Cancel	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogAddTable1Cancel()$/;"	f	class:VoiceIden
+dialogAddTable1Comfirn	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogAddTable1Comfirn()$/;"	f	class:VoiceIden
+dialogAddTable2Cancel	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogAddTable2Cancel()$/;"	f	class:VoiceIden
+dialogAddTable2Comfirn	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogAddTable2Comfirn()$/;"	f	class:VoiceIden
+dialogModifyTable1Cancel	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogModifyTable1Cancel()$/;"	f	class:VoiceIden
+dialogModifyTable1Comfirn	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogModifyTable1Comfirn()$/;"	f	class:VoiceIden
+dialogModifyTable2Cancel	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogModifyTable2Cancel()$/;"	f	class:VoiceIden
+dialogModifyTable2Comfirn	./voiceIden/voiceIden.cpp	/^void VoiceIden::dialogModifyTable2Comfirn()$/;"	f	class:VoiceIden
+doWhenTimeout1	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::doWhenTimeout1()$/;"	f	class:ImageIden
+doWhenTimeout2	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::doWhenTimeout2()$/;"	f	class:ImageIden
+downloadProgram	./avoid/avoid.cpp	/^Avoid::downloadProgram()$/;"	f	class:Avoid
+ev_press	./deviceDrive/orient_button.c	/^static volatile int ev_press = 0;$/;"	v	file:
+finishRecord	./voiceIden/moc_dialogAddTable1.cpp	/^void DialogAddTable1::finishRecord()$/;"	f	class:DialogAddTable1
+finishRecord	./voiceIden/moc_dialogAddTable2.cpp	/^void DialogAddTable2::finishRecord()$/;"	f	class:DialogAddTable2
+finishRecord	./voiceIden/moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::finishRecord()$/;"	f	class:DialogModifyTable1
+finishRecord	./voiceIden/moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::finishRecord()$/;"	f	class:DialogModifyTable2
+finishRecord	./voiceIden/moc_dialogShowVoice.cpp	/^void DialogShowVoice::finishRecord()$/;"	f	class:DialogShowVoice
+finishedRecordVoice	./voiceIden/voiceIden.cpp	/^void VoiceIden::finishedRecordVoice()$/;"	f	class:VoiceIden
+getItemText	./voiceIden/dialogAddTable1.cpp	/^QString DialogAddTable1::getItemText(int num) const$/;"	f	class:DialogAddTable1
+getItemText	./voiceIden/dialogAddTable2.cpp	/^QString DialogAddTable2::getItemText(int num) const$/;"	f	class:DialogAddTable2
+getItemText	./voiceIden/dialogModifyTable1.cpp	/^QString DialogModifyTable1::getItemText(int num) const$/;"	f	class:DialogModifyTable1
+getItemText	./voiceIden/dialogModifyTable2.cpp	/^QString DialogModifyTable2::getItemText(int num) const$/;"	f	class:DialogModifyTable2
+groupBox	./avoid/ui_avoid.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_Avoid
+groupBox	./localSet/ui_localSet.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_LocalSet
+groupBox	./useByTaoImageIden/ui_imageIden.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_ImageIden
+groupBox	./voiceIden/ui_dialogModifyTable1.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_DialogModifyTable1
+groupBox	./voiceIden/ui_dialogModifyTable2.h	/^    QGroupBox *groupBox;$/;"	m	class:Ui_DialogModifyTable2
+groupBoxDownload	./avoid/ui_avoid.h	/^    QGroupBox *groupBoxDownload;$/;"	m	class:Ui_Avoid
+groupBoxSet	./avoid/ui_avoid.h	/^    QGroupBox *groupBoxSet;$/;"	m	class:Ui_Avoid
+groupBox_2	./localSet/ui_localSet.h	/^    QGroupBox *groupBox_2;$/;"	m	class:Ui_LocalSet
+groupBox_2	./useByTaoImageIden/ui_imageIden.h	/^    QGroupBox *groupBox_2;$/;"	m	class:Ui_ImageIden
+horizontalAngleSet	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::horizontalAngleSet()$/;"	f	class:ImageIden
+horizontalLayout	./localSet/ui_localSet.h	/^    QHBoxLayout *horizontalLayout;$/;"	m	class:Ui_LocalSet
+horizontalLayoutWidget	./localSet/ui_localSet.h	/^    QWidget *horizontalLayoutWidget;$/;"	m	class:Ui_LocalSet
+horizontalLayoutWidget_2	./localSet/ui_localSet.h	/^    QWidget *horizontalLayoutWidget_2;$/;"	m	class:Ui_LocalSet
+horizontalLayoutWidget_3	./localSet/ui_localSet.h	/^    QWidget *horizontalLayoutWidget_3;$/;"	m	class:Ui_LocalSet
+horizontalLayout_2	./localSet/ui_localSet.h	/^    QHBoxLayout *horizontalLayout_2;$/;"	m	class:Ui_LocalSet
+horizontalLayout_3	./localSet/ui_localSet.h	/^    QHBoxLayout *horizontalLayout_3;$/;"	m	class:Ui_LocalSet
+im	./avoid/avoid.h	/^	QWSInputMethod *im; \/\/ ‰»Îøÿº˛$/;"	m	class:Avoid
+im	./configureMainWindow/configureMainWindow.h	/^ 	QWSInputMethod *im; 	$/;"	m	class:ConfigureMainWindow
+im	./configureMainWindowv1.0/configureMainWindow.h	/^ 	QWSInputMethod *im; 	$/;"	m	class:ConfigureMainWindow
+im	./localSet/localSet.h	/^	QWSInputMethod *im;$/;"	m	class:LocalSet
+im	./useByTaoImageIden/imageIden.h	/^	QWSInputMethod *im;	$/;"	m	class:ImageIden
+im	./voiceIden/voiceIden.h	/^	QWSInputMethod *im;	$/;"	m	class:VoiceIden
+initRemoteSetStatus	./localSet/localSet.cpp	/^void LocalSet::initRemoteSetStatus()$/;"	f	class:LocalSet
+irq	./deviceDrive/orient_button.c	/^	int irq;$/;"	m	struct:button_irq_des	file:
+isVoiceRecordChecked	./voiceIden/dialogModifyTable1.cpp	/^bool DialogModifyTable1::isVoiceRecordChecked()$/;"	f	class:DialogModifyTable1
+isVoiceRecordChecked	./voiceIden/dialogModifyTable2.cpp	/^bool DialogModifyTable2::isVoiceRecordChecked()$/;"	f	class:DialogModifyTable2
+label	./configureMainWindow/ui_configureMainWindow.h	/^    QLabel *label;$/;"	m	class:Ui_ConfigureMainWindow
+label	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QLabel *label;$/;"	m	class:Ui_ConfigureMainWindow
+label	./localSet/ui_localSet.h	/^    QLabel *label;$/;"	m	class:Ui_LocalSet
+label	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label;$/;"	m	class:Ui_ImageIden
+label	./voiceIden/ui_dialogAddTable1.h	/^    QLabel *label;$/;"	m	class:Ui_DialogAddTable1
+label	./voiceIden/ui_dialogAddTable2.h	/^    QLabel *label;$/;"	m	class:Ui_DialogAddTable2
+label	./voiceIden/ui_dialogModifyTable1.h	/^    QLabel *label;$/;"	m	class:Ui_DialogModifyTable1
+label	./voiceIden/ui_dialogModifyTable2.h	/^    QLabel *label;$/;"	m	class:Ui_DialogModifyTable2
+label	./voiceIden/ui_dialogShowVoice.h	/^    QLabel *label;$/;"	m	class:Ui_DialogShowVoice
+label	./voiceIden/ui_voiceIden.h	/^    QLabel *label;$/;"	m	class:Ui_VoiceIden
+labelDestination	./planRoad/ui_planRoad.h	/^    QLabel *labelDestination;$/;"	m	class:Ui_PlanRoad
+labelDirectionAngle	./avoid/ui_avoid.h	/^    QLabel *labelDirectionAngle;$/;"	m	class:Ui_Avoid
+labelIndentID	./imageIden/ui_imageIden.h	/^    QLabel *labelIndentID;$/;"	m	class:Ui_ImageIden
+labelInputID	./imageIden/ui_imageIden.h	/^    QLabel *labelInputID;$/;"	m	class:Ui_ImageIden
+labelLeftSpeed	./avoid/ui_avoid.h	/^    QLabel *labelLeftSpeed;$/;"	m	class:Ui_Avoid
+labelLoadFile	./avoid/ui_avoid.h	/^    QLabel *labelLoadFile;$/;"	m	class:Ui_Avoid
+labelOne	./voiceIden/ui_voiceIden.h	/^    QLabel *labelOne;$/;"	m	class:Ui_VoiceIden
+labelOrigin	./planRoad/ui_planRoad.h	/^    QLabel *labelOrigin;$/;"	m	class:Ui_PlanRoad
+labelPicture	./imageIden/ui_imageIden.h	/^    QLabel *labelPicture;$/;"	m	class:Ui_ImageIden
+labelPicture	./planRoad/ui_planRoad.h	/^    QLabel *labelPicture;$/;"	m	class:Ui_PlanRoad
+labelPicture	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *labelPicture;$/;"	m	class:Ui_ImageIden
+labelRightSpeed	./avoid/ui_avoid.h	/^    QLabel *labelRightSpeed;$/;"	m	class:Ui_Avoid
+labelSafeDis	./avoid/ui_avoid.h	/^    QLabel *labelSafeDis;$/;"	m	class:Ui_Avoid
+labelTitleCtrl	./avoid/ui_avoid.h	/^    QLabel *labelTitleCtrl;$/;"	m	class:Ui_Avoid
+labelTitleSet	./avoid/ui_avoid.h	/^    QLabel *labelTitleSet;$/;"	m	class:Ui_Avoid
+labelTwo	./voiceIden/ui_voiceIden.h	/^    QLabel *labelTwo;$/;"	m	class:Ui_VoiceIden
+label_10	./localSet/ui_localSet.h	/^    QLabel *label_10;$/;"	m	class:Ui_LocalSet
+label_11	./localSet/ui_localSet.h	/^    QLabel *label_11;$/;"	m	class:Ui_LocalSet
+label_12	./localSet/ui_localSet.h	/^    QLabel *label_12;$/;"	m	class:Ui_LocalSet
+label_13	./localSet/ui_localSet.h	/^    QLabel *label_13;$/;"	m	class:Ui_LocalSet
+label_2	./localSet/ui_localSet.h	/^    QLabel *label_2;$/;"	m	class:Ui_LocalSet
+label_2	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label_2;$/;"	m	class:Ui_ImageIden
+label_2	./voiceIden/ui_dialogAddTable1.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogAddTable1
+label_2	./voiceIden/ui_dialogAddTable2.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogAddTable2
+label_2	./voiceIden/ui_dialogModifyTable1.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogModifyTable1
+label_2	./voiceIden/ui_dialogModifyTable2.h	/^    QLabel *label_2;$/;"	m	class:Ui_DialogModifyTable2
+label_2	./voiceIden/ui_voiceIden.h	/^    QLabel *label_2;$/;"	m	class:Ui_VoiceIden
+label_3	./localSet/ui_localSet.h	/^    QLabel *label_3;$/;"	m	class:Ui_LocalSet
+label_3	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label_3;$/;"	m	class:Ui_ImageIden
+label_3	./voiceIden/ui_dialogAddTable2.h	/^    QLabel *label_3;$/;"	m	class:Ui_DialogAddTable2
+label_3	./voiceIden/ui_dialogModifyTable2.h	/^    QLabel *label_3;$/;"	m	class:Ui_DialogModifyTable2
+label_4	./localSet/ui_localSet.h	/^    QLabel *label_4;$/;"	m	class:Ui_LocalSet
+label_4	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label_4;$/;"	m	class:Ui_ImageIden
+label_5	./localSet/ui_localSet.h	/^    QLabel *label_5;$/;"	m	class:Ui_LocalSet
+label_5	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label_5;$/;"	m	class:Ui_ImageIden
+label_6	./localSet/ui_localSet.h	/^    QLabel *label_6;$/;"	m	class:Ui_LocalSet
+label_6	./useByTaoImageIden/ui_imageIden.h	/^    QLabel *label_6;$/;"	m	class:Ui_ImageIden
+label_7	./localSet/ui_localSet.h	/^    QLabel *label_7;$/;"	m	class:Ui_LocalSet
+label_8	./localSet/ui_localSet.h	/^    QLabel *label_8;$/;"	m	class:Ui_LocalSet
+label_9	./localSet/ui_localSet.h	/^    QLabel *label_9;$/;"	m	class:Ui_LocalSet
+lcdNumber	./imageIden/ui_imageIden.h	/^    QLCDNumber *lcdNumber;$/;"	m	class:Ui_ImageIden
+leCW1	./localSet/ui_localSet.h	/^    QLineEdit *leCW1;$/;"	m	class:Ui_LocalSet
+leCW2	./localSet/ui_localSet.h	/^    QLineEdit *leCW2;$/;"	m	class:Ui_LocalSet
+leCW3	./localSet/ui_localSet.h	/^    QLineEdit *leCW3;$/;"	m	class:Ui_LocalSet
+leCW4	./localSet/ui_localSet.h	/^    QLineEdit *leCW4;$/;"	m	class:Ui_LocalSet
+leChanged	./voiceIden/dialogAddTable1.cpp	/^void DialogAddTable1::leChanged(const QString &text)$/;"	f	class:DialogAddTable1
+leChanged	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::leChanged(const QString &text)$/;"	f	class:DialogAddTable2
+leChanged	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::leChanged(const QString &text)$/;"	f	class:DialogModifyTable1
+leChanged	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::leChanged(const QString &text)$/;"	f	class:DialogModifyTable2
+leGW1	./localSet/ui_localSet.h	/^    QLineEdit *leGW1;$/;"	m	class:Ui_LocalSet
+leGW2	./localSet/ui_localSet.h	/^    QLineEdit *leGW2;$/;"	m	class:Ui_LocalSet
+leGW3	./localSet/ui_localSet.h	/^    QLineEdit *leGW3;$/;"	m	class:Ui_LocalSet
+leGW4	./localSet/ui_localSet.h	/^    QLineEdit *leGW4;$/;"	m	class:Ui_LocalSet
+leHorizontal	./useByTaoImageIden/ui_imageIden.h	/^    QLineEdit *leHorizontal;$/;"	m	class:Ui_ImageIden
+leIP1	./localSet/ui_localSet.h	/^    QLineEdit *leIP1;$/;"	m	class:Ui_LocalSet
+leIP2	./localSet/ui_localSet.h	/^    QLineEdit *leIP2;$/;"	m	class:Ui_LocalSet
+leIP3	./localSet/ui_localSet.h	/^    QLineEdit *leIP3;$/;"	m	class:Ui_LocalSet
+leIP4	./localSet/ui_localSet.h	/^    QLineEdit *leIP4;$/;"	m	class:Ui_LocalSet
+leName	./useByTaoImageIden/ui_imageIden.h	/^    QLineEdit *leName;$/;"	m	class:Ui_ImageIden
+leNumber	./useByTaoImageIden/ui_imageIden.h	/^    QLineEdit *leNumber;$/;"	m	class:Ui_ImageIden
+leTime	./useByTaoImageIden/ui_imageIden.h	/^    QLineEdit *leTime;$/;"	m	class:Ui_ImageIden
+leVertical	./useByTaoImageIden/ui_imageIden.h	/^    QLineEdit *leVertical;$/;"	m	class:Ui_ImageIden
+lineEditItem0	./voiceIden/ui_dialogAddTable1.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogAddTable1
+lineEditItem0	./voiceIden/ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem0	./voiceIden/ui_dialogModifyTable1.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogModifyTable1
+lineEditItem0	./voiceIden/ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem0;$/;"	m	class:Ui_DialogModifyTable2
+lineEditItem1	./voiceIden/ui_dialogAddTable1.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogAddTable1
+lineEditItem1	./voiceIden/ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem1	./voiceIden/ui_dialogModifyTable1.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogModifyTable1
+lineEditItem1	./voiceIden/ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem1;$/;"	m	class:Ui_DialogModifyTable2
+lineEditItem2	./voiceIden/ui_dialogAddTable2.h	/^    QLineEdit *lineEditItem2;$/;"	m	class:Ui_DialogAddTable2
+lineEditItem2	./voiceIden/ui_dialogModifyTable2.h	/^    QLineEdit *lineEditItem2;$/;"	m	class:Ui_DialogModifyTable2
+lineEditLoadFilePath	./avoid/ui_avoid.h	/^    QLineEdit *lineEditLoadFilePath;$/;"	m	class:Ui_Avoid
+lineEditSelectOne	./voiceIden/ui_voiceIden.h	/^    QLineEdit *lineEditSelectOne;$/;"	m	class:Ui_VoiceIden
+lineEditSelectTwo	./voiceIden/ui_voiceIden.h	/^    QLineEdit *lineEditSelectTwo;$/;"	m	class:Ui_VoiceIden
+lineEditShowIdentId	./imageIden/ui_imageIden.h	/^    QLineEdit *lineEditShowIdentId;$/;"	m	class:Ui_ImageIden
+lineEdit_13	./localSet/ui_localSet.h	/^    QLineEdit *lineEdit_13;$/;"	m	class:Ui_LocalSet
+lineTrack	./avoid/avoid.cpp	/^Avoid::lineTrack() \/\/—≠º£––◊ﬂ$/;"	f	class:Avoid
+loadPicture	./imageIden/imageIden.cpp	/^void ImageIden::loadPicture()$/;"	f	class:ImageIden
+loadPicture	./planRoad/planRoad.cpp	/^void PlanRoad::loadPicture()$/;"	f	class:PlanRoad
+loadPicture	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::loadPicture()$/;"	f	class:ImageIden
+loadProgram	./avoid/avoid.cpp	/^Avoid::loadProgram()$/;"	f	class:Avoid
+m_bKeyShow	./avoid/avoid.h	/^	bool m_bKeyShow;    \/\/º¸≈Ãœ‘ æ $/;"	m	class:Avoid
+m_currentModel	./imageIden/imageIden.h	/^	int m_currentModel;$/;"	m	class:ImageIden
+m_currentTable2Name	./voiceIden/voiceIden.h	/^	QString m_currentTable2Name;$/;"	m	class:VoiceIden
+m_dat1	./voiceIden/voiceIden.h	/^	DialogAddTable1 *m_dat1;$/;"	m	class:VoiceIden
+m_dat2	./voiceIden/voiceIden.h	/^	DialogAddTable2 *m_dat2;$/;"	m	class:VoiceIden
+m_destinationCoords	./planRoad/planRoad.h	/^	int m_destinationCoords[2];$/;"	m	class:PlanRoad
+m_digit	./imageIden/imageIden.h	/^	int m_digit;	   \/\/ ∂± ˝◊÷$/;"	m	class:ImageIden
+m_dmt1	./voiceIden/voiceIden.h	/^	DialogModifyTable1 *m_dmt1;$/;"	m	class:VoiceIden
+m_dmt2	./voiceIden/voiceIden.h	/^	DialogModifyTable2 *m_dmt2;$/;"	m	class:VoiceIden
+m_getImg	./imageIden/imageIden.h	/^	QImage *m_getImg;  \/\/load picture from file$/;"	m	class:ImageIden
+m_getImg	./planRoad/planRoad.h	/^	QImage *m_getImg;  \/\/load picture from file$/;"	m	class:PlanRoad
+m_getImg	./useByTaoImageIden/imageIden.h	/^	QImage *m_getImg;  \/\/load picture from file$/;"	m	class:ImageIden
+m_inputId	./imageIden/imageIden.h	/^	QString m_inputId; \/\/ ‰»Î»À¡≥ID$/;"	m	class:ImageIden
+m_isVoiseSource	./voiceIden/voiceIden.h	/^	bool m_isVoiseSource;  \/\/¬º“Ù◊ ‘¥ «∑Òø…”√$/;"	m	class:VoiceIden
+m_loadFileName	./avoid/avoid.h	/^	QString m_loadFileName;$/;"	m	class:Avoid
+m_originCoords	./planRoad/planRoad.h	/^	int m_originCoords[2];$/;"	m	class:PlanRoad
+m_timeoutCount	./useByTaoImageIden/imageIden.h	/^	int m_timeoutCount;$/;"	m	class:ImageIden
+main	./avoid/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./configureMainWindow/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./configureMainWindowv1.0/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./deviceDrive/test.c	/^int main(int argc, char *argv[])$/;"	f
+main	./imageIden/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./localSet/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./planRoad/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./startFork/start.c	/^int main(void)$/;"	f
+main	./useByTaoImageIden/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	./voiceIden/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+menuCommand	./imageIden/ui_imageIden.h	/^    QMenu *menuCommand;$/;"	m	class:Ui_ImageIden
+menuFile	./imageIden/ui_imageIden.h	/^    QMenu *menuFile;$/;"	m	class:Ui_ImageIden
+menuFile	./planRoad/ui_planRoad.h	/^    QMenu *menuFile;$/;"	m	class:Ui_PlanRoad
+menuFile	./useByTaoImageIden/ui_imageIden.h	/^    QMenu *menuFile;$/;"	m	class:Ui_ImageIden
+menuPattern	./imageIden/ui_imageIden.h	/^    QMenu *menuPattern;$/;"	m	class:Ui_ImageIden
+menubar	./imageIden/ui_imageIden.h	/^    QMenuBar *menubar;$/;"	m	class:Ui_ImageIden
+menubar	./planRoad/ui_planRoad.h	/^    QMenuBar *menubar;$/;"	m	class:Ui_PlanRoad
+menubar	./useByTaoImageIden/ui_imageIden.h	/^    QMenuBar *menubar;$/;"	m	class:Ui_ImageIden
+metaObject	./avoid/moc_avoid.cpp	/^const QMetaObject *Avoid::metaObject() const$/;"	f	class:Avoid
+metaObject	./configureMainWindow/moc_configureMainWindow.cpp	/^const QMetaObject *ConfigureMainWindow::metaObject() const$/;"	f	class:ConfigureMainWindow
+metaObject	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^const QMetaObject *ConfigureMainWindow::metaObject() const$/;"	f	class:ConfigureMainWindow
+metaObject	./imageIden/moc_imageIden.cpp	/^const QMetaObject *ImageIden::metaObject() const$/;"	f	class:ImageIden
+metaObject	./localSet/moc_localSet.cpp	/^const QMetaObject *LocalSet::metaObject() const$/;"	f	class:LocalSet
+metaObject	./planRoad/moc_planRoad.cpp	/^const QMetaObject *PlanRoad::metaObject() const$/;"	f	class:PlanRoad
+metaObject	./useByTaoImageIden/moc_TQInputMethod.cpp	/^const QMetaObject *TQInputMethod::metaObject() const$/;"	f	class:TQInputMethod
+metaObject	./useByTaoImageIden/moc_imageIden.cpp	/^const QMetaObject *ImageIden::metaObject() const$/;"	f	class:ImageIden
+metaObject	./voiceIden/moc_TQInputMethod.cpp	/^const QMetaObject *TQInputMethod::metaObject() const$/;"	f	class:TQInputMethod
+metaObject	./voiceIden/moc_dialogAddTable1.cpp	/^const QMetaObject *DialogAddTable1::metaObject() const$/;"	f	class:DialogAddTable1
+metaObject	./voiceIden/moc_dialogAddTable2.cpp	/^const QMetaObject *DialogAddTable2::metaObject() const$/;"	f	class:DialogAddTable2
+metaObject	./voiceIden/moc_dialogModifyTable1.cpp	/^const QMetaObject *DialogModifyTable1::metaObject() const$/;"	f	class:DialogModifyTable1
+metaObject	./voiceIden/moc_dialogModifyTable2.cpp	/^const QMetaObject *DialogModifyTable2::metaObject() const$/;"	f	class:DialogModifyTable2
+metaObject	./voiceIden/moc_dialogShowVoice.cpp	/^const QMetaObject *DialogShowVoice::metaObject() const$/;"	f	class:DialogShowVoice
+metaObject	./voiceIden/moc_voiceIden.cpp	/^const QMetaObject *VoiceIden::metaObject() const$/;"	f	class:VoiceIden
+modifyTable1	./voiceIden/voiceIden.cpp	/^void VoiceIden::modifyTable1(int r, int c)$/;"	f	class:VoiceIden
+modifyTable2	./voiceIden/voiceIden.cpp	/^void VoiceIden::modifyTable2(int r, int c)$/;"	f	class:VoiceIden
+name	./deviceDrive/orient_button.c	/^	char *name;$/;"	m	struct:button_irq_des	file:
+operateConfirm	./voiceIden/moc_dialogAddTable1.cpp	/^void DialogAddTable1::operateConfirm()$/;"	f	class:DialogAddTable1
+operateConfirm	./voiceIden/moc_dialogAddTable2.cpp	/^void DialogAddTable2::operateConfirm()$/;"	f	class:DialogAddTable2
+operateConfirm	./voiceIden/moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::operateConfirm()$/;"	f	class:DialogModifyTable1
+operateConfirm	./voiceIden/moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::operateConfirm()$/;"	f	class:DialogModifyTable2
+pin	./deviceDrive/orient_button.c	/^	int pin;$/;"	m	struct:button_irq_des	file:
+process	./configureMainWindow/configureMainWindow.h	/^	QProcess process;$/;"	m	class:ConfigureMainWindow
+process	./configureMainWindowv1.0/configureMainWindow.h	/^	QProcess process;$/;"	m	class:ConfigureMainWindow
+processFinished	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::processFinished(int exitCode, QProcess::ExitStatus exitStatus)$/;"	f	class:ConfigureMainWindow
+processFinished	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::processFinished(int exitCode, QProcess::ExitStatus exitStatus)$/;"	f	class:ConfigureMainWindow
+processLauncher	./configureMainWindow/configureMainWindow.cpp	/^void ConfigureMainWindow::processLauncher(const QString &program, const QStringList &arguments)$/;"	f	class:ConfigureMainWindow
+processLauncher	./configureMainWindowv1.0/configureMainWindow.cpp	/^void ConfigureMainWindow::processLauncher(const QString &program, const QStringList &arguments)$/;"	f	class:ConfigureMainWindow
+programEreasure	./avoid/avoid.cpp	/^Avoid::programEreasure()$/;"	f	class:Avoid
+qt_meta_data_Avoid	./avoid/moc_avoid.cpp	/^static const uint qt_meta_data_Avoid[] = {$/;"	v	file:
+qt_meta_data_ConfigureMainWindow	./configureMainWindow/moc_configureMainWindow.cpp	/^static const uint qt_meta_data_ConfigureMainWindow[] = {$/;"	v	file:
+qt_meta_data_ConfigureMainWindow	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^static const uint qt_meta_data_ConfigureMainWindow[] = {$/;"	v	file:
+qt_meta_data_DialogAddTable1	./voiceIden/moc_dialogAddTable1.cpp	/^static const uint qt_meta_data_DialogAddTable1[] = {$/;"	v	file:
+qt_meta_data_DialogAddTable2	./voiceIden/moc_dialogAddTable2.cpp	/^static const uint qt_meta_data_DialogAddTable2[] = {$/;"	v	file:
+qt_meta_data_DialogModifyTable1	./voiceIden/moc_dialogModifyTable1.cpp	/^static const uint qt_meta_data_DialogModifyTable1[] = {$/;"	v	file:
+qt_meta_data_DialogModifyTable2	./voiceIden/moc_dialogModifyTable2.cpp	/^static const uint qt_meta_data_DialogModifyTable2[] = {$/;"	v	file:
+qt_meta_data_DialogShowVoice	./voiceIden/moc_dialogShowVoice.cpp	/^static const uint qt_meta_data_DialogShowVoice[] = {$/;"	v	file:
+qt_meta_data_ImageIden	./imageIden/moc_imageIden.cpp	/^static const uint qt_meta_data_ImageIden[] = {$/;"	v	file:
+qt_meta_data_ImageIden	./useByTaoImageIden/moc_imageIden.cpp	/^static const uint qt_meta_data_ImageIden[] = {$/;"	v	file:
+qt_meta_data_LocalSet	./localSet/moc_localSet.cpp	/^static const uint qt_meta_data_LocalSet[] = {$/;"	v	file:
+qt_meta_data_PlanRoad	./planRoad/moc_planRoad.cpp	/^static const uint qt_meta_data_PlanRoad[] = {$/;"	v	file:
+qt_meta_data_TQInputMethod	./useByTaoImageIden/moc_TQInputMethod.cpp	/^static const uint qt_meta_data_TQInputMethod[] = {$/;"	v	file:
+qt_meta_data_TQInputMethod	./voiceIden/moc_TQInputMethod.cpp	/^static const uint qt_meta_data_TQInputMethod[] = {$/;"	v	file:
+qt_meta_data_VoiceIden	./voiceIden/moc_voiceIden.cpp	/^static const uint qt_meta_data_VoiceIden[] = {$/;"	v	file:
+qt_meta_stringdata_Avoid	./avoid/moc_avoid.cpp	/^static const char qt_meta_stringdata_Avoid[] = {$/;"	v	file:
+qt_meta_stringdata_ConfigureMainWindow	./configureMainWindow/moc_configureMainWindow.cpp	/^static const char qt_meta_stringdata_ConfigureMainWindow[] = {$/;"	v	file:
+qt_meta_stringdata_ConfigureMainWindow	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^static const char qt_meta_stringdata_ConfigureMainWindow[] = {$/;"	v	file:
+qt_meta_stringdata_DialogAddTable1	./voiceIden/moc_dialogAddTable1.cpp	/^static const char qt_meta_stringdata_DialogAddTable1[] = {$/;"	v	file:
+qt_meta_stringdata_DialogAddTable2	./voiceIden/moc_dialogAddTable2.cpp	/^static const char qt_meta_stringdata_DialogAddTable2[] = {$/;"	v	file:
+qt_meta_stringdata_DialogModifyTable1	./voiceIden/moc_dialogModifyTable1.cpp	/^static const char qt_meta_stringdata_DialogModifyTable1[] = {$/;"	v	file:
+qt_meta_stringdata_DialogModifyTable2	./voiceIden/moc_dialogModifyTable2.cpp	/^static const char qt_meta_stringdata_DialogModifyTable2[] = {$/;"	v	file:
+qt_meta_stringdata_DialogShowVoice	./voiceIden/moc_dialogShowVoice.cpp	/^static const char qt_meta_stringdata_DialogShowVoice[] = {$/;"	v	file:
+qt_meta_stringdata_ImageIden	./imageIden/moc_imageIden.cpp	/^static const char qt_meta_stringdata_ImageIden[] = {$/;"	v	file:
+qt_meta_stringdata_ImageIden	./useByTaoImageIden/moc_imageIden.cpp	/^static const char qt_meta_stringdata_ImageIden[] = {$/;"	v	file:
+qt_meta_stringdata_LocalSet	./localSet/moc_localSet.cpp	/^static const char qt_meta_stringdata_LocalSet[] = {$/;"	v	file:
+qt_meta_stringdata_PlanRoad	./planRoad/moc_planRoad.cpp	/^static const char qt_meta_stringdata_PlanRoad[] = {$/;"	v	file:
+qt_meta_stringdata_TQInputMethod	./useByTaoImageIden/moc_TQInputMethod.cpp	/^static const char qt_meta_stringdata_TQInputMethod[] = {$/;"	v	file:
+qt_meta_stringdata_TQInputMethod	./voiceIden/moc_TQInputMethod.cpp	/^static const char qt_meta_stringdata_TQInputMethod[] = {$/;"	v	file:
+qt_meta_stringdata_VoiceIden	./voiceIden/moc_voiceIden.cpp	/^static const char qt_meta_stringdata_VoiceIden[] = {$/;"	v	file:
+qt_metacall	./avoid/moc_avoid.cpp	/^int Avoid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Avoid
+qt_metacall	./configureMainWindow/moc_configureMainWindow.cpp	/^int ConfigureMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ConfigureMainWindow
+qt_metacall	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^int ConfigureMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ConfigureMainWindow
+qt_metacall	./imageIden/moc_imageIden.cpp	/^int ImageIden::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ImageIden
+qt_metacall	./localSet/moc_localSet.cpp	/^int LocalSet::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:LocalSet
+qt_metacall	./planRoad/moc_planRoad.cpp	/^int PlanRoad::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:PlanRoad
+qt_metacall	./useByTaoImageIden/moc_TQInputMethod.cpp	/^int TQInputMethod::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:TQInputMethod
+qt_metacall	./useByTaoImageIden/moc_imageIden.cpp	/^int ImageIden::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ImageIden
+qt_metacall	./voiceIden/moc_TQInputMethod.cpp	/^int TQInputMethod::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:TQInputMethod
+qt_metacall	./voiceIden/moc_dialogAddTable1.cpp	/^int DialogAddTable1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogAddTable1
+qt_metacall	./voiceIden/moc_dialogAddTable2.cpp	/^int DialogAddTable2::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogAddTable2
+qt_metacall	./voiceIden/moc_dialogModifyTable1.cpp	/^int DialogModifyTable1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogModifyTable1
+qt_metacall	./voiceIden/moc_dialogModifyTable2.cpp	/^int DialogModifyTable2::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogModifyTable2
+qt_metacall	./voiceIden/moc_dialogShowVoice.cpp	/^int DialogShowVoice::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:DialogShowVoice
+qt_metacall	./voiceIden/moc_voiceIden.cpp	/^int VoiceIden::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:VoiceIden
+qt_metacast	./avoid/moc_avoid.cpp	/^void *Avoid::qt_metacast(const char *_clname)$/;"	f	class:Avoid
+qt_metacast	./configureMainWindow/moc_configureMainWindow.cpp	/^void *ConfigureMainWindow::qt_metacast(const char *_clname)$/;"	f	class:ConfigureMainWindow
+qt_metacast	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^void *ConfigureMainWindow::qt_metacast(const char *_clname)$/;"	f	class:ConfigureMainWindow
+qt_metacast	./imageIden/moc_imageIden.cpp	/^void *ImageIden::qt_metacast(const char *_clname)$/;"	f	class:ImageIden
+qt_metacast	./localSet/moc_localSet.cpp	/^void *LocalSet::qt_metacast(const char *_clname)$/;"	f	class:LocalSet
+qt_metacast	./planRoad/moc_planRoad.cpp	/^void *PlanRoad::qt_metacast(const char *_clname)$/;"	f	class:PlanRoad
+qt_metacast	./useByTaoImageIden/moc_TQInputMethod.cpp	/^void *TQInputMethod::qt_metacast(const char *_clname)$/;"	f	class:TQInputMethod
+qt_metacast	./useByTaoImageIden/moc_imageIden.cpp	/^void *ImageIden::qt_metacast(const char *_clname)$/;"	f	class:ImageIden
+qt_metacast	./voiceIden/moc_TQInputMethod.cpp	/^void *TQInputMethod::qt_metacast(const char *_clname)$/;"	f	class:TQInputMethod
+qt_metacast	./voiceIden/moc_dialogAddTable1.cpp	/^void *DialogAddTable1::qt_metacast(const char *_clname)$/;"	f	class:DialogAddTable1
+qt_metacast	./voiceIden/moc_dialogAddTable2.cpp	/^void *DialogAddTable2::qt_metacast(const char *_clname)$/;"	f	class:DialogAddTable2
+qt_metacast	./voiceIden/moc_dialogModifyTable1.cpp	/^void *DialogModifyTable1::qt_metacast(const char *_clname)$/;"	f	class:DialogModifyTable1
+qt_metacast	./voiceIden/moc_dialogModifyTable2.cpp	/^void *DialogModifyTable2::qt_metacast(const char *_clname)$/;"	f	class:DialogModifyTable2
+qt_metacast	./voiceIden/moc_dialogShowVoice.cpp	/^void *DialogShowVoice::qt_metacast(const char *_clname)$/;"	f	class:DialogShowVoice
+qt_metacast	./voiceIden/moc_voiceIden.cpp	/^void *VoiceIden::qt_metacast(const char *_clname)$/;"	f	class:VoiceIden
+quitAvoid	./avoid/avoid.cpp	/^Avoid::quitAvoid()$/;"	f	class:Avoid
+quited	./configureMainWindow/moc_configureMainWindow.cpp	/^void ConfigureMainWindow::quited()$/;"	f	class:ConfigureMainWindow
+quited	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^void ConfigureMainWindow::quited()$/;"	f	class:ConfigureMainWindow
+rbRefrashImg	./useByTaoImageIden/ui_imageIden.h	/^    QRadioButton *rbRefrashImg;$/;"	m	class:Ui_ImageIden
+rbt1	./avoid/ui_avoid.h	/^    QRadioButton *rbt1;$/;"	m	class:Ui_Avoid
+rbt2	./avoid/ui_avoid.h	/^    QRadioButton *rbt2;$/;"	m	class:Ui_Avoid
+rbt3	./avoid/ui_avoid.h	/^    QRadioButton *rbt3;$/;"	m	class:Ui_Avoid
+rbt4	./avoid/ui_avoid.h	/^    QRadioButton *rbt4;$/;"	m	class:Ui_Avoid
+rbt5	./avoid/ui_avoid.h	/^    QRadioButton *rbt5;$/;"	m	class:Ui_Avoid
+rbt6	./avoid/ui_avoid.h	/^    QRadioButton *rbt6;$/;"	m	class:Ui_Avoid
+readDatabaseTable1	./voiceIden/voiceIden.cpp	/^void VoiceIden::readDatabaseTable1()$/;"	f	class:VoiceIden
+readDatabaseTable2	./voiceIden/voiceIden.cpp	/^void VoiceIden::readDatabaseTable2(QString &tableName)$/;"	f	class:VoiceIden
+remoteCtrl	./avoid/avoid.cpp	/^Avoid::remoteCtrl() \/\/“£øÿøÿ÷∆$/;"	f	class:Avoid
+retranslateUi	./avoid/ui_avoid.h	/^    void retranslateUi(QTabWidget *Avoid)$/;"	f	class:Ui_Avoid
+retranslateUi	./configureMainWindow/ui_configureMainWindow.h	/^    void retranslateUi(QMainWindow *ConfigureMainWindow)$/;"	f	class:Ui_ConfigureMainWindow
+retranslateUi	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    void retranslateUi(QMainWindow *ConfigureMainWindow)$/;"	f	class:Ui_ConfigureMainWindow
+retranslateUi	./imageIden/ui_imageIden.h	/^    void retranslateUi(QMainWindow *ImageIden)$/;"	f	class:Ui_ImageIden
+retranslateUi	./localSet/ui_localSet.h	/^    void retranslateUi(QWidget *LocalSet)$/;"	f	class:Ui_LocalSet
+retranslateUi	./planRoad/ui_planRoad.h	/^    void retranslateUi(QMainWindow *PlanRoad)$/;"	f	class:Ui_PlanRoad
+retranslateUi	./useByTaoImageIden/ui_imageIden.h	/^    void retranslateUi(QMainWindow *ImageIden)$/;"	f	class:Ui_ImageIden
+retranslateUi	./voiceIden/ui_dialogAddTable1.h	/^    void retranslateUi(QDialog *DialogAddTable1)$/;"	f	class:Ui_DialogAddTable1
+retranslateUi	./voiceIden/ui_dialogAddTable2.h	/^    void retranslateUi(QDialog *DialogAddTable2)$/;"	f	class:Ui_DialogAddTable2
+retranslateUi	./voiceIden/ui_dialogModifyTable1.h	/^    void retranslateUi(QDialog *DialogModifyTable1)$/;"	f	class:Ui_DialogModifyTable1
+retranslateUi	./voiceIden/ui_dialogModifyTable2.h	/^    void retranslateUi(QDialog *DialogModifyTable2)$/;"	f	class:Ui_DialogModifyTable2
+retranslateUi	./voiceIden/ui_dialogShowVoice.h	/^    void retranslateUi(QDialog *DialogShowVoice)$/;"	f	class:Ui_DialogShowVoice
+retranslateUi	./voiceIden/ui_voiceIden.h	/^    void retranslateUi(QWidget *VoiceIden)$/;"	f	class:Ui_VoiceIden
+returned	./avoid/moc_avoid.cpp	/^void Avoid::returned()$/;"	f	class:Avoid
+returned	./imageIden/moc_imageIden.cpp	/^void ImageIden::returned()$/;"	f	class:ImageIden
+returned	./localSet/moc_localSet.cpp	/^void LocalSet::returned()$/;"	f	class:LocalSet
+returned	./planRoad/moc_planRoad.cpp	/^void PlanRoad::returned()$/;"	f	class:PlanRoad
+returned	./useByTaoImageIden/moc_imageIden.cpp	/^void ImageIden::returned()$/;"	f	class:ImageIden
+returned	./voiceIden/moc_voiceIden.cpp	/^void VoiceIden::returned()$/;"	f	class:VoiceIden
+s3c6410_button_exit	./deviceDrive/orient_button.c	/^module_exit(s3c6410_button_exit);$/;"	v
+s3c6410_button_exit	./deviceDrive/orient_button.c	/^static void __exit s3c6410_button_exit(void)$/;"	f	file:
+s3c6410_button_init	./deviceDrive/orient_button.c	/^module_init(s3c6410_button_init);$/;"	v
+s3c6410_button_init	./deviceDrive/orient_button.c	/^static int __init s3c6410_button_init(void)$/;"	f	file:
+setDirectionAngle	./avoid/avoid.cpp	/^Avoid::setDirectionAngle()$/;"	f	class:Avoid
+setItemText	./voiceIden/dialogAddTable2.cpp	/^void DialogAddTable2::setItemText(const QString &string, int item)$/;"	f	class:DialogAddTable2
+setItemText	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::setItemText(const QString &string, int item)$/;"	f	class:DialogModifyTable1
+setItemText	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::setItemText(const QString &string, int item)$/;"	f	class:DialogModifyTable2
+setModelDigit	./imageIden/imageIden.cpp	/^void ImageIden::setModelDigit()$/;"	f	class:ImageIden
+setModelFace	./imageIden/imageIden.cpp	/^void ImageIden::setModelFace()$/;"	f	class:ImageIden
+setRefrashImage	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::setRefrashImage(bool checked)$/;"	f	class:ImageIden
+setSafeDistance	./avoid/avoid.cpp	/^Avoid::setSafeDistance()$/;"	f	class:Avoid
+setSpeed	./avoid/avoid.cpp	/^Avoid::setSpeed()$/;"	f	class:Avoid
+setTableOneSelectItem	./voiceIden/voiceIden.cpp	/^void VoiceIden::setTableOneSelectItem(const QString& text)$/;"	f	class:VoiceIden
+setTableTwoSelectItem	./voiceIden/voiceIden.cpp	/^void VoiceIden::setTableTwoSelectItem(const QString& text)$/;"	f	class:VoiceIden
+setText	./voiceIden/dialogShowVoice.cpp	/^void DialogShowVoice::setText(QString &string)$/;"	f	class:DialogShowVoice
+setting	./deviceDrive/orient_button.c	/^	unsigned long setting;$/;"	m	struct:button_irq_des	file:
+setupUi	./avoid/ui_avoid.h	/^    void setupUi(QTabWidget *Avoid)$/;"	f	class:Ui_Avoid
+setupUi	./configureMainWindow/ui_configureMainWindow.h	/^    void setupUi(QMainWindow *ConfigureMainWindow)$/;"	f	class:Ui_ConfigureMainWindow
+setupUi	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    void setupUi(QMainWindow *ConfigureMainWindow)$/;"	f	class:Ui_ConfigureMainWindow
+setupUi	./imageIden/ui_imageIden.h	/^    void setupUi(QMainWindow *ImageIden)$/;"	f	class:Ui_ImageIden
+setupUi	./localSet/ui_localSet.h	/^    void setupUi(QWidget *LocalSet)$/;"	f	class:Ui_LocalSet
+setupUi	./planRoad/ui_planRoad.h	/^    void setupUi(QMainWindow *PlanRoad)$/;"	f	class:Ui_PlanRoad
+setupUi	./useByTaoImageIden/ui_imageIden.h	/^    void setupUi(QMainWindow *ImageIden)$/;"	f	class:Ui_ImageIden
+setupUi	./voiceIden/ui_dialogAddTable1.h	/^    void setupUi(QDialog *DialogAddTable1)$/;"	f	class:Ui_DialogAddTable1
+setupUi	./voiceIden/ui_dialogAddTable2.h	/^    void setupUi(QDialog *DialogAddTable2)$/;"	f	class:Ui_DialogAddTable2
+setupUi	./voiceIden/ui_dialogModifyTable1.h	/^    void setupUi(QDialog *DialogModifyTable1)$/;"	f	class:Ui_DialogModifyTable1
+setupUi	./voiceIden/ui_dialogModifyTable2.h	/^    void setupUi(QDialog *DialogModifyTable2)$/;"	f	class:Ui_DialogModifyTable2
+setupUi	./voiceIden/ui_dialogShowVoice.h	/^    void setupUi(QDialog *DialogShowVoice)$/;"	f	class:Ui_DialogShowVoice
+setupUi	./voiceIden/ui_voiceIden.h	/^    void setupUi(QWidget *VoiceIden)$/;"	f	class:Ui_VoiceIden
+spinBoxDirectionAngle	./avoid/ui_avoid.h	/^    QSpinBox *spinBoxDirectionAngle;$/;"	m	class:Ui_Avoid
+spinBoxLeftSpeed	./avoid/ui_avoid.h	/^    QSpinBox *spinBoxLeftSpeed;$/;"	m	class:Ui_Avoid
+spinBoxRightSpeed	./avoid/ui_avoid.h	/^    QSpinBox *spinBoxRightSpeed;$/;"	m	class:Ui_Avoid
+spinBoxSafeDis	./avoid/ui_avoid.h	/^    QSpinBox *spinBoxSafeDis;$/;"	m	class:Ui_Avoid
+startCatch	./imageIden/imageIden.cpp	/^void ImageIden::startCatch()$/;"	f	class:ImageIden
+startIden	./imageIden/imageIden.cpp	/^void ImageIden::startIden()$/;"	f	class:ImageIden
+startRecord	./voiceIden/moc_dialogAddTable1.cpp	/^void DialogAddTable1::startRecord()$/;"	f	class:DialogAddTable1
+startRecord	./voiceIden/moc_dialogAddTable2.cpp	/^void DialogAddTable2::startRecord()$/;"	f	class:DialogAddTable2
+startRecord	./voiceIden/moc_dialogModifyTable1.cpp	/^void DialogModifyTable1::startRecord()$/;"	f	class:DialogModifyTable1
+startRecord	./voiceIden/moc_dialogModifyTable2.cpp	/^void DialogModifyTable2::startRecord()$/;"	f	class:DialogModifyTable2
+startRecord	./voiceIden/moc_dialogShowVoice.cpp	/^void DialogShowVoice::startRecord()$/;"	f	class:DialogShowVoice
+startTrain	./imageIden/imageIden.cpp	/^void ImageIden::startTrain()$/;"	f	class:ImageIden
+startedRecordVoice	./voiceIden/voiceIden.cpp	/^void VoiceIden::startedRecordVoice()$/;"	f	class:VoiceIden
+staticMetaObject	./avoid/moc_avoid.cpp	/^const QMetaObject Avoid::staticMetaObject = {$/;"	m	class:Avoid	file:
+staticMetaObject	./configureMainWindow/moc_configureMainWindow.cpp	/^const QMetaObject ConfigureMainWindow::staticMetaObject = {$/;"	m	class:ConfigureMainWindow	file:
+staticMetaObject	./configureMainWindowv1.0/moc_configureMainWindow.cpp	/^const QMetaObject ConfigureMainWindow::staticMetaObject = {$/;"	m	class:ConfigureMainWindow	file:
+staticMetaObject	./imageIden/moc_imageIden.cpp	/^const QMetaObject ImageIden::staticMetaObject = {$/;"	m	class:ImageIden	file:
+staticMetaObject	./localSet/moc_localSet.cpp	/^const QMetaObject LocalSet::staticMetaObject = {$/;"	m	class:LocalSet	file:
+staticMetaObject	./planRoad/moc_planRoad.cpp	/^const QMetaObject PlanRoad::staticMetaObject = {$/;"	m	class:PlanRoad	file:
+staticMetaObject	./useByTaoImageIden/moc_TQInputMethod.cpp	/^const QMetaObject TQInputMethod::staticMetaObject = {$/;"	m	class:TQInputMethod	file:
+staticMetaObject	./useByTaoImageIden/moc_imageIden.cpp	/^const QMetaObject ImageIden::staticMetaObject = {$/;"	m	class:ImageIden	file:
+staticMetaObject	./voiceIden/moc_TQInputMethod.cpp	/^const QMetaObject TQInputMethod::staticMetaObject = {$/;"	m	class:TQInputMethod	file:
+staticMetaObject	./voiceIden/moc_dialogAddTable1.cpp	/^const QMetaObject DialogAddTable1::staticMetaObject = {$/;"	m	class:DialogAddTable1	file:
+staticMetaObject	./voiceIden/moc_dialogAddTable2.cpp	/^const QMetaObject DialogAddTable2::staticMetaObject = {$/;"	m	class:DialogAddTable2	file:
+staticMetaObject	./voiceIden/moc_dialogModifyTable1.cpp	/^const QMetaObject DialogModifyTable1::staticMetaObject = {$/;"	m	class:DialogModifyTable1	file:
+staticMetaObject	./voiceIden/moc_dialogModifyTable2.cpp	/^const QMetaObject DialogModifyTable2::staticMetaObject = {$/;"	m	class:DialogModifyTable2	file:
+staticMetaObject	./voiceIden/moc_dialogShowVoice.cpp	/^const QMetaObject DialogShowVoice::staticMetaObject = {$/;"	m	class:DialogShowVoice	file:
+staticMetaObject	./voiceIden/moc_voiceIden.cpp	/^const QMetaObject VoiceIden::staticMetaObject = {$/;"	m	class:VoiceIden	file:
+statusbar	./configureMainWindow/ui_configureMainWindow.h	/^    QStatusBar *statusbar;$/;"	m	class:Ui_ConfigureMainWindow
+statusbar	./configureMainWindowv1.0/ui_configureMainWindow.h	/^    QStatusBar *statusbar;$/;"	m	class:Ui_ConfigureMainWindow
+statusbar	./imageIden/ui_imageIden.h	/^    QStatusBar *statusbar;$/;"	m	class:Ui_ImageIden
+syszuxpinyin	./TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./avoid/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./configureMainWindow/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./configureMainWindowv1.0/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./localSet/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./useByTaoImageIden/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+syszuxpinyin	./voiceIden/TQInputMethod.h	/^        SyszuxPinyin* syszuxpinyin;$/;"	m	class:TQInputMethod
+tabCtrl	./avoid/ui_avoid.h	/^    QWidget *tabCtrl;$/;"	m	class:Ui_Avoid
+tabSet	./avoid/ui_avoid.h	/^    QWidget *tabSet;$/;"	m	class:Ui_Avoid
+tableWidgetOne	./voiceIden/ui_voiceIden.h	/^    QTableWidget *tableWidgetOne;$/;"	m	class:Ui_VoiceIden
+tableWidgetTwo	./voiceIden/ui_voiceIden.h	/^    QTableWidget *tableWidgetTwo;$/;"	m	class:Ui_VoiceIden
+timer1	./useByTaoImageIden/imageIden.h	/^	QTimer *timer1;$/;"	m	class:ImageIden
+timer2	./useByTaoImageIden/imageIden.h	/^	QTimer *timer2;$/;"	m	class:ImageIden
+ui	./avoid/avoid.h	/^	Ui::Avoid *ui;$/;"	m	class:Avoid
+ui	./configureMainWindow/configureMainWindow.h	/^	Ui::ConfigureMainWindow *ui;$/;"	m	class:ConfigureMainWindow
+ui	./configureMainWindowv1.0/configureMainWindow.h	/^	Ui::ConfigureMainWindow *ui;$/;"	m	class:ConfigureMainWindow
+ui	./imageIden/imageIden.h	/^	Ui::ImageIden *ui;$/;"	m	class:ImageIden
+ui	./localSet/localSet.h	/^	Ui::LocalSet *ui;$/;"	m	class:LocalSet
+ui	./planRoad/planRoad.h	/^	Ui::PlanRoad *ui;$/;"	m	class:PlanRoad
+ui	./useByTaoImageIden/imageIden.h	/^	Ui::ImageIden *ui;$/;"	m	class:ImageIden
+ui	./voiceIden/dialogAddTable1.h	/^	Ui::DialogAddTable1 *ui;$/;"	m	class:DialogAddTable1
+ui	./voiceIden/dialogAddTable2.h	/^	Ui::DialogAddTable2 *ui;$/;"	m	class:DialogAddTable2
+ui	./voiceIden/dialogModifyTable1.h	/^	Ui::DialogModifyTable1 *ui;$/;"	m	class:DialogModifyTable1
+ui	./voiceIden/dialogModifyTable2.h	/^	Ui::DialogModifyTable2 *ui;$/;"	m	class:DialogModifyTable2
+ui	./voiceIden/dialogShowVoice.h	/^	Ui::DialogShowVoice *ui;$/;"	m	class:DialogShowVoice
+ui	./voiceIden/voiceIden.h	/^	Ui::VoiceIden *ui;$/;"	m	class:VoiceIden
+updateTable2	./voiceIden/voiceIden.cpp	/^void VoiceIden::updateTable2(int currentRow,int currentColumn,int previousRow,int previousColumn)$/;"	f	class:VoiceIden
+updateTable2_2	./voiceIden/voiceIden.cpp	/^void VoiceIden::updateTable2_2(int currentRow,int currentColumn,int previousRow,int previousColumn)$/;"	f	class:VoiceIden
+verticalAngleSet	./useByTaoImageIden/imageIden.cpp	/^void ImageIden::verticalAngleSet()$/;"	f	class:ImageIden
+verticalLayout	./imageIden/ui_imageIden.h	/^    QVBoxLayout *verticalLayout;$/;"	m	class:Ui_ImageIden
+verticalLayout	./planRoad/ui_planRoad.h	/^    QVBoxLayout *verticalLayout;$/;"	m	class:Ui_PlanRoad
+verticalLayoutWidget	./imageIden/ui_imageIden.h	/^    QWidget *verticalLayoutWidget;$/;"	m	class:Ui_ImageIden
+verticalLayoutWidget	./planRoad/ui_planRoad.h	/^    QWidget *verticalLayoutWidget;$/;"	m	class:Ui_PlanRoad
+verticalLayoutWidget_2	./imageIden/ui_imageIden.h	/^    QWidget *verticalLayoutWidget_2;$/;"	m	class:Ui_ImageIden
+verticalLayoutWidget_2	./planRoad/ui_planRoad.h	/^    QWidget *verticalLayoutWidget_2;$/;"	m	class:Ui_PlanRoad
+verticalLayout_2	./imageIden/ui_imageIden.h	/^    QVBoxLayout *verticalLayout_2;$/;"	m	class:Ui_ImageIden
+verticalLayout_2	./planRoad/ui_planRoad.h	/^    QVBoxLayout *verticalLayout_2;$/;"	m	class:Ui_PlanRoad
+verticalSpacer	./imageIden/ui_imageIden.h	/^    QSpacerItem *verticalSpacer;$/;"	m	class:Ui_ImageIden
+voiceCtrl	./avoid/avoid.cpp	/^Avoid::voiceCtrl() \/\/”Ô“Ùøÿ÷∆$/;"	f	class:Avoid
+voiceRecordCheckChanged	./voiceIden/dialogModifyTable1.cpp	/^void DialogModifyTable1::voiceRecordCheckChanged(int state)$/;"	f	class:DialogModifyTable1
+voiceRecordCheckChanged	./voiceIden/dialogModifyTable2.cpp	/^void DialogModifyTable2::voiceRecordCheckChanged(int state)$/;"	f	class:DialogModifyTable2
+wallTrack	./avoid/avoid.cpp	/^Avoid::wallTrack() \/\/Ã˘±⁄––◊ﬂ$/;"	f	class:Avoid
+~Avoid	./avoid/avoid.cpp	/^Avoid::~Avoid()$/;"	f	class:Avoid
+~ConfigureMainWindow	./configureMainWindow/configureMainWindow.cpp	/^ConfigureMainWindow::~ConfigureMainWindow()$/;"	f	class:ConfigureMainWindow
+~ConfigureMainWindow	./configureMainWindowv1.0/configureMainWindow.cpp	/^ConfigureMainWindow::~ConfigureMainWindow()$/;"	f	class:ConfigureMainWindow
+~DialogAddTable1	./voiceIden/dialogAddTable1.cpp	/^DialogAddTable1::~DialogAddTable1()$/;"	f	class:DialogAddTable1
+~DialogAddTable2	./voiceIden/dialogAddTable2.cpp	/^DialogAddTable2::~DialogAddTable2()$/;"	f	class:DialogAddTable2
+~DialogModifyTable1	./voiceIden/dialogModifyTable1.cpp	/^DialogModifyTable1::~DialogModifyTable1()$/;"	f	class:DialogModifyTable1
+~DialogModifyTable2	./voiceIden/dialogModifyTable2.cpp	/^DialogModifyTable2::~DialogModifyTable2()$/;"	f	class:DialogModifyTable2
+~DialogShowVoice	./voiceIden/dialogShowVoice.cpp	/^DialogShowVoice::~DialogShowVoice()$/;"	f	class:DialogShowVoice
+~ImageIden	./imageIden/imageIden.cpp	/^ImageIden::~ImageIden()$/;"	f	class:ImageIden
+~ImageIden	./useByTaoImageIden/imageIden.cpp	/^ImageIden::~ImageIden()$/;"	f	class:ImageIden
+~LocalSet	./localSet/localSet.cpp	/^LocalSet::~LocalSet()$/;"	f	class:LocalSet
+~PlanRoad	./planRoad/planRoad.cpp	/^PlanRoad::~PlanRoad()$/;"	f	class:PlanRoad
+~VoiceIden	./voiceIden/voiceIden.cpp	/^VoiceIden::~VoiceIden()$/;"	f	class:VoiceIden
