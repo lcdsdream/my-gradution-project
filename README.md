@@ -1,39 +1,42 @@
-/********************************************************************************************************
- * 
+
  *		 	机器人图形菜单系统
- *  	陆潮东 2015年毕业设计
- * 	20150204
+ ========
+ *  	陆潮东 2015年毕业设计<br> 
+ * 	20150204<br> 
  */
 主要说明：
-(1).平台基于qt开发
-	具体版本： Qt 4.5.0
-(2).最终移植嵌入式平台
-	TQ6410
+----------
+(1).平台基于qt开发<br> 
+	具体版本： Qt 4.5.0<br> 
+(2).最终移植嵌入式平台<br> 
+	TQ6410<br> 
 
 文件说明 ：
-	configureMainWindow           #主界面， 用于装载子模块
-	configureMainWindowv1.0	      #附带驱动触发，测试用
-	avoid			      #运动控制模块
-	imageIden		      #图形识别模块
-	localSet		      #系统设置模块
-	planRoad		      #运动控制模块
-	useByTaoImageIden	      #华滔图像采集系统用
-	voiceIden	              #语音识别模块
-	deviceDrive		      #按钮驱动
-	startFork		      #按钮中断触发启动配置界面程序
-	lcdrs			      #arm qt启动配置脚本
-	libTQInputMethod.so	      #天嵌键盘库
-	TQInputMethod.h		      #天嵌键盘头文件
-	wqy-microhei.ttc              #字体库
-	picture			      #图片资源
-	.gitignore		      #git 过滤
-	README.md		      #说明文档 即本文
-	tags			      #ctags 记录
+----------
+	configureMainWindow           #主界面， 用于装载子模块<br> 
+	configureMainWindowv1.0	      #附带驱动触发，测试用<br> 
+	avoid			      #运动控制模块<br> 
+	imageIden		      #图形识别模块<br> 
+	localSet		      #系统设置模块<br> 
+	planRoad		      #运动控制模块<br> 
+	useByTaoImageIden	      #华滔图像采集系统用<br> 
+	voiceIden	              #语音识别模块<br> 
+	deviceDrive		      #按钮驱动<br> 
+	startFork		      #按钮中断触发启动配置界面程序<br> 
+	lcdrs			      #arm qt启动配置脚本<br> 
+	libTQInputMethod.so	      #天嵌键盘库<br> 
+	TQInputMethod.h		      #天嵌键盘头文件<br> 
+	wqy-microhei.ttc              #字体库<br> 
+	picture			      #图片资源<br> 
+	.gitignore		      #git 过滤<br> 
+	README.md		      #说明文档 即本文<br> 
+	tags			      #ctags 记录<br> 
 	
 如何使用 ：
-	系统通过主配置界面模块读取可执行文件创建进程的形式启动其他子模块，每一个模块单独编译一个可执行文件，系统设置目录/opt/gb_ms/（具体见configureMainWindow文件目录下configureMainWindow.cpp）
+----------
+	系统通过主配置界面模块读取可执行文件创建进程的形式启动其他子模块，每一个模块单独编译一个可执行文件，系统设置目录/opt/gb_ms/（具体见configureMainWindow文件目录下configureMainWindow.cpp）<br> 
 	
-	目标平台/opt/gb_ms/picture放置图片资源，/opt/gb_ms/app/放置可执行文件，其他qt库文件等童年tq环境一致，通过脚本lcdrs可以启动系统
+	目标平台/opt/gb_ms/picture放置图片资源，/opt/gb_ms/app/放置可执行文件，其他qt库文件等童年tq环境一致，通过脚本lcdrs可以启动系统<br> 
 	
 	模块编译 ：
 	文件中附带修改过的工程文件.pro，若添加其他文件，可以对应修改工程文件中。
